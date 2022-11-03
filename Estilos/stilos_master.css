@@ -1,0 +1,103 @@
+﻿body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #191c32 !important;
+}
+
+* {
+    margin-top: .1em;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+.menu {
+    display: flex !important;
+    width: 50% !important;
+    justify-content: space-around !important;
+}
+
+    .menu li {
+        list-style: none !important;
+    }
+
+    .menu a {
+        color: #fff;
+        text-decoration: none !important;
+        padding: 10px 20px !important;
+    }
+
+    .menu li:hover a {
+        background-color: rgb(4, 145, 145) !important;
+        color: #fff;
+    }
+
+    .menu .active {
+        color: aqua !important;
+    }
+
+
+    .menu li a:hover {
+        color: #66E7C8 ;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    padding: 2em;
+    background-color: rgb(7, 156, 156);
+}
+
+.footer_contenido h2 {
+    font-size: 3em;
+}
+
+.footer_contenido h5 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.Redes {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-top: 1em;
+}
+
+    .Redes i {
+        font-size: 1.5em;
+    }

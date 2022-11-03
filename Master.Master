@@ -4,15 +4,57 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>TP WebForms</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Script/bootstrap.js"></script>
+    <link href="Estilos/stilos_master.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
 </head>
 <body>
     <form id="form1" runat="server">
+        <header>
+            <nav class="navegacion">
+                <img src="imagenes/logo.svg" width="150" height="40" alt="Logo tipo de bienes Raices">
+                <ul class="menu">
+                    <li>
+                        <asp:HyperLink ID="HlHome" CssClass="nav-link" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HlAnuncios" CssClass="nav-link" NavigateUrl="~/Anuncios.aspx" runat="server">Anuncios</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HlContacto" CssClass="nav-link" NavigateUrl="~/Contactos.aspx" runat="server">Contacto</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HlBlog" CssClass="nav-link" NavigateUrl="~/Blog.aspx" runat="server">Blog</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HlNosotros" CssClass="nav-link" NavigateUrl="~/Nosotros.aspx" runat="server">Nosotros</asp:HyperLink>
+                    </li>
+
+                </ul>
+            </nav>
+         
+                <h1 style="text-align:center; color:aliceblue; font-size:x-large">Casas y departamentos Exclusicos</h1>
+
+        </header>
+
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <footer class="footer">
+            <div class="footer_contenido">
+                <h2>Bienes Raices</h2>
+            </div>
+            <div class="Redes">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-twitter-square"></i>
+            </div>
+        </footer>
     </form>
 </body>
 </html>
+
