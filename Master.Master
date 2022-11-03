@@ -36,7 +36,7 @@
                 </ul>
             </nav>
          
-                <h1 style="text-align:center; color:aliceblue; font-size:x-large">Casas y departamentos Exclusicos</h1>
+           <%--     <h1 style="text-align:center; color:aliceblue; font-size:x-large">Casas y departamentos Exclusicos</h1>--%>
 
         </header>
 

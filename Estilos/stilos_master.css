@@ -9,11 +9,11 @@
     box-sizing: border-box;
 }
 
-.header {
+/*.header {
     background-color: #333333;
     padding: 1rem 0 3rem 0;
 }
-
+*/
 .navegacion {
     display: flex;
     flex-direction: row;
@@ -41,17 +41,17 @@
     }
 
     .menu li:hover a {
-        background-color: rgb(4, 145, 145) !important;
+        background-color: #808080 !important;
         color: #fff;
     }
 
     .menu .active {
-        color: aqua !important;
+        color: #000000 !important;
     }
 
 
     .menu li a:hover {
-        color: #66E7C8 ;
+        color: #000000;
     }
 
 
@@ -79,7 +79,7 @@
     width: 100vw;
     height: 200px;
     padding: 2em;
-    background-color: rgb(7, 156, 156);
+    background-color:#808080;
 }
 
 .footer_contenido h2 {
