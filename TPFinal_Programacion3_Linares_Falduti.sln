@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPFinal_Programacion3_Linares_Falduti", "TPFinal_Programacion3_Linares_Falduti.csproj", "{ED5683C8-610C-4203-A5D2-082A20CE247D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionWeb", "AplicacionWeb.csproj", "{ED5683C8-610C-4203-A5D2-082A20CE247D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{35EA6384-807C-4B20-BB80-13B8D9748CBE}"
 EndProject
