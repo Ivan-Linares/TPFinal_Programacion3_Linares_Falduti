@@ -18,10 +18,11 @@ namespace Negocio
             Cmd = new SqlCommand();
         }
 
-        public void setearConsulta(string NewConsulta)
+        public void Setear_Sp(string sp)
         {
-            Cmd.CommandType = System.Data.CommandType.Text;
-            Cmd.CommandText = NewConsulta;
+            Cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            Cmd.CommandText = sp;
+
         }
 
         public SqlDataReader Lector
