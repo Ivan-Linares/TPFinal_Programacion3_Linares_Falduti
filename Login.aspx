@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Aplicacion_Web.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <link href="Estilos/Estilo_Login.css" rel="stylesheet">
     <div id="login">
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
