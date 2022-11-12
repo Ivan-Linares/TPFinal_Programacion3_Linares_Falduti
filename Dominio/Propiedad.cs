@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Dominio
 {
     public class Propiedad
-    {
+    {   
+
         public int Tipo { get; set; }
         public int CantAmbientes { get; set; }
         public float Mts2 { get; set; }

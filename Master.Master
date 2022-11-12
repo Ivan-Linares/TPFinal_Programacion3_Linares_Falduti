@@ -6,6 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>TP WebForms</title>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="Script/bootstrap.js"></script>
     <link href="Estilos/stilos_master.css" rel="stylesheet">
@@ -14,45 +16,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header  height="2000" style="background:url(imagenes/header.jpg)"/>
-            <nav class="navegacion">
-                <img src="imagenes/logo.svg" width="300" height="40" alt="Logo tipo de bienes Raices">
-                <ul class="menu">
-                    <li>
-                        <asp:HyperLink ID="HlHome" CssClass="nav-link" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink>
-                    </li>
-                    <li>
-                        <asp:HyperLink ID="HlAnuncios" CssClass="nav-link" NavigateUrl="~/Anuncios.aspx" runat="server">Anuncios</asp:HyperLink>
-                    </li>
-                    <li>
-                        <asp:HyperLink ID="HlContacto" CssClass="nav-link" NavigateUrl="~/Contactos.aspx" runat="server">Contacto</asp:HyperLink>
-                    </li>
-                    <li>
-                        <asp:HyperLink ID="HlNosotros" CssClass="nav-link" NavigateUrl="~/Nosotros.aspx" runat="server">Nosotros</asp:HyperLink>
-                    </li>
-                     <li>
-                        <asp:HyperLink ID="HyperLink1" CssClass="nav-link" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
-                    </li>
-                </ul>
-            </nav>
 
-            <%--     <h1 style="text-align:center; color:aliceblue; font-size:x-large">Casas y departamentos Exclusicos</h1>--%>
-        </header>
-
-        <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
-        <footer class="footer">
-            <div class="footer_contenido">
-                <h2>Bienes Raices</h2>
-            </div>
-            <div class="Redes">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-twitter-square"></i>
-            </div>
-        </footer>
+  
     </form>
 </body>
 </html>
