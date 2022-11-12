@@ -13,5 +13,10 @@ namespace Aplicacion_Web
         {
 
         }
+
+        protected void BotonRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

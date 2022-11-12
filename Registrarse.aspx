@@ -41,7 +41,7 @@
                                 <asp:TextBox ID="TexContra" runat="server" class="form-control"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <asp:Button ID="BotonRegister" runat="server" class="btn btn-info btn-md" Text="Registrarme!"/>
+                                <asp:Button ID="BotonRegister" runat="server" class="btn btn-info btn-md" Text="Registrarme!" OnClick="BotonRegister_Click"/>
                             </div>
                         </div>
                     </div>
