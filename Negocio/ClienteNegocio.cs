@@ -8,7 +8,7 @@ namespace Negocio
 {
     public class ClienteNegocio
     {
-        public List<Cliente> listar()
+        public List<Cliente> Listar()
         {
             List<Cliente> lista = new List<Cliente>();
             ConexionBD datos = new ConexionBD();

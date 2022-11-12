@@ -12,7 +12,7 @@ namespace Negocio
     public class PropiedadNegocio
     {
 
-        public List<Propiedad> listar()
+        public List<Propiedad> Listar()
         {
             List<Propiedad> lista = new List<Propiedad>();
             ConexionBD datos = new ConexionBD();

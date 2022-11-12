@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
+    public enum Nivel_Acceso
+    {
+        CLIENTE = 0,
+        VENDEDOR = 1,
+        ADMINISTRADOR=2
+    }
     public class Persona
     {
         public string Dni { get; set; }
@@ -14,5 +20,6 @@ namespace Dominio
         public DateTime Fecha_Nacimiento { get; set; }
         public string Domicilio { get; set; }
         public string Email { get; set; }
+        public Nivel_Acceso NivelAcceso { get; set; }
     }
 }
