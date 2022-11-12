@@ -10,5 +10,6 @@ namespace Dominio
     {
         public int Legajo { get; set; }
         public DateTime Fecha_Ingreso { get; set; }
+
     }
 }
