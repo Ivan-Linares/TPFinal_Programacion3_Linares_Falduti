@@ -9,9 +9,9 @@ namespace Negocio
 {
     public class EmpleadoNegocio
     {
-        public List<Empleado> listar()
+        public List<Vendedor> listar()
         {
-            List<Empleado> lista = new List<Empleado>();
+            List<Vendedor> lista = new List<Vendedor>();
             ConexionBD datos = new ConexionBD();
             try
             {
@@ -21,7 +21,7 @@ namespace Negocio
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
-                    Empleado aux = new Empleado();
+                    Vendedor aux = new Vendedor();
 
 
                     lista.Add(aux);
@@ -34,7 +34,7 @@ namespace Negocio
                 throw ex;
             }
         }
-        public void Agregar_Empleado(Empleado nueva)
+        public void Agregar_Empleado(Vendedor nueva)
         {
             ConexionBD datos = new ConexionBD();
 
@@ -54,7 +54,7 @@ namespace Negocio
             }
         }
 
-        public void ModificarEmpleado(Empleado Prop)
+        public void ModificarEmpleado(Vendedor Prop)
         {
             ConexionBD datos = new ConexionBD();
             try

@@ -7,22 +7,23 @@
     margin-top: .1em;
     padding: 2px;
     box-sizing: border-box;
+
 }
 
-/*.header {
-    background-color: #333333;
-    padding: 1rem 0 3rem 0;
+.header  {
+    background-color: cadetblue;
+    padding: 1rem 3rem 0;
+    background-size: cover;
+    width: 100vw;
+    height: 100000px;
 }
-*/
+
 .navegacion {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
 }
-
-
-
-
 
 .menu {
     display: flex !important;
@@ -55,22 +56,6 @@
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -100,4 +85,9 @@
 
     .Redes i {
         font-size: 1.5em;
+    }
+
+
+    .no-webp .inicio {
+        background-image: url(../imagenes/header)
     }

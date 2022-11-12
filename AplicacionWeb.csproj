@@ -68,7 +68,9 @@
     <Content Include="Blog.aspx" />
     <Content Include="Contactos.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Estilos\Estilo_Login.css" />
     <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
     <Content Include="Nosotros.aspx" />
     <Content Include="Estilos\stilos_master.css" />
     <Content Include="Web.config" />
@@ -104,6 +106,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>

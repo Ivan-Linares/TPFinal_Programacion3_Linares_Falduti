@@ -10,12 +10,13 @@
     <script src="Script/bootstrap.js"></script>
     <link href="Estilos/stilos_master.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
     <form id="form1" runat="server">
-        <header>
+        <header  height="2000"   style="background:url(imagenes/header.jpg)"/>
             <nav class="navegacion">
-                <img src="imagenes/logo.svg" width="150" height="40" alt="Logo tipo de bienes Raices">
+                <img src="imagenes/logo.svg" width="300" height="40" alt="Logo tipo de bienes Raices">
                 <ul class="menu">
                     <li>
                         <asp:HyperLink ID="HlHome" CssClass="nav-link" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink>
@@ -27,17 +28,13 @@
                         <asp:HyperLink ID="HlContacto" CssClass="nav-link" NavigateUrl="~/Contactos.aspx" runat="server">Contacto</asp:HyperLink>
                     </li>
                     <li>
-                        <asp:HyperLink ID="HlBlog" CssClass="nav-link" NavigateUrl="~/Blog.aspx" runat="server">Blog</asp:HyperLink>
-                    </li>
-                    <li>
                         <asp:HyperLink ID="HlNosotros" CssClass="nav-link" NavigateUrl="~/Nosotros.aspx" runat="server">Nosotros</asp:HyperLink>
                     </li>
 
                 </ul>
             </nav>
-         
-           <%--     <h1 style="text-align:center; color:aliceblue; font-size:x-large">Casas y departamentos Exclusicos</h1>--%>
 
+            <%--     <h1 style="text-align:center; color:aliceblue; font-size:x-large">Casas y departamentos Exclusicos</h1>--%>
         </header>
 
         <div>
