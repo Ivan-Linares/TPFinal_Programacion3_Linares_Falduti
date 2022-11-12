@@ -8,6 +8,6 @@ namespace Dominio
 {
     public class Cliente : Persona
     {
-
+        public DateTime Fecha_Ingreso { get; set; }
     }
 }
