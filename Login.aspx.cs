@@ -17,7 +17,6 @@ namespace Aplicacion_Web
         {
           
         }
-
         private void Page_Error(object sender, EventArgs e)
         {
             Exception exc = Server.GetLastError();

@@ -7,7 +7,7 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
+                        <div id="login-form" class="form" action="" method="post">
                             <h3 class="text-center text-info">Inicio De Sesion</h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Usuario:</label><br>
@@ -19,15 +19,14 @@
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-info">
-                                    <span>Recordar contraseña</span> <span>
-                                        <input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                <span>Recordar contraseña</span> <span>
+                                <input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
                                 <asp:Button ID="BotonLogin" runat="server" class="btn btn-info btn-md" Text="Ingresar" OnClick="btnLogin_Click" />
-                            
                             </div>
-                            <div id="register-link" class="text-right">
+                            <div class="form-group">
                                 <a href="../Registrarse.aspx" class="text-info">Registrate</a>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
