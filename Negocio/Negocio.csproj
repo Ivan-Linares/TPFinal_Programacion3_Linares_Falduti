@@ -59,8 +59,10 @@
       <Name>Dominio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Scrip\" />
+    <Content Include="Scrip\Scrip.sql" />
+    <Content Include="Scrip\SP.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

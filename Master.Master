@@ -14,7 +14,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header  height="2000"   style="background:url(imagenes/header.jpg)"/>
+        <header  height="2000" style="background:url(imagenes/header.jpg)"/>
             <nav class="navegacion">
                 <img src="imagenes/logo.svg" width="300" height="40" alt="Logo tipo de bienes Raices">
                 <ul class="menu">
@@ -30,7 +30,9 @@
                     <li>
                         <asp:HyperLink ID="HlNosotros" CssClass="nav-link" NavigateUrl="~/Nosotros.aspx" runat="server">Nosotros</asp:HyperLink>
                     </li>
-
+                     <li>
+                        <asp:HyperLink ID="HyperLink1" CssClass="nav-link" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
+                    </li>
                 </ul>
             </nav>
 

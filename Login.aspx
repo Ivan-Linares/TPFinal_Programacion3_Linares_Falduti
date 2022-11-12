@@ -25,7 +25,7 @@
                             
                             </div>
                             <div id="register-link" class="text-right">
-                                <a href="#" class="text-info">Registrate</a>
+                                <a href="../Registrarse.aspx" class="text-info">Registrate</a>
                             </div>
                         </form>
                     </div>

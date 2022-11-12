@@ -7,74 +7,83 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TPFinal_Programacion3_Linares_Falduti
+namespace Aplicacion_Web
 {
 
 
-    public partial class Master
+    public partial class Registrarse
     {
 
         /// <summary>
-        /// Control form1.
+        /// Control TexDNI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox TexDNI;
 
         /// <summary>
-        /// Control HlHome.
+        /// Control TexNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HlHome;
+        protected global::System.Web.UI.WebControls.TextBox TexNombre;
 
         /// <summary>
-        /// Control HlAnuncios.
+        /// Control TexApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HlAnuncios;
+        protected global::System.Web.UI.WebControls.TextBox TexApellido;
 
         /// <summary>
-        /// Control HlContacto.
+        /// Control TexDomicilio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HlContacto;
+        protected global::System.Web.UI.WebControls.TextBox TexDomicilio;
 
         /// <summary>
-        /// Control HlNosotros.
+        /// Control TexEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HlNosotros;
+        protected global::System.Web.UI.WebControls.TextBox TexEmail;
 
         /// <summary>
-        /// Control HyperLink1.
+        /// Control TexUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.TextBox TexUsuario;
 
         /// <summary>
-        /// Control ContentPlaceHolder1.
+        /// Control TexContra.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.TextBox TexContra;
+
+        /// <summary>
+        /// Control BotonRegister.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BotonRegister;
     }
 }
