@@ -24,27 +24,31 @@
         </nav>
     </header>
 
-    
-        <div class="ContenedorN">
+
+
+    <section class="contenedor">
             <div class="card">
-                <img src="imagenes/icono1.svg" alt="Icono seguridad" />
+                <img src=" imagenes/icono1.svg " class="card-img-top" alt="Seguridad">
                 <h3>Seguridad</h3>
                 <p></p>
             </div>
-
+      
             <div class="card">
-                <img src="imagenes/icono2.svg" alt="Icono Precio" />
+                <img src=" imagenes/icono2.svg " class="card-img-top" alt="Precio">
                 <h3>Precio</h3>
                 <p></p>
             </div>
-
+      
 
             <div class="card">
-                <img src="imagenes/icono3.svg" alt="Icono Tiempo" />
+                <img src=" imagenes/icono3.svg " class="card-img-top" alt="Tiempo">
                 <h3>Tiempo</h3>
-                <p>Nuestros proyectos están basados en la responsabilidad y compromiso de cumplir lo prometido </p>
+                <p></p>
             </div>
-        </div>
+
+    </section>
+
+ 
 
 
 

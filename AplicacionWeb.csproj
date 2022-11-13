@@ -72,7 +72,7 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Nosotros.aspx" />
-    <Content Include="Estilos\stilos_master.css" />
+    <Content Include="Estilos\Estilos_Master.css" />
     <Content Include="Registrarse.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
