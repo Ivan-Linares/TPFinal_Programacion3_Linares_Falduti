@@ -12,13 +12,6 @@
 
 }
 
-.header  {
-    background-color: cadetblue;
-    padding: 1rem 3rem 0;
-    background-size: cover;
-    width: 100vw;
-    height: 100000px;
-}
 
 .navegacion {
     display: flex;
@@ -94,7 +87,7 @@
         background-image: url(../imagenes/header)
     }
 
-.ContenedorNosotros{
+.ContenedorN{
     width:100%;
     max-width: 1200px;
     height: 430px;
@@ -104,7 +97,7 @@
     margin: auto;
 }
 
-.ContenedorNosotros .card{
+.ContenedorN .card{
     width: 330px;
     height: 350px;
     border-radius: 8px;
@@ -115,12 +108,12 @@
     transition: all 0.25s;
 }
 
-.ContenedorNosotros .card:hover{
+.ContenedorN .card:hover{
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0,0,0,0.2);
 }
 
-.ContenedorNosotros .card img{
+.ContenedorN .card img{
     width: 330px;
     height: 220px;
 }
