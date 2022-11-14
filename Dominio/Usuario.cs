@@ -17,6 +17,7 @@ namespace Dominio
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Email { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public Nivel_Acceso NivelAcceso { get; set; }
         public string User { get; set; }
         public string Password { get; set; }
