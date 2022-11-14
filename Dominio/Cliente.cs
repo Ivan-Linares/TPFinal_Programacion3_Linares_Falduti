@@ -8,6 +8,8 @@ namespace Dominio
 {
     public class Cliente : Persona
     {
-        public DateTime Fecha_Ingreso { get; set; }
+        public DateTime FechaLogueo { get; set; }
+        public string User { get; set; }
+        public string Password { get; set; }
     }
 }

@@ -9,7 +9,8 @@ namespace Dominio
     public class Vendedor : Persona
     {
         public int Legajo { get; set; }
-        public DateTime Fecha_Ingreso { get; set; }
-
+        public DateTime FechaIngreso { get; set; }
+        public string User { get; set; }
+        public string Password { get; set; }
     }
 }
