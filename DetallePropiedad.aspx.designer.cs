@@ -7,20 +7,20 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TPFinal_Programacion3_Linares_Falduti
+namespace Aplicacion_Web
 {
 
 
-    public partial class Anuncios
+    public partial class DetallePropiedad
     {
 
         /// <summary>
-        /// Control Repetidor.
+        /// Control btnBack.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repetidor;
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }

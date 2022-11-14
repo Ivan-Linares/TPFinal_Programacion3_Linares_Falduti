@@ -65,9 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Anuncios.aspx" />
-    <Content Include="Blog.aspx" />
     <Content Include="Contactos.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DetallePropiedad.aspx" />
     <Content Include="Estilos\Estilo_Login.css" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
@@ -84,13 +84,6 @@
     <Compile Include="Anuncios.aspx.designer.cs">
       <DependentUpon>Anuncios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Blog.aspx.cs">
-      <DependentUpon>Blog.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Blog.aspx.designer.cs">
-      <DependentUpon>Blog.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Contactos.aspx.cs">
       <DependentUpon>Contactos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -104,6 +97,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetallePropiedad.aspx.cs">
+      <DependentUpon>DetallePropiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallePropiedad.aspx.designer.cs">
+      <DependentUpon>DetallePropiedad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
