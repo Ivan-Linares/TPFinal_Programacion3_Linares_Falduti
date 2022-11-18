@@ -8,7 +8,7 @@ namespace Dominio
 {
     public class Cliente : Usuario
     {
-        Cliente()
+        public Cliente()
         {
             NivelAcceso = Nivel_Acceso.CLIENTE;
         }

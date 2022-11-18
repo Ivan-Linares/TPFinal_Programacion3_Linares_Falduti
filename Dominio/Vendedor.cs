@@ -8,7 +8,7 @@ namespace Dominio
 {
     public class Vendedor : Usuario
     {
-        Vendedor()
+        public Vendedor()
         {
             NivelAcceso = Nivel_Acceso.VENDEDOR;
         }
