@@ -18,7 +18,6 @@ namespace Negocio
             ConexionBD datos = new ConexionBD();
             try
             {
-
                 datos.Setear_Sp("");
 
                 datos.ejecutarLectura();

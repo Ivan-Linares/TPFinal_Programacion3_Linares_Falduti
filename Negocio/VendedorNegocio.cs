@@ -15,7 +15,6 @@ namespace Negocio
             ConexionBD datos = new ConexionBD();
             try
             {
-
                 datos.Setear_Sp("");
 
                 datos.ejecutarLectura();
@@ -34,13 +33,25 @@ namespace Negocio
                 throw ex;
             }
         }
-        public void Agregar_Empleado(Vendedor nueva)
+        public void AgregarVendedor(Vendedor New)
         {
             ConexionBD datos = new ConexionBD();
-
+            //AGREGAR A TABLA VENDEDORES
             try
             {
                 datos.Setear_Sp("");
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            //AGREGAR A TABLA USUARIOS
+            try
+            {
+                datos.Setear_Sp("");
+
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -53,9 +64,52 @@ namespace Negocio
             }
         }
 
-        public void ModificarEmpleado(Vendedor Prop)
+        public void ModificarVendedor(Vendedor Updated)
         {
             ConexionBD datos = new ConexionBD();
+            //MODIFICAR DE TABLA VENDEDORES
+            try
+            {
+                datos.Setear_Sp("");
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            //MODIFICAR DE TABLA USUARIOS
+            try
+            {
+                datos.Setear_Sp("");
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void EliminarVendedor(Vendedor Deleted)
+        {
+            ConexionBD datos = new ConexionBD();
+            //BORRAR DE TABLA VENDEDORES
+            try
+            {
+                datos.Setear_Sp("");
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            //BORRAR DE TABLA USUARIOS
             try
             {
                 datos.Setear_Sp("");
@@ -72,7 +126,5 @@ namespace Negocio
             }
         }
     }
-
-
 }
 

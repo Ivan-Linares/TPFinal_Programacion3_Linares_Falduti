@@ -34,10 +34,27 @@ namespace Negocio
                 throw ex;
             }
         }
-        public void Agregar_Empleado(Cliente nuevo)
+        public void Agregar_Cliente(Cliente New)
         {
             ConexionBD datos = new ConexionBD();
 
+            try
+            {
+                datos.Setear_Sp("");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void ModificarCliente(Cliente Updated)
+        {
+            ConexionBD datos = new ConexionBD();
             try
             {
                 datos.Setear_Sp("");
@@ -53,8 +70,7 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
-
-        public void ModificarEmpleado(Cliente Prop)
+        public void EliminarCliente(Cliente Deleted)
         {
             ConexionBD datos = new ConexionBD();
             try
