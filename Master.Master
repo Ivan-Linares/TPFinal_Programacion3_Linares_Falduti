@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>TP WebForms</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <%--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>--%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="Script/bootstrap.js"></script>
     <link href="Estilos/Estilos_Master.css" rel="stylesheet">
@@ -14,8 +14,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-       
-         <header >
+
+        <header>
             <nav class="navegacion">
                 <img src="imagenes/logo.svg" width="300" height="100" alt="Logo tipo de bienes Raices">
                 <ul class="menu">
@@ -40,14 +40,14 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
 
-        <footer class="footer">
+        <footer class="footer" style="position: absolute; height: 50px; line-height: 50px; background: black; color: white; text-align: center; left: 0; width: 100%;">
             <div class="footer_contenido">
                 <h2>Bienes Raices</h2>
             </div>
             <div class="Redes">
                 <i class="fab fa-instagram"></i>
                 <i class="fab fa-linkedin"></i>
-                <i class="fab fa-twitter-square"></i>
+
             </div>
         </footer>
     </form>

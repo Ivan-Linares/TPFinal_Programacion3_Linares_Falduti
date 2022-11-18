@@ -32,5 +32,10 @@ namespace Aplicacion_Web
         {
             Response.Redirect("Default.aspx");
         }
+
+        protected void Aceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
