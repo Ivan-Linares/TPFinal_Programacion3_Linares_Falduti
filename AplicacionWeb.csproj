@@ -64,10 +64,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarPropiedad.aspx" />
     <Content Include="Anuncios.aspx" />
     <Content Include="Contactos.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DetallePropiedad.aspx" />
+    <Content Include="EditarPropiedad.aspx" />
     <Content Include="Estilos\Estilo_Login.css" />
     <Content Include="Global.asax" />
     <Content Include="ListadoPropiedades.aspx" />
@@ -78,6 +80,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarPropiedad.aspx.cs">
+      <DependentUpon>AgregarPropiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarPropiedad.aspx.designer.cs">
+      <DependentUpon>AgregarPropiedad.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Anuncios.aspx.cs">
       <DependentUpon>Anuncios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,6 +114,13 @@
     </Compile>
     <Compile Include="DetallePropiedad.aspx.designer.cs">
       <DependentUpon>DetallePropiedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarPropiedad.aspx.cs">
+      <DependentUpon>EditarPropiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarPropiedad.aspx.designer.cs">
+      <DependentUpon>EditarPropiedad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
