@@ -5,7 +5,7 @@
         <div class="card" style="width: 28rem;margin:auto; align-content:center">
             <img class="card-img-top" src="<%: Propiedad.UrlImagen %>" alt="Card Image">
             <div class="card-body">
-                <h5 class="card-title"><%: Propiedad. %></h5>
+                <h5 class="card-title"><%: Propiedad%></h5>
             </div>
             <ul class="list-group list-group-flush" style=" align-content:center;text-align:center">
                 <li class ="list-group-item"><%: Propiedad.Tipo %></li>
