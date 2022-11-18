@@ -8,6 +8,9 @@ namespace Dominio
 {
     public class Administrador : Usuario
     {
-        public int AdministradorId { get; set; }
+        Administrador()
+        {
+            NivelAcceso = Nivel_Acceso.ADMINISTRADOR;
+        }
     }
 }

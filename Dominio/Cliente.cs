@@ -8,7 +8,9 @@ namespace Dominio
 {
     public class Cliente : Usuario
     {
-        public int ClienteID { get; set; }
-        public DateTime FechaLogueo { get; set; }
+        Cliente()
+        {
+            NivelAcceso = Nivel_Acceso.CLIENTE;
+        }
     }
 }

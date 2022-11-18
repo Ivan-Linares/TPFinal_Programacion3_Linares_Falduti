@@ -70,6 +70,7 @@
     <Content Include="DetallePropiedad.aspx" />
     <Content Include="Estilos\Estilo_Login.css" />
     <Content Include="Global.asax" />
+    <Content Include="ListadoPropiedades.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Nosotros.aspx" />
     <Content Include="Estilos\Estilos_Master.css" />
@@ -107,6 +108,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoPropiedades.aspx.cs">
+      <DependentUpon>ListadoPropiedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoPropiedades.aspx.designer.cs">
+      <DependentUpon>ListadoPropiedades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

@@ -8,7 +8,9 @@ namespace Dominio
 {
     public class Vendedor : Usuario
     {
-        public int Legajo { get; set; }
-        public DateTime FechaIngreso { get; set; }
+        Vendedor()
+        {
+            NivelAcceso = Nivel_Acceso.VENDEDOR;
+        }
     }
 }

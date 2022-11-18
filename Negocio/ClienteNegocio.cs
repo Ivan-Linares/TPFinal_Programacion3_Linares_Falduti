@@ -12,6 +12,7 @@ namespace Negocio
         {
             List<Cliente> lista = new List<Cliente>();
             ConexionBD datos = new ConexionBD();
+            Cliente cliente = new Cliente();
             try
             {
 
