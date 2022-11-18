@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using Dominio;
+using Negocio;
 namespace Aplicacion_Web
 {
     public partial class ListadoPropiedades : System.Web.UI.Page
@@ -13,5 +14,7 @@ namespace Aplicacion_Web
         {
 
         }
+
+        
     }
 }
