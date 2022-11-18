@@ -7,7 +7,7 @@ using Dominio;
 
 namespace Negocio
 {
-    public class EmpleadoNegocio
+    public class VendedorNegocio
     {
         public List<Vendedor> Listar()
         {
@@ -41,7 +41,6 @@ namespace Negocio
             try
             {
                 datos.Setear_Sp("");
-
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
