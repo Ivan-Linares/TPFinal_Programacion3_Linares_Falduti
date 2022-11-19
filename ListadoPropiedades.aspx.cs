@@ -10,25 +10,30 @@ namespace Aplicacion_Web
 {
     public partial class ListadoPropiedades : System.Web.UI.Page
     {
+        public List<Propiedad> ListaPropiedades { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            Cargar();
+        }
+
+        protected void btnDescrip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnFav_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cargar()
+        {
             PropiedadNegocio Negocio = new PropiedadNegocio();
-            //Session.Add("ListaPropiedades", Negocio.listarConSP());
-            DgvPropiedades.DataSource = Session["ListaPropiedades"];
+
+            ListaPropiedades = Negocio.Listar();
+
+            Repeater.DataSource = ListaPropiedades;
+            Repeater.DataBind();
         }
-
-        protected void DgvPropiedades_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            DgvPropiedades.PageIndex = e.NewPageIndex;
-            DgvPropiedades.DataBind();
-        }
-
-        protected void DgvPropiedades_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string id = DgvPropiedades.SelectedDataKey.Value.ToString();
-            Response.Redirect("FormularioPokemon.aspx?id=" + id);
-
-        }
-
     }
 }

@@ -10,6 +10,7 @@ namespace Dominio
     {   
         public int IdPropiedad { get; set; }    
         public int Tipo { get; set; }
+        public string Descripcion { get; set; }
         public int CantAmbientes { get; set; }
         public float Mts2 { get; set; }
         public bool Cochera { get; set; }
