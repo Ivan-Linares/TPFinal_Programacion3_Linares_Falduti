@@ -12,30 +12,29 @@ namespace Aplicacion_Web
     public partial class DetallePropiedad : System.Web.UI.Page
     {
         public List<Propiedad> ListaPropiedad { get; set; }
-
         public Propiedad Propiedad = new Propiedad();
         protected void Page_Load(object sender, EventArgs e)
         {
-            PropiedadNegocio propiedadNegocio = new PropiedadNegocio();
-            ListaPropiedad = propiedadNegocio.Listar();
-
-            string id = Request.QueryString["id"] != null ? Request.QueryString["id"].ToString() : "";
-
-            foreach (Propiedad Prop in ListaPropiedad)
-            {
-                if (Prop.IdPropiedad == int.Parse(id))
-                    Propiedad = Prop;
-            }
+            Cargar(); 
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("ListadoPropiedades.aspx");
         }
 
-        protected void Aceptar_Click(object sender, EventArgs e)
+        private void Cargar()
         {
+            PropiedadNegocio propiedadNegocio = new PropiedadNegocio();
+            ListaPropiedad = propiedadNegocio.Listar();
 
+            string ID = Request.QueryString["ID"] != null ? Request.QueryString["ID"].ToString() : "";
+
+            foreach (Propiedad propiedad in ListaPropiedad)
+            {
+                if (propiedad.IdPropiedad == int.Parse(ID))
+                    Propiedad = propiedad;
+            }
         }
     }
 }

@@ -33,13 +33,13 @@ namespace TPFinal_Programacion3_Linares_Falduti
         protected global::System.Web.UI.WebControls.HyperLink HlHome;
 
         /// <summary>
-        /// Control HlAnuncios.
+        /// Control HlPropiedades.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HlAnuncios;
+        protected global::System.Web.UI.WebControls.HyperLink HlPropiedades;
 
         /// <summary>
         /// Control HlContacto.

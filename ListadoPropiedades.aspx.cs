@@ -18,12 +18,14 @@ namespace Aplicacion_Web
 
         protected void btnDescrip_Click(object sender, EventArgs e)
         {
+            string ID = ((Button)sender).CommandArgument.ToString();
 
+            Response.Redirect("DetallePropiedad.aspx?IdPropiedad=" + ID, false);
         }
 
         protected void btnFav_Click(object sender, EventArgs e)
         {
-
+            string ID = ((Button)sender).CommandArgument.ToString();
         }
 
         private void Cargar()
@@ -32,8 +34,11 @@ namespace Aplicacion_Web
 
             ListaPropiedades = Negocio.Listar();
 
-            Repeater.DataSource = ListaPropiedades;
-            Repeater.DataBind();
+            if (!IsPostBack)
+            {
+                Repeater.DataSource = ListaPropiedades;
+                Repeater.DataBind();
+            }
         }
     }
 }

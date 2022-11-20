@@ -11,7 +11,6 @@ namespace Negocio
 {
     public class PropiedadNegocio
     {
-
         public List<Propiedad> Listar()
         {
             List<Propiedad> lista = new List<Propiedad>();
@@ -37,8 +36,6 @@ namespace Negocio
             }
         }
 
-
-
         public void Agregar_Propiedad(Propiedad nueva)
         {
             ConexionBD datos = new ConexionBD();
@@ -58,7 +55,6 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
-
 
         public void Modificar_Propiedad(Propiedad Prop)
         {

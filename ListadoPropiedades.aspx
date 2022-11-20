@@ -17,8 +17,8 @@
                                 </ul>
                                 <br />
                                 <ul class="link-detalle" cssclass="col-md-2">
-                                    <asp:Button ID="btnDescrip" runat="server" Text="Ver Detalle" CssClass="btn btn-primary" CommandArgument='<%#Eval("") %>' CommandName="ArticuloId" OnClick="btnDescrip_Click"/>
-                                    <asp:Button ID="btnFav" runat="server" Text="Agregar a Favoritos" CssClass="btn btn-primary" CommandArgument='<%#Eval("") %>' CommandName="ArticuloId" OnClick="btnFav_Click"/>
+                                    <asp:Button ID="btnDescrip" runat="server" Text="Ver Detalle" CssClass="btn btn-primary" CommandArgument='<%#Eval("IdPropiedad") %>' CommandName="IdPropiedad" OnClick="btnDescrip_Click"/>
+                                    <asp:Button ID="btnFav" runat="server" Text="Agregar a Favoritos" CssClass="btn btn-primary" CommandArgument='<%#Eval("IdPropiedad") %>' CommandName="IdPropiedad" OnClick="btnFav_Click"/>
                                 </ul>
                             </div>
                         </div>
