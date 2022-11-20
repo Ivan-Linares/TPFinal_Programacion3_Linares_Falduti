@@ -14,7 +14,7 @@ namespace Dominio
         public int CantAmbientes { get; set; }
         public float Mts2 { get; set; }
         public bool Cochera { get; set; }
-        public string Domicilio { get; set; }
+        public string Direccion { get; set; }
         public string UrlImagen { get; set; }
         public bool EnVenta { get; set; }
         public decimal Precio { get; set; }
