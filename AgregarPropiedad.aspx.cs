@@ -13,5 +13,10 @@ namespace Aplicacion_Web
         {
 
         }
+
+        protected void TextUrlImagen_TextChanged(object sender, EventArgs e)
+        {
+            ImagePropiedad.ImageUrl = TextUrlImagen.Text;
+        }
     }
 }

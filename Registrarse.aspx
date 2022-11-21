@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Registrarse.aspx.cs" Inherits="Aplicacion_Web.Registrarse" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     
+
+    <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+
     <div id="login">
         <div class="container">
             <div id="register-row" class="row justify-content-center align-items-center">
@@ -20,10 +23,16 @@
                                 <label for="surname" class="text-info">Apellido:</label><br>
                                 <asp:TextBox ID="TexApellido" runat="server" class="form-control"></asp:TextBox>
                             </div>
-                            <div class="form-group">
-                                <label for="username" class="text-info">Fecha de Nacimiento:</label><br>
-                                <%-- TODO: FORMULARIO PARA FECHA DE NACIMIENTO--%>
-                            </div>
+
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <ContentTemplate>
+                                    <div class="form-group">
+                                        <label for="username" class="text-info">Fecha de Nacimiento:</label><br>
+                                        <asp:Calendar ID="Calendar" runat="server"></asp:Calendar>
+                                    </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+
                             <div class="form-group">
                                 <label for="username" class="text-info">Domicilio:</label><br>
                                 <asp:TextBox ID="TexDomicilio" runat="server" class="form-control"></asp:TextBox>
@@ -41,7 +50,7 @@
                                 <asp:TextBox ID="TexContra" runat="server" class="form-control"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <asp:Button ID="BotonRegister" runat="server" class="btn btn-info btn-md" Text="Registrarme!" OnClick="BotonRegister_Click"/>
+                                <asp:Button ID="BotonRegister" runat="server" class="btn btn-info btn-md" Text="Registrarme!" OnClick="BotonRegister_Click" />
                             </div>
                         </div>
                     </div>

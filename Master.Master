@@ -34,6 +34,9 @@
                     <li>
                         <asp:HyperLink ID="HyperLink1" CssClass="nav-link" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
                     </li>
+                    <li>
+                        <asp:HyperLink ID="H" CssClass="nav-link" NavigateUrl="~/AgregarPropiedad.aspx" runat="server">Add</asp:HyperLink>
+                    </li>
                 </ul>
             </nav>
         </header>
