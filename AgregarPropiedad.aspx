@@ -13,8 +13,8 @@
                 <div id="AddProp-row1">
                     <div id="AddProp-form" class="form" action="" method="post">
                         <div class="form-group">
-                            <label for="TiposProp" class="text-info">Tipo de Propiedad:</label><br>
-                            <asp:DropDownList ID="TiposProp" runat="server"></asp:DropDownList>
+                            <label for="DDTiposProp" class="text-info">Tipo de Propiedad:</label><br>
+                            <asp:DropDownList ID="DDTiposProp" runat="server"></asp:DropDownList>
                         </div>
                         <div class="form-group">
                             <label for="TextDescrip" class="text-info">Descripcion:</label><br>
