@@ -75,6 +75,7 @@
     <Content Include="Estilos\Estilo_Contacto.css" />
     <Content Include="Estilos\Estilo_Home.css" />
     <Content Include="Estilos\Estilo_Login.css" />
+    <Content Include="Estilos\Estilo_Nosotros.css" />
     <Content Include="Global.asax" />
     <Content Include="ListadoPropiedades.aspx" />
     <Content Include="Login.aspx" />
