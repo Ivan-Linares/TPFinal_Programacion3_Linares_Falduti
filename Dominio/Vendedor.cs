@@ -12,10 +12,12 @@ namespace Dominio
         {
             NivelAcceso = Nivel_Acceso.VENDEDOR;
         }
-        public int  IdVendedor { get; set; }    
+        public int IdVendedor { get; set; }
         public string Legajo { get; set; }
         public string Dni { get; set; }
         public string Domicilio { get; set; }
         public DateTime FechaIngreso { get; set; }
+
+        public bool Estado { get; set; }
     }
 }
