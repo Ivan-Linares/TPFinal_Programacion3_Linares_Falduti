@@ -14,7 +14,7 @@ namespace Negocio
         private SqlDataReader DataReader;
         public ConexionBD()
         {
-            Conn = new SqlConnection("server=.\\SQLEXPRESS; database=; integrated security=true"); //Insertar nombre de base de datos
+            Conn = new SqlConnection("server=.\\SQLEXPRESS; database=BIENES_RAICES; integrated security=true");
             Cmd = new SqlCommand();
         }
 
