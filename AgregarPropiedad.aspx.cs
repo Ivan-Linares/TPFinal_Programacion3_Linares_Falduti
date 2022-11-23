@@ -62,7 +62,7 @@ namespace Aplicacion_Web
                     List<TiposPropiedad> lista = negocio.Listar();
 
                     DDTiposProp.DataSource = lista;
-                    DDTiposProp.DataValueField = "ID";
+                    DDTiposProp.DataValueField = "IdTipo";
                     DDTiposProp.DataTextField = "Descripcion";
                     DDTiposProp.DataBind();
                 }
@@ -70,6 +70,7 @@ namespace Aplicacion_Web
             catch (Exception ex)
             {
                 Session.Add("Error", ex);
+                throw;
             }
         }
     }
