@@ -70,7 +70,6 @@ namespace Aplicacion_Web
             catch (Exception ex)
             {
                 Session.Add("Error", ex);
-                throw;
             }
         }
     }

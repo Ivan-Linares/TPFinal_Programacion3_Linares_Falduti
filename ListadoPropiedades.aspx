@@ -9,7 +9,7 @@
                     <div class="col">
                         <div class="card" style="width: 28rem;">
                             <div class="card-body">
-                                <img src="<%#Eval("UrlImagen") %>" class="card-img-top" alt="Imagen Propiedad" onerror="this.src='./Images/PlaceHolder.png';" />
+                                <img src="<%#Eval("UrlImagen") %>" class="card-img-top" alt="Imagen Propiedad" <%--onerror="this.src='./Images/PlaceHolder.png';"--%> />
                                 <br />
                                 <ul class="Descripcion-card">
                                     <p class="card-Descripcion">$<%#Eval("Descripcion") %></p>
