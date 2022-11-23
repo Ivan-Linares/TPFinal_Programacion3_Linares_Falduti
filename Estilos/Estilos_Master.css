@@ -12,12 +12,19 @@
 
 }
 
+.Header {
+    width: 100%;
+    height: 102px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #191c32;
+}
 
 .navegacion {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 .menu {
@@ -84,65 +91,3 @@
     }
 
 
-.Contenedor{
-    width:100px;
-    float:left;
-    display:flex;
-    max-width:1200px;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin: .1em;
-    padding: 2px;
-    background-color: #191c32;
-
-}
-
-
-
-.card {
-    width: 25%;
-    margin: 20px;
-    border-radius: 6px;
-    overflow: hidden;
-    background: #ffffff;
-    box-shadow: 0px 1px 10px aqua;
-    cursor: default;
-    transition: all 400ms ease;
-
-}
-
-    .card:hover {
-        transform: translateY(-3%)
-    }
-
-    .card img {
-        display: block;
-        margin: auto;
-        width: 300px;
-        height: 250px;
-        z-index: 1;
-    }
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #17a2b8;
-    height: 100vh;
-    width: 100%;
-}
-
-#login .container .login-row .login-column .login-box {
-    margin-top: 150px;
-    max-width: 600px;
-    height: 320px;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
-}
-
-.login .container .login-row .login-column .login-box #login-form {
-    padding: 20px;
-}
-
-.login .container .login-row .login-column .login-box .login-form .register-link {
-    margin-top: -85px;
-}

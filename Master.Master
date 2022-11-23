@@ -19,7 +19,7 @@
 <body>
     <form id="form1" runat="server">
 
-        <header>
+        <header class="Header">
             <nav class="navegacion">
                 <img src="imagenes/logo.svg" width="300" height="100" alt="Logo tipo de bienes Raices">
                 <ul class="menu">
