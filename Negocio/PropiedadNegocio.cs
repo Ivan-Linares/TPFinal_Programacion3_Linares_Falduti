@@ -33,7 +33,9 @@ namespace Negocio
                     aux.Mts2 = datos.Lector.GetDecimal(5);
                     aux.Cochera = datos.Lector.GetBoolean(6);
                     aux.Direccion = datos.Lector.GetString(7);
-                    aux.UrlImagen = datos.Lector.GetString(8);
+                    if (!(datos.Lector.GetString(8) is null))
+                        aux.UrlImagen = datos.Lector.GetString(8);
+                    else aux.UrlImagen = "https://ichef.bbci.co.uk/news/640/cpsprodpb/7078/production/_99729782_gettyimages-88518346.jpg";
                     aux.EnVenta = datos.Lector.GetBoolean(9);
                     aux.Precio = datos.Lector.GetDecimal(10);
                     aux.Estado = datos.Lector.GetBoolean(11);
