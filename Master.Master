@@ -10,7 +10,10 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="Script/bootstrap.js"></script>
     <link href="Estilos/Estilos_Master.css" rel="stylesheet">
-    <link href="Estilos/Estilos_Login.css" rel="stylesheet">
+    <link href="Estilos/Estilo_Login.css" rel="stylesheet">
+    <link href="Estilos/Estilo_Contacto.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
 </head>
 <body>
     <form id="form1" runat="server">
@@ -43,14 +46,13 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
 
-        <footer class="footer" style="position: absolute; height: 50px; line-height: 50px; background: black; color: white; text-align: center; left: 0; width: 100%;">
+        <footer class="footer">
             <div class="footer_contenido">
                 <h2>Bienes Raices</h2>
             </div>
             <div class="Redes">
                 <i class="fab fa-instagram"></i>
                 <i class="fab fa-linkedin"></i>
-
             </div>
         </footer>
     </form>

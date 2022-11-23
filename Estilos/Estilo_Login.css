@@ -1,7 +1,11 @@
-﻿.container {
+﻿.login {
+    min-height:550px !important;
+}
+/*
+.container {
     background: yellow;
     width: 200px;
-    height: 200px;
+    min-height:500px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -9,12 +13,12 @@
     margin-left: -100px;
 }
 
-#login .container .login-row .login-column .login-box {
+.container .login-row .login-column .login-box {
     margin-top: 150px;
     max-width: 600px;
-    height: 320px;
     border: 1px solid #9C9C9C;
     background-color: #EAEAEA;
+    min-height: 500px;
 }
 
     .login .container .login-row .login-column .login-box #login-form {
@@ -24,3 +28,4 @@
         .login .container .login-row .login-column .login-box .login-form .register-link {
             margin-top: -85px;
         }
+*/

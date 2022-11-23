@@ -70,6 +70,9 @@
     <Content Include="Default.aspx" />
     <Content Include="DetallePropiedad.aspx" />
     <Content Include="EditarPropiedad.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Estilos\Estilos_Error.css" />
+    <Content Include="Estilos\Estilo_Contacto.css" />
     <Content Include="Estilos\Estilo_Login.css" />
     <Content Include="Global.asax" />
     <Content Include="ListadoPropiedades.aspx" />
@@ -121,6 +124,13 @@
     </Compile>
     <Compile Include="EditarPropiedad.aspx.designer.cs">
       <DependentUpon>EditarPropiedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
