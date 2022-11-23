@@ -1,5 +1,7 @@
 ﻿.login {
-    min-height:550px !important;
+    min-height: 550px !important;
+    align-content: end;
+}
 }
 /*
 .container {
