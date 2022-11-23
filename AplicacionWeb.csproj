@@ -73,6 +73,7 @@
     <Content Include="Error.aspx" />
     <Content Include="Estilos\Estilos_Error.css" />
     <Content Include="Estilos\Estilo_Contacto.css" />
+    <Content Include="Estilos\Estilo_Home.css" />
     <Content Include="Estilos\Estilo_Login.css" />
     <Content Include="Global.asax" />
     <Content Include="ListadoPropiedades.aspx" />

@@ -12,6 +12,7 @@
     <link href="Estilos/Estilos_Master.css" rel="stylesheet">
     <link href="Estilos/Estilo_Login.css" rel="stylesheet">
     <link href="Estilos/Estilo_Contacto.css" rel="stylesheet">
+    <link href="Estilos/Estilo_Home.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
 </head>
