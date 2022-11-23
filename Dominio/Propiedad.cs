@@ -9,7 +9,7 @@ namespace Dominio
     public class Propiedad
     {   
         public int IdPropiedad { get; set; }    
-        TiposPropiedad TipoPropiedad { get; set; }
+        public TiposPropiedad TipoPropiedad { get; set; }
         public string Descripcion { get; set; }
         public int CantAmbientes { get; set; }
         public float Mts2 { get; set; }

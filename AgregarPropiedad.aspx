@@ -21,6 +21,10 @@
                             <asp:TextBox ID="TextDescrip" runat="server" class="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
+                            <label for="CheckVenta" class="text-info">En Venta:</label>
+                            <asp:CheckBox ID="CheckVenta" runat="server" />
+                        </div>
+                        <div class="form-group">
                             <label for="TextCantAmb" class="text-info">Cantidad de ambientes:</label><br>
                             <asp:TextBox ID="TextCantAmb" runat="server" class="form-control"></asp:TextBox>
                         </div>

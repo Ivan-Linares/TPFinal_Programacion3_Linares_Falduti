@@ -24,19 +24,31 @@ namespace Aplicacion_Web
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            Propiedad NewPropiedad = new Propiedad();
-            PropiedadNegocio Negocio = new PropiedadNegocio();
-
             try
             {
-                //TODO: Hay que traer todos los parametros al objeto propiedad
+                Propiedad NewPropiedad = new Propiedad();
+                PropiedadNegocio Negocio = new PropiedadNegocio();
 
+                NewPropiedad.Descripcion = TextDescrip.Text;
+                NewPropiedad.CantAmbientes = int.Parse(TextCantAmb.Text);
+                NewPropiedad.Mts2 = float.Parse(TextMts.Text);
+                NewPropiedad.Direccion = TextDireccion.Text;
+                NewPropiedad.UrlImagen = TextUrlImagen.Text;
+                NewPropiedad.Precio = decimal.Parse(TextPrecio.Text);
+
+                if (CheckCochera.Checked) NewPropiedad.Cochera = true;
+                if(CheckVenta.Checked) NewPropiedad.EnVenta = true;
+
+                NewPropiedad.TipoPropiedad = new TiposPropiedad();
+                NewPropiedad.TipoPropiedad.IdTipo = int.Parse(DDTiposProp.SelectedValue);
+                
                 Negocio.Agregar_Propiedad(NewPropiedad);
                 Response.Redirect("ListadoPropiedades.aspx", false);
             }
             catch(Exception ex)
             {
                 Session.Add("Error", ex);
+                throw;
             }
         }
 
