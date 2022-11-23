@@ -24,31 +24,31 @@ namespace Aplicacion_Web
         protected global::System.Web.UI.ScriptManager ScriptManager;
 
         /// <summary>
-        /// Control TexDNI.
+        /// Control TextDNI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TexDNI;
+        protected global::System.Web.UI.WebControls.TextBox TextDNI;
 
         /// <summary>
-        /// Control TexNombre.
+        /// Control TextNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TexNombre;
+        protected global::System.Web.UI.WebControls.TextBox TextNombre;
 
         /// <summary>
-        /// Control TexApellido.
+        /// Control TextApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TexApellido;
+        protected global::System.Web.UI.WebControls.TextBox TextApellido;
 
         /// <summary>
         /// Control UpdatePanel1.
@@ -69,40 +69,40 @@ namespace Aplicacion_Web
         protected global::System.Web.UI.WebControls.Calendar Calendar;
 
         /// <summary>
-        /// Control TexDomicilio.
+        /// Control TextDomicilio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TexDomicilio;
+        protected global::System.Web.UI.WebControls.TextBox TextDomicilio;
 
         /// <summary>
-        /// Control TexEmail.
+        /// Control TextEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TexEmail;
+        protected global::System.Web.UI.WebControls.TextBox TextEmail;
 
         /// <summary>
-        /// Control TexUsuario.
+        /// Control TextUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TexUsuario;
+        protected global::System.Web.UI.WebControls.TextBox TextUsuario;
 
         /// <summary>
-        /// Control TexContra.
+        /// Control TextContra.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TexContra;
+        protected global::System.Web.UI.WebControls.TextBox TextContra;
 
         /// <summary>
         /// Control BotonRegister.

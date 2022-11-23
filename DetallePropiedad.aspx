@@ -7,7 +7,7 @@
             <div class="card-body">
             </div>
             <ul class="list-group list-group-flush" style="align-content: center; text-align: center">
-                <li class="list-group-item"><%: Propiedad.Tipo %></li>
+                <li class="list-group-item"><% %></li>
                 <li class="list-group-item">$<%: Propiedad.Precio %></li>
                 <li class="list-group-item"><%: Propiedad.CantAmbientes %></li>
             </ul>
