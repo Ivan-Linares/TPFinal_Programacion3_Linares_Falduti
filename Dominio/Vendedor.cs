@@ -17,7 +17,6 @@ namespace Dominio
         public string Dni { get; set; }
         public string Domicilio { get; set; }
         public DateTime FechaIngreso { get; set; }
-
         public bool Estado { get; set; }
     }
 }
