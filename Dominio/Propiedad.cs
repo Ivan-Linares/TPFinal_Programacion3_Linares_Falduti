@@ -12,7 +12,7 @@ namespace Dominio
         public TiposPropiedad TipoPropiedad { get; set; }
         public string Descripcion { get; set; }
         public int CantAmbientes { get; set; }
-        public float Mts2 { get; set; }
+        public decimal Mts2 { get; set; }
         public bool Cochera { get; set; }
         public string Direccion { get; set; }
         public string UrlImagen { get; set; }

@@ -31,7 +31,7 @@ namespace Aplicacion_Web
 
                 NewPropiedad.Descripcion = TextDescrip.Text;
                 NewPropiedad.CantAmbientes = int.Parse(TextCantAmb.Text);
-                NewPropiedad.Mts2 = float.Parse(TextMts.Text);
+                NewPropiedad.Mts2 = decimal.Parse(TextMts.Text);
                 NewPropiedad.Direccion = TextDireccion.Text;
                 NewPropiedad.UrlImagen = TextUrlImagen.Text;
                 NewPropiedad.Precio = decimal.Parse(TextPrecio.Text);
