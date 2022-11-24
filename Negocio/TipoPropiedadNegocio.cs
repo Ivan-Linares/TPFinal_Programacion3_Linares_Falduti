@@ -17,13 +17,15 @@ namespace Negocio
             try
             {
 
-                datos.Setear_Sp("");
+                datos.Setear_Sp("SP_LISTAR_TIPOPROPIEDAD");
 
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
                     TiposPropiedad aux = new TiposPropiedad();
 
+                    aux.IdTipo = datos.Lector.GetInt32(0);
+                    aux.Descripcion = datos.Lector.GetString(1);
 
                     lista.Add(aux);
                 }
