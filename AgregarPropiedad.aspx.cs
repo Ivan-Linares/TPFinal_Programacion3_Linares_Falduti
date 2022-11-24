@@ -31,12 +31,14 @@ namespace Aplicacion_Web
 
                 NewPropiedad.TipoPropiedad = new TiposPropiedad();
                 NewPropiedad.TipoPropiedad.IdTipo = int.Parse(DDTiposProp.SelectedValue);
+                
                 NewPropiedad.Descripcion = TextDescrip.Text;
                 NewPropiedad.CantAmbientes = int.Parse(TextCantAmb.Text);
                 NewPropiedad.Mts2 = decimal.Parse(TextMts.Text);
                 NewPropiedad.Direccion = TextDireccion.Text;
                 NewPropiedad.UrlImagen = TextUrlImagen.Text;
                 NewPropiedad.Precio = decimal.Parse(TextPrecio.Text);
+               
                 if (CheckCochera.Checked) NewPropiedad.Cochera = true;
                 if(CheckVenta.Checked) NewPropiedad.EnVenta = true;
                 
