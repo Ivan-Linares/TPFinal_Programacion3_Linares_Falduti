@@ -48,7 +48,7 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
 
-        <footer class="footer">
+       <%-- <footer class="footer">
             <div class="footer_contenido">
                 <h2>Bienes Raices</h2>
             </div>
@@ -56,7 +56,39 @@
                 <i class="fab fa-instagram"></i>
                 <i class="fab fa-linkedin"></i>
             </div>
-        </footer>
+        </footer>--%>
+
+
+
+    <footer class="footer-distributed">
+
+      <div class="footer-right">
+
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+
+      </div>
+
+      <div class="footer-left">
+
+        <p class="footer-links">
+
+          <a class="link-1" href="#">Home</a>
+
+          <a href="#">Propiedades</a>
+
+          <a href="#">Contacto</a>
+
+          <a href="#">Nosotros</a>
+
+        </p>
+
+        <p>Company Name &copy; 2022</p>
+      </div>
+
+    </footer>
     </form>
 </body>
 </html>
