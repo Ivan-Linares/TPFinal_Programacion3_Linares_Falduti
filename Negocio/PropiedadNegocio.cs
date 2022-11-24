@@ -112,5 +112,26 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void Eliminar_Propiedad(Propiedad DeleteProp)
+        {
+            ConexionBD datos = new ConexionBD();
+            try
+            {
+                datos.Setear_Sp("SP_ELIMINAR_PROPIEDAD");
+
+                datos.setearParametro("@IDPROPIEDAD", DeleteProp.IdPropiedad);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

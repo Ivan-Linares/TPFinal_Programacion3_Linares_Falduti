@@ -70,15 +70,13 @@ WHERE IDPROPIEDAD = @IDPROPIEDAD
 END
 GO
 ------------------------------------------------------------------
-CREATE PROC SP_ELIMINAR_PROPIEDAD(
-@IDPROPIEDAD INT
-)
+CREATE PROC SP_ELIMINAR_PROPIEDAD(@IDPROPIEDAD INT)
 AS
 BEGIN
-UPDATE PROPIEDADES SET ESTADO=@ESTADO
-WHERE IDPROPIEDAD=@IDPROPIEDAD
+UPDATE PROPIEDADES SET ESTADO = 0
+WHERE IDPROPIEDAD = @IDPROPIEDAD
 END
-
+GO
 
 
 ---------------------------------------------------------------VENDEDORES--------------------------------------------------------------------
