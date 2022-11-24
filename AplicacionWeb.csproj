@@ -74,6 +74,7 @@
     <Content Include="Estilos\Estilos_Error.css" />
     <Content Include="Estilos\Estilo_Contacto.css" />
     <Content Include="Estilos\Estilo_Home.css" />
+    <Content Include="Estilos\Estilo_ListadoProp.css" />
     <Content Include="Estilos\Estilo_Login.css" />
     <Content Include="Estilos\Estilo_Nosotros.css" />
     <Content Include="Global.asax" />
