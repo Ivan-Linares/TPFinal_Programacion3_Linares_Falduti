@@ -26,15 +26,15 @@
                         <article class="col-md-8">
                             <!--Texto fijo-->
                             <h2>Trabajamos para tu éxito</h2>
-                            <p>
+                            <b>
                                 Con 20 años de experiencia en el rubro inmobiliario, somos pioneros en el lado Este del barrio más joven de la ciudad.
 
 A través de nuestro equipo comercial y ubicados estratégicamente con nuestro local sobre Juana Manso, hemos desarrollado y comercializado varios de los emprendimientos residenciales en la zona, poniendo la piedra fundacional a un barrio que sigue creciendo en infraestructura y prestigio.
-                            </p>
-                            <p>
+                            </b>
+                            <b>
                                 Nuestro objetivo es conseguir que clientes y usuarios se sientan conectados en el nuevo mundo de la información con servicios y contenidos que no dificulten su relación, sino que la simplifiquen y la conviertan en un hecho cotidiano,
                         agradable y satisfactorio
-                            </p>
+                            </b>
 
                             <!--Componente de acordeon para la mision, visión y los valores-->
                           

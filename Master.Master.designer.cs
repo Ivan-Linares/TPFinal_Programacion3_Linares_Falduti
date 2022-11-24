@@ -60,22 +60,22 @@ namespace TPFinal_Programacion3_Linares_Falduti
         protected global::System.Web.UI.WebControls.HyperLink HlNosotros;
 
         /// <summary>
-        /// Control HyperLink1.
+        /// Control HlLogin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.HyperLink HlLogin;
 
         /// <summary>
-        /// Control H.
+        /// Control HlAgregarPropiedades.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink H;
+        protected global::System.Web.UI.WebControls.HyperLink HlAgregarPropiedades;
 
         /// <summary>
         /// Control ContentPlaceHolder1.

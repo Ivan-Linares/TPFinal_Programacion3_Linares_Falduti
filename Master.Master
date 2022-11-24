@@ -22,8 +22,8 @@
 
         <header class="Header">
             <nav class="navegacion">
-                <img src="imagenes/logo.svg" width="300" height="100" alt="Logo tipo de bienes Raices">
-                <ul class="menu">
+                <img src="imagenes/logo.svg" width="180" height="100" alt="Logo tipo de bienes Raices" >
+                <ul class="menu" style="align-items:center">
                     <li>
                         <asp:HyperLink ID="HlHome" CssClass="nav-link" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink>
                     </li>
@@ -37,10 +37,10 @@
                         <asp:HyperLink ID="HlNosotros" CssClass="nav-link" NavigateUrl="~/Nosotros.aspx" runat="server">Nosotros</asp:HyperLink>
                     </li>
                     <li>
-                        <asp:HyperLink ID="HyperLink1" CssClass="nav-link" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
+                        <asp:HyperLink ID="HlLogin" CssClass="nav-link" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
                     </li>
                     <li>
-                        <asp:HyperLink ID="H" CssClass="nav-link" NavigateUrl="~/AgregarPropiedad.aspx" runat="server">Add</asp:HyperLink>
+                        <asp:HyperLink ID="HlAgregarPropiedades" CssClass="nav-link" NavigateUrl="~/AgregarPropiedad.aspx" runat="server">Add</asp:HyperLink>
                     </li>
                 </ul>
             </nav>
