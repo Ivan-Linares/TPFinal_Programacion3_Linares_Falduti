@@ -51,13 +51,24 @@ namespace Negocio
             }
         }
 
-        public void Agregar_Propiedad(Propiedad nueva)
+        public void Agregar_Propiedad(Propiedad NewPropiedad)
         {
             ConexionBD datos = new ConexionBD();
 
             try
             {
-                datos.Setear_Sp("");
+                datos.Setear_Sp("SP_AGREGAR_PROPIEDAD");
+
+                datos.setearParametro("@TIPO_PROPIEDAD", NewPropiedad.TipoPropiedad.IdTipo);
+                datos.setearParametro("@DESCRIPCION", NewPropiedad.Descripcion);
+                datos.setearParametro("@CANT_AMBIENTES", NewPropiedad.CantAmbientes);
+                datos.setearParametro("@MTS2", NewPropiedad.Mts2);
+                datos.setearParametro("@COCHERA", NewPropiedad.Cochera);
+                datos.setearParametro("@DIRECCION", NewPropiedad.Direccion);
+                datos.setearParametro("@URL", NewPropiedad.UrlImagen);
+                datos.setearParametro("@VENTA", NewPropiedad.EnVenta);
+                datos.setearParametro("@PRECIO", NewPropiedad.Precio);
+                datos.setearParametro("@ESTADO", 1);
 
                 datos.ejecutarAccion();
             }

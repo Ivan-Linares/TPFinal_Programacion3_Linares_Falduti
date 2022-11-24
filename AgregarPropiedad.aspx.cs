@@ -29,18 +29,16 @@ namespace Aplicacion_Web
                 Propiedad NewPropiedad = new Propiedad();
                 PropiedadNegocio Negocio = new PropiedadNegocio();
 
+                NewPropiedad.TipoPropiedad = new TiposPropiedad();
+                NewPropiedad.TipoPropiedad.IdTipo = int.Parse(DDTiposProp.SelectedValue);
                 NewPropiedad.Descripcion = TextDescrip.Text;
                 NewPropiedad.CantAmbientes = int.Parse(TextCantAmb.Text);
                 NewPropiedad.Mts2 = decimal.Parse(TextMts.Text);
                 NewPropiedad.Direccion = TextDireccion.Text;
                 NewPropiedad.UrlImagen = TextUrlImagen.Text;
                 NewPropiedad.Precio = decimal.Parse(TextPrecio.Text);
-
                 if (CheckCochera.Checked) NewPropiedad.Cochera = true;
                 if(CheckVenta.Checked) NewPropiedad.EnVenta = true;
-
-                NewPropiedad.TipoPropiedad = new TiposPropiedad();
-                NewPropiedad.TipoPropiedad.IdTipo = int.Parse(DDTiposProp.SelectedValue);
                 
                 Negocio.Agregar_Propiedad(NewPropiedad);
                 Response.Redirect("ListadoPropiedades.aspx", false);
@@ -70,6 +68,7 @@ namespace Aplicacion_Web
             catch (Exception ex)
             {
                 Session.Add("Error", ex);
+                throw;
             }
         }
     }
