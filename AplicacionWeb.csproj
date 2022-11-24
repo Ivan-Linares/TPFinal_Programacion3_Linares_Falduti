@@ -78,6 +78,7 @@
     <Content Include="Estilos\Estilo_Login.css" />
     <Content Include="Estilos\Estilo_Nosotros.css" />
     <Content Include="Global.asax" />
+    <Content Include="imagenes\PlaceHolder.png" />
     <Content Include="ListadoPropiedades.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Nosotros.aspx" />
@@ -187,7 +188,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="imagenes\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

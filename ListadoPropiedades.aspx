@@ -7,7 +7,7 @@
             <asp:Repeater runat="server" ID="Repeater">
                 <ItemTemplate>
                     <div class="Card1">
-                        <img src="<%#Eval("UrlImagen") %>">
+                        <img src="<%#Eval("UrlImagen") %>" onerror="this.src= './imagenes/PlaceHolder.png'">
                         <br />
                         <br />
                         <p class="card-Descripcion"><%#Eval("Descripcion") %></p>

@@ -61,11 +61,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\PlaceHolder.png" />
     <Content Include="Scripts_DB\CREATE DATABASE.sql" />
     <Content Include="Scripts_DB\Sp variios.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

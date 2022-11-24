@@ -51,7 +51,7 @@
                             <div class="form-group">
                                 <label for="TextUrlImagen" class="text-info">Imagen:</label><br>
                                 <asp:TextBox ID="TextUrlImagen" runat="server" class="form-control" AutoPostBack="true" OnTextChanged="TextUrlImagen_TextChanged"></asp:TextBox>
-                                <asp:Image ID="ImagePropiedad" runat="server" ImageUrl="https://ichef.bbci.co.uk/news/640/cpsprodpb/7078/production/_99729782_gettyimages-88518346.jpg" />
+                                <asp:Image ID="ImagePropiedad" runat="server" ImageUrl="./imagenes/PlaceHolder.png" onerror="this.src= './imagenes/PlaceHolder.png'" />
                             </div>
                         </ContentTemplate>
                     </asp:UpdatePanel>

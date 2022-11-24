@@ -35,7 +35,7 @@ namespace Negocio
                     aux.Direccion = datos.Lector.GetString(7);
                     if (!(datos.Lector.GetString(8) is null))
                         aux.UrlImagen = datos.Lector.GetString(8);
-                    else aux.UrlImagen = "";
+                    else aux.UrlImagen = "./Images/PlaceHolder.png";
                     aux.EnVenta = datos.Lector.GetBoolean(9);
                     aux.Precio = datos.Lector.GetDecimal(10);
                     aux.Estado = datos.Lector.GetBoolean(11);
