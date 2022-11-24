@@ -88,6 +88,10 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        public Usuario LoguearUsuario(string user, string password)
+        {
+            return new Usuario();
+        }
     }
 }
 
