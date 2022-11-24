@@ -64,5 +64,8 @@
     <Content Include="Scripts_DB\CREATE DATABASE.sql" />
     <Content Include="Scripts_DB\Sp variios.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
