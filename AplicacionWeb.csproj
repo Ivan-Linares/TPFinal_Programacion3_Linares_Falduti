@@ -80,6 +80,7 @@
     <Content Include="Global.asax" />
     <Content Include="ListadoPropiedades.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="MenuAdmin.aspx" />
     <Content Include="Nosotros.aspx" />
     <Content Include="Estilos\Estilos_Master.css" />
     <Content Include="Registrarse.aspx" />
@@ -158,6 +159,13 @@
     </Compile>
     <Compile Include="Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin.aspx.cs">
+      <DependentUpon>MenuAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin.aspx.designer.cs">
+      <DependentUpon>MenuAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Nosotros.aspx.cs">
       <DependentUpon>Nosotros.aspx</DependentUpon>
