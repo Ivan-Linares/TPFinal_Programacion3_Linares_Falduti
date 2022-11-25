@@ -1,0 +1,15 @@
+﻿.AbmAdmin {
+    min-height: 1000px !important;
+    align-content: end;
+}
+
+.ContenedorAbm {
+    width: 100%;
+    max-width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-content: end;
+    background-image: url(imagenes/destacada3.jpg);
+}
