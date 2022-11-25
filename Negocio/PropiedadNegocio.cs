@@ -35,7 +35,7 @@ namespace Negocio
                     aux.Direccion = datos.Lector.GetString(7);
                     if (!(datos.Lector.GetString(8) is null))
                         aux.UrlImagen = datos.Lector.GetString(8);
-                    else aux.UrlImagen = "https://ichef.bbci.co.uk/news/640/cpsprodpb/7078/production/_99729782_gettyimages-88518346.jpg";
+                    else aux.UrlImagen = "./Images/PlaceHolder.png";
                     aux.EnVenta = datos.Lector.GetBoolean(9);
                     aux.Precio = datos.Lector.GetDecimal(10);
                     aux.Estado = datos.Lector.GetBoolean(11);
@@ -51,13 +51,24 @@ namespace Negocio
             }
         }
 
-        public void Agregar_Propiedad(Propiedad nueva)
+        public void Agregar_Propiedad(Propiedad NewPropiedad)
         {
             ConexionBD datos = new ConexionBD();
 
             try
             {
-                datos.Setear_Sp("");
+                datos.Setear_Sp("SP_AGREGAR_PROPIEDAD");
+
+                datos.setearParametro("@TIPO_PROPIEDAD", NewPropiedad.TipoPropiedad.IdTipo);
+                datos.setearParametro("@DESCRIPCION", NewPropiedad.Descripcion);
+                datos.setearParametro("@CANT_AMBIENTES", NewPropiedad.CantAmbientes);
+                datos.setearParametro("@MTS2", NewPropiedad.Mts2);
+                datos.setearParametro("@COCHERA", NewPropiedad.Cochera);
+                datos.setearParametro("@DIRECCION", NewPropiedad.Direccion);
+                datos.setearParametro("@URL", NewPropiedad.UrlImagen);
+                datos.setearParametro("@VENTA", NewPropiedad.EnVenta);
+                datos.setearParametro("@PRECIO", NewPropiedad.Precio);
+                datos.setearParametro("@ESTADO", 1);
 
                 datos.ejecutarAccion();
             }
@@ -71,12 +82,45 @@ namespace Negocio
             }
         }
 
-        public void Modificar_Propiedad(Propiedad Prop)
+        public void Modificar_Propiedad(Propiedad AlterPropiedad)
         {
             ConexionBD datos = new ConexionBD();
             try
             {
-                datos.Setear_Sp("");
+                datos.Setear_Sp("SP_MODIFICAR_PROPIEDAD");
+
+                datos.setearParametro("@IDPROPIEDAD", AlterPropiedad.IdPropiedad);
+                datos.setearParametro("@TIPO_PROPIEDAD", AlterPropiedad.TipoPropiedad.IdTipo);
+                datos.setearParametro("@DESCRIPCION", AlterPropiedad.Descripcion);
+                datos.setearParametro("@CANT_AMBIENTES", AlterPropiedad.CantAmbientes);
+                datos.setearParametro("@MTS2", AlterPropiedad.Mts2);
+                datos.setearParametro("@COCHERA", AlterPropiedad.Cochera);
+                datos.setearParametro("@DIRECCION", AlterPropiedad.Direccion);
+                datos.setearParametro("@URL", AlterPropiedad.UrlImagen);
+                datos.setearParametro("@VENTA", AlterPropiedad.EnVenta);
+                datos.setearParametro("@PRECIO", AlterPropiedad.Precio);
+                datos.setearParametro("@ESTADO", 1);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Eliminar_Propiedad(Propiedad DeleteProp)
+        {
+            ConexionBD datos = new ConexionBD();
+            try
+            {
+                datos.Setear_Sp("SP_ELIMINAR_PROPIEDAD");
+
+                datos.setearParametro("@IDPROPIEDAD", DeleteProp.IdPropiedad);
 
                 datos.ejecutarAccion();
             }
