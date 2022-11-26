@@ -72,6 +72,7 @@
     <Content Include="EditarPropiedad.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Estilos\Estilos_Error.css" />
+    <Content Include="Estilos\Estilos_Registrarse.css" />
     <Content Include="Estilos\Estilo_Abm.css" />
     <Content Include="Estilos\Estilo_Contacto.css" />
     <Content Include="Estilos\Estilo_Home.css" />
