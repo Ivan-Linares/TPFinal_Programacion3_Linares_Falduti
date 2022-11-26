@@ -49,6 +49,10 @@ namespace Negocio
             {
                 throw ex;
             }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
 
         public void Agregar_Propiedad(Propiedad NewPropiedad)
