@@ -14,14 +14,13 @@ namespace Dominio
     }
     public class Usuario
     {
-        public int IdUsuario { get; set; }  
+        public int IdUsuario { get; set; }
+        public int TipoUsuario { get; set; } //0 CLIENTES - 1 VENDEDORES - 2 ADMINISTRADOR
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Email { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public Nivel_Acceso NivelAcceso { get; set; }
-        public string User { get; set; }
         public string Password { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public bool Estado { get; set; }
     }
 }

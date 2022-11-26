@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Vendedor : Usuario
+    public class Vendedor
     {
-        public Vendedor()
-        {
-            NivelAcceso = Nivel_Acceso.VENDEDOR;
-        }
         public int IdVendedor { get; set; }
         public string Legajo { get; set; }
         public string Dni { get; set; }

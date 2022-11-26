@@ -15,13 +15,19 @@ namespace Negocio
             ConexionBD datos = new ConexionBD();
             try
             {
-                datos.Setear_Sp("");
+                datos.Setear_Sp("SP_LISTAR_VENDORES");
 
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
                     Vendedor aux = new Vendedor();
 
+                    aux.IdVendedor = datos.Lector.GetInt32(0);
+                    aux.Legajo = datos.Lector.GetString(1);
+                    aux.Dni = datos.Lector.GetString(2);
+                    aux.Domicilio = datos.Lector.GetString(3);
+                    aux.FechaIngreso = datos.Lector.GetDateTime(4);
+                    aux.Estado = datos.Lector.GetBoolean(5);
 
                     lista.Add(aux);
                 }
@@ -33,24 +39,19 @@ namespace Negocio
                 throw ex;
             }
         }
-        public void AgregarVendedor(Vendedor New)
+        public void AgregarVendedor(Vendedor NewVendedor)
         {
             ConexionBD datos = new ConexionBD();
-            //AGREGAR A TABLA VENDEDORES
-            try
-            {
-                datos.Setear_Sp("");
 
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            //AGREGAR A TABLA USUARIOS
             try
             {
-                datos.Setear_Sp("");
+                datos.Setear_Sp("SP_AGREGAR_VENDEDOR");
+                
+                datos.setearParametro("@LEGAJO", NewVendedor.Legajo);
+                datos.setearParametro("@DNI", NewVendedor.Dni);
+                datos.setearParametro("@DOMICILIO", NewVendedor.Domicilio);
+                datos.setearParametro("@FEC_INGRESO", NewVendedor.FechaIngreso);
+                datos.setearParametro("@ESTADO", 1);
 
                 datos.ejecutarAccion();
             }
@@ -64,24 +65,20 @@ namespace Negocio
             }
         }
 
-        public void ModificarVendedor(Vendedor Updated)
+        public void ModificarVendedor(Vendedor UpdatedVendedor)
         {
             ConexionBD datos = new ConexionBD();
-            //MODIFICAR DE TABLA VENDEDORES
+            
             try
             {
-                datos.Setear_Sp("");
+                datos.Setear_Sp("SP_MODIFICAR_VENDEDOR");
 
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            //MODIFICAR DE TABLA USUARIOS
-            try
-            {
-                datos.Setear_Sp("");
+                datos.setearParametro("@IDVENDEDOR", UpdatedVendedor.IdVendedor);
+                datos.setearParametro("@LEGAJO", UpdatedVendedor.Legajo);
+                datos.setearParametro("@DNI", UpdatedVendedor.Dni);
+                datos.setearParametro("@DOMICILIO", UpdatedVendedor.Domicilio);
+                datos.setearParametro("@FEC_INGRESO", UpdatedVendedor.FechaIngreso);
+                datos.setearParametro("@ESTADO", UpdatedVendedor.Estado);
 
                 datos.ejecutarAccion();
             }
@@ -95,24 +92,15 @@ namespace Negocio
             }
         }
 
-        public void EliminarVendedor(Vendedor Deleted)
+        public void EliminarVendedor(Vendedor DeletedVendedor)
         {
             ConexionBD datos = new ConexionBD();
-            //BORRAR DE TABLA VENDEDORES
+            
             try
             {
-                datos.Setear_Sp("");
+                datos.Setear_Sp("SP_ELIMINAR_VENDEDOR");
 
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            //BORRAR DE TABLA USUARIOS
-            try
-            {
-                datos.Setear_Sp("");
+                datos.setearParametro("@IDVENDEDOR", DeletedVendedor.IdVendedor);
 
                 datos.ejecutarAccion();
             }
