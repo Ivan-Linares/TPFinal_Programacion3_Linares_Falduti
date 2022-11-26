@@ -1,9 +1,6 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dominio;
 
 namespace Negocio
 {
@@ -56,8 +53,65 @@ namespace Negocio
             {
                 datos.Setear_Sp("SP_AGREGAR_PROPIEDAD");
 
-                datos.setearParametro("", NewUsuario);
+                datos.setearParametro("@NOMBRE", NewUsuario.Nombre);
+                datos.setearParametro("@APELLIDO", NewUsuario.Apellido);
+                datos.setearParametro("@EMAIL", NewUsuario.Email);
+                datos.setearParametro("@FECHA_NAC", NewUsuario.FechaNacimiento);
+                datos.setearParametro("@NIVEL", NewUsuario.Tipo.Nivel);
+                datos.setearParametro("@PASS", NewUsuario.Password);
+                datos.setearParametro("@ESTADO", 1);
 
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Modificar_Usuario(Usuario UpdatedUsuario)
+        {
+            ConexionBD datos = new ConexionBD();
+
+            try
+            {
+                datos.Setear_Sp("SP_MODIFICAR_USUARIO");
+
+                datos.setearParametro("@IDUSUARIO", UpdatedUsuario.IdUsuario);
+                datos.setearParametro("@NOMBRE", UpdatedUsuario.Nombre);
+                datos.setearParametro("@APELLIDO", UpdatedUsuario.Apellido);
+                datos.setearParametro("@EMAIL", UpdatedUsuario.Email);
+                datos.setearParametro("@FECHA_NAC", UpdatedUsuario.FechaNacimiento);
+                datos.setearParametro("@NIVEL", UpdatedUsuario.Tipo.Nivel);
+                datos.setearParametro("@PASS", UpdatedUsuario.Password);
+                datos.setearParametro("@ESTADO", UpdatedUsuario.Estado);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Eliminar_Usuario(Usuario DeletedUsuario)
+        {
+            ConexionBD datos = new ConexionBD();
+
+            try
+            {
+                datos.Setear_Sp("SP_ELIMINAR_USUARIO");
+
+                datos.setearParametro("@IDUSUARIO", DeletedUsuario.IdUsuario);
+                
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
