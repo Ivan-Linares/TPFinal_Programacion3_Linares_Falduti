@@ -25,7 +25,7 @@ namespace Negocio
                     aux.Email = datos.Lector.GetString(3);
                     aux.FechaNacimiento = datos.Lector.GetDateTime(4);
                     aux.Tipo = new TipoUsuario();
-                    aux.Tipo.Nivel = datos.Lector.GetInt32(5);
+                    aux.Tipo.Id = datos.Lector.GetInt32(5);
                     aux.Tipo.Descripcion = datos.Lector.GetString(6);
                     aux.Password = datos.Lector.GetString(7);
                     aux.Estado = datos.Lector.GetBoolean(8);
@@ -57,7 +57,7 @@ namespace Negocio
                 datos.setearParametro("@APELLIDO", NewUsuario.Apellido);
                 datos.setearParametro("@EMAIL", NewUsuario.Email);
                 datos.setearParametro("@FECHA_NAC", NewUsuario.FechaNacimiento);
-                datos.setearParametro("@NIVEL", NewUsuario.Tipo.Nivel);
+                datos.setearParametro("@NIVEL", NewUsuario.Tipo.Id);
                 datos.setearParametro("@PASS", NewUsuario.Password);
                 datos.setearParametro("@ESTADO", 1);
 
@@ -86,7 +86,7 @@ namespace Negocio
                 datos.setearParametro("@APELLIDO", UpdatedUsuario.Apellido);
                 datos.setearParametro("@EMAIL", UpdatedUsuario.Email);
                 datos.setearParametro("@FECHA_NAC", UpdatedUsuario.FechaNacimiento);
-                datos.setearParametro("@NIVEL", UpdatedUsuario.Tipo.Nivel);
+                //datos.setearParametro("@NIVEL", UpdatedUsuario.Tipo.Nivel);
                 datos.setearParametro("@PASS", UpdatedUsuario.Password);
                 datos.setearParametro("@ESTADO", UpdatedUsuario.Estado);
 

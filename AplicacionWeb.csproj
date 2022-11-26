@@ -79,6 +79,7 @@
     <Content Include="Estilos\Estilo_ListadoProp.css" />
     <Content Include="Estilos\Estilo_Login.css" />
     <Content Include="Estilos\Estilo_Nosotros.css" />
+    <Content Include="Estilos\Estilo_Vendedor.css" />
     <Content Include="Global.asax" />
     <Content Include="imagenes\PlaceHolder.png" />
     <Content Include="ListadoPropiedades.aspx" />
@@ -87,6 +88,7 @@
     <Content Include="Nosotros.aspx" />
     <Content Include="Estilos\Estilos_Master.css" />
     <Content Include="Registrarse.aspx" />
+    <Content Include="VendedoresForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +186,13 @@
     </Compile>
     <Compile Include="Registrarse.aspx.designer.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VendedoresForm.aspx.cs">
+      <DependentUpon>VendedoresForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VendedoresForm.aspx.designer.cs">
+      <DependentUpon>VendedoresForm.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
