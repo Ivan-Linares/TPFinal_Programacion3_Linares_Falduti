@@ -15,7 +15,7 @@ namespace Dominio
     public class Usuario
     {
         public int IdUsuario { get; set; }
-        public int TipoUsuario { get; set; } //0 CLIENTES - 1 VENDEDORES - 2 ADMINISTRADOR
+        public TipoUsuario Tipo { get; set; } //0 ADMINISTRADOR - 1 VENDEDORES - 2 CLIENTE
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Email { get; set; }
