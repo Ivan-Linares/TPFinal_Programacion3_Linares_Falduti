@@ -3,13 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
-
-    <div id="login">
-        <div class="container">
+    <div class="Registrarse">
+        <br />
+        <br />
+        <div class="ContenedorReg" >
             <div id="register-row" class="row justify-content-center align-items-center">
                 <div id="register-column" class="col-md-6">
                     <div id="register-box" class="col-md-12">
-                        <div id="register-form" class="form" action="" method="post">
+                        <div class="form" method="post">
                             <h3 class="text-center text-info">Registrate!</h3>
                             <div class="form-group">
                                 <label for="TextDNI" class="text-info">DNI:</label><br>
@@ -26,10 +27,8 @@
 
                             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                 <ContentTemplate>
-                                    <div class="form-group">
-                                        <label for="Calendar" class="text-info">Fecha de Nacimiento:</label><br>
-                                        <asp:Calendar ID="Calendar" runat="server"></asp:Calendar>
-                                    </div>
+                                    <label for="txtFecha" class="form-label">Fecha de Nacimiento</label>
+                                    <asp:TextBox runat="server" ID="txtFechaNac" TextMode="Date" CssClass="form-control" />
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 
@@ -41,10 +40,7 @@
                                 <label for="TextEmail" class="text-info">Email:</label><br>
                                 <asp:TextBox ID="TextEmail" runat="server" class="form-control"></asp:TextBox>
                             </div>
-                            <div class="form-group">
-                                <label for="TextUsuario" class="text-info">Usuario:</label><br>
-                                <asp:TextBox ID="TextUsuario" runat="server" class="form-control"></asp:TextBox>
-                            </div>
+
                             <div class="form-group">
                                 <label for="TextContra" class="text-info">Contraseña:</label><br>
                                 <asp:TextBox ID="TextContra" runat="server" class="form-control"></asp:TextBox>
@@ -58,4 +54,5 @@
             </div>
         </div>
     </div>
+
 </asp:Content>

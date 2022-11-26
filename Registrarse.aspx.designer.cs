@@ -60,13 +60,13 @@ namespace Aplicacion_Web
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control Calendar.
+        /// Control txtFechaNac.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar;
+        protected global::System.Web.UI.WebControls.TextBox txtFechaNac;
 
         /// <summary>
         /// Control TextDomicilio.
@@ -85,15 +85,6 @@ namespace Aplicacion_Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextEmail;
-
-        /// <summary>
-        /// Control TextUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextUsuario;
 
         /// <summary>
         /// Control TextContra.

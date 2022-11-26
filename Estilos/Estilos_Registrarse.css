@@ -1,0 +1,30 @@
+﻿.Registrarse {
+    min-height: 550px !important;
+    /*    max-width: 100% !important;*/
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    background-color:turquoise;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "lato", sans-serif;
+}
+
+.signupFrm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form {
+    background-color: beige;
+    width: 400px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+
+
+/* Hide the placeholder texts (a) */
