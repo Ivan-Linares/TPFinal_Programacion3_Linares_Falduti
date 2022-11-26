@@ -1,164 +1,82 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="MenuAdmin.aspx.cs" Inherits="Aplicacion_Web.MenuAdmin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
     <div class="AbmAdmin">
-        <div class="ContenedorAbm" style="background-image: url(imagenes/destacada3.jpg);">
 
 
-            <div style="margin: 0 auto;">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">NUEVA PROPIEDAD</h5>
-                                <p class="card-text">Ingrese una nueva propiedad</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">MODIFICAR PROPIEDAD</h5>
-                                <p class="card-text">Modificar una propiedad</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/TurnoListado.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="ContenedorAbm" style="background-image: url(imagenes/header3.jpg)">
+            <div class="Card">
+                <h5>PROPIEDADES</h5>
+                <p>Agregar una nueva propiedad</p>
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Agregar</a>
                 <br />
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">AGREGAR USUARIO</h5>
-                                <p class="card-text">Ingresar un nuevo usuario al sistema</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/UsuarioForm.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">MODIFICAR USUARIO</h5>
-                                <p class="card-text">Modificar usuario registrado</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/UsuarioListado.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <br />
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">AGREGAR TIPO PROPIEDAD</h5>
-                                <p class="card-text">Ingresar un nuevo tipo de propiedad</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/ObraSocialForm.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">MODIFICAR TIPO DE PROPIEDAD</h5>
-                                <p class="card-text">Modificar tipo de propiedad existente</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/ObraSocialListado.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">ALTA VISITA</h5>
-                                <p class="card-text">Ingresar una nueva visita</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/EstadoTurnoForm.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">MODIFICAR VISITA</h5>
-                                <p class="card-text">Modificar estado de una visira</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/EstadoTurnoListado.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <br />
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">AGREGAR TIPO DE PERFIL</h5>
-                                <p class="card-text">Ingresar un nuevo tipo de perfil de usuario</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/PerfilUsuarioForm.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">MODIFICAR TIPO DE PERFIL</h5>
-                                <p class="card-text">Modificar tipo de perfil de usuario existente</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/PerfilUsuarioListado.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">AGREGAR VENDEDOR</h5>
-                                <p class="card-text">Ingresar un nuevo tipo de perfil de usuario</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/PerfilUsuarioForm.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card border-light mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">MODIFICAR VENDEDOR</h5>
-                                <p class="card-text">Modificar tipo de perfil de usuario existente</p>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a href="../Tablas/PerfilUsuarioListado.aspx" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <p>Modificar una propiedad</p>
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
             </div>
+
+            <div class="Card">
+                <h5>USUARIOS</h5>
+                <br />
+                <p>Agregar usuario</p>
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Agregar</a>
+                <br />
+                <br />
+                <p>Modificar usuario</p>
+                <br />
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
+            </div>
+
+
+            <div class="Card">
+                <h5>TIPO PROPIEDAD</h5>
+                <p>Agregar un tipo propiedad</p>
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Agregar</a>
+                <br />
+                <br />
+                <p>Modificar tipo propiedad</p>
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
+            </div>
+
+
+
+            <div class="Card">
+                <h5>VISITAS</h5>
+                <p>Agregar visita</p>
+                <br />
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Agregar</a>
+                <br />
+                <br />
+                <p>Modificar visita</p>
+                <br />
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
+            </div>
+
+            <div class="Card">
+                <h5>PERFILES</h5>
+                <p>Agregar un perfil</p>
+                <br />
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Agregar</a>
+                <br />
+                <br />
+                <p>Modificar un perfil</p>
+                <br />
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
+            </div>
+
+            <div class="Card">
+                <h5>VENDEDORES</h5>
+                <p>Agregar un vendedor</p>
+                <br />
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Agregar</a>
+                <br />
+                <br />
+                <p>Modificar un vendedor</p>
+                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
+            </div>
+
+        </div>
     </div>
 
-            </div>
 </asp:Content>

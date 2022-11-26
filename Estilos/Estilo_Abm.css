@@ -1,15 +1,50 @@
 ﻿.AbmAdmin {
-    min-height: 1000px !important;
-    align-content: end;
+    min-height: 900px !important;
+    max-width: 100% !important;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
 }
 
 .ContenedorAbm {
     width: 100%;
     max-width: 100%;
-    height: 1000px;
+    height: 900px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    align-content: end;
-    background-image: url(imagenes/destacada3.jpg);
+    align-content: center;
+  
 }
+
+    .ContenedorAbm .Card {
+        width: 200px;
+        height: 300px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+        overflow: hidden;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.25s;
+        background-color:paleturquoise;
+    }
+
+/*        .ContenedorAbm .Card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 12px 16px rgba(0,0,0,0.02)
+        }
+*/
+
+
+.ContenedorAbm .Card h5 {
+    font-weight: 600;
+    color:lightslategray;
+}
+
+.ContenedorAbm .Card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+}
+

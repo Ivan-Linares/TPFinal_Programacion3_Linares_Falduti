@@ -10,7 +10,7 @@ namespace Dominio
     {
         public Cliente()
         {
-            NivelAcceso = Nivel_Acceso.CLIENTE;
+        
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Dominio
     {
         public Administrador()
         {
-            NivelAcceso = Nivel_Acceso.ADMINISTRADOR;
+            
         }
     }
 }
