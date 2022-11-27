@@ -115,7 +115,7 @@ namespace Aplicacion_Web
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 

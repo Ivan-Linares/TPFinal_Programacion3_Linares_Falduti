@@ -18,6 +18,8 @@
                     <asp:CheckBoxField HeaderText="Cochera" DataField="Cochera" />
                     <asp:CheckBoxField HeaderText="EnVenta" DataField="EnVenta" />
                     <asp:CheckBoxField HeaderText="" DataField="Estado" />
+                    <asp:CommandField HeaderText="Modificar" ShowSelectButton="true" SelectText="✍" />
+                    <asp:CommandField HeaderText="Eliminar" ShowSelectButton="true" SelectText="X" />
                 </Columns>
             </asp:GridView>
         </div>
