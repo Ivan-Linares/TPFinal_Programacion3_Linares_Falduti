@@ -9,7 +9,7 @@
             <div class="Card">
                 <h5>PROPIEDADES</h5>
                 <p>Agregar una nueva propiedad</p>
-                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Agregar</a>
+                <a href="../PropiedadesAdmin.aspx" class="btn btn-primary">Agregar</a>
                 <br />
                 <br />
                 <p>Modificar una propiedad</p>

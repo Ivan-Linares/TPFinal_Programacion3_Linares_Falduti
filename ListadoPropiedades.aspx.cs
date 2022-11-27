@@ -17,18 +17,6 @@ namespace Aplicacion_Web
             Cargar();
         }
 
-        //protected void btnDescrip_Click(object sender, EventArgs e)
-        //{
-        //    string ID = ((Button)sender).CommandArgument.ToString();
-
-        //    Response.Redirect("DetallePropiedad.aspx?IdPropiedad=" + ID, false);
-        //}
-
-        protected void btnFav_Click(object sender, EventArgs e)
-        {
-            string ID = ((Button)sender).CommandArgument.ToString();
-        }
-
         private void Cargar()
         {
             PropiedadNegocio Negocio = new PropiedadNegocio();
@@ -40,6 +28,11 @@ namespace Aplicacion_Web
                 Repeater.DataSource = ListaPropiedades;
                 Repeater.DataBind();
             }
+        }
+
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+            string ID = ((Button)sender).CommandArgument.ToString();
         }
     }
 }

@@ -87,6 +87,7 @@
     <Content Include="MenuAdmin.aspx" />
     <Content Include="Nosotros.aspx" />
     <Content Include="Estilos\Estilos_Master.css" />
+    <Content Include="PropiedadesAdmin.aspx" />
     <Content Include="Registrarse.aspx" />
     <Content Include="VendedoresForm.aspx" />
     <Content Include="Web.config" />
@@ -180,6 +181,13 @@
       <DependentUpon>Nosotros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropiedadesAdmin.aspx.cs">
+      <DependentUpon>PropiedadesAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PropiedadesAdmin.aspx.designer.cs">
+      <DependentUpon>PropiedadesAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registrarse.aspx.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -11,11 +11,11 @@
                         <br />
                         <br />
                         <p class="card-Descripcion"><%#Eval("Descripcion") %></p>
-                         <br />
-                        <p class="card-Precio">$<%#Eval("Precio") %></p> 
+                        <br />
+                        <p class="card-Precio">$<%#Eval("Precio") %></p>
                         <br />
                         <a href="DetallePropiedad.aspx?id=<%#Eval("IdPropiedad")%>">Ver Detalle</a>
-                        <asp:Button ID="btnFav" runat="server" Text="Agregar a Favoritos" CssClass="btn btn-primary" CommandArgument='<%#Eval("IdPropiedad") %>' CommandName="IdPropiedad" OnClick="btnFav_Click" />
+                        <asp:Button ID="btnComprar" runat="server" Text="Alquilar/Comprar" CssClass="btn btn-primary" CommandArgument='<%#Eval("IdPropiedad") %>' CommandName="IdPropiedad" OnClick="btnComprar_Click" />
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
