@@ -14,7 +14,7 @@
                          <br />
                         <p class="card-Precio">$<%#Eval("Precio") %></p> 
                         <br />
-                        <asp:Button ID="btnDescrip" runat="server" Text="Ver Detalle" CssClass="btn btn-primary" CommandArgument='<%#Eval("IdPropiedad") %>' CommandName="IdPropiedad" OnClick="btnDescrip_Click" />
+                        <a href="DetallePropiedad.aspx?id=<%#Eval("IdPropiedad")%>">Ver Detalle</a>
                         <asp:Button ID="btnFav" runat="server" Text="Agregar a Favoritos" CssClass="btn btn-primary" CommandArgument='<%#Eval("IdPropiedad") %>' CommandName="IdPropiedad" OnClick="btnFav_Click" />
                     </div>
                 </ItemTemplate>

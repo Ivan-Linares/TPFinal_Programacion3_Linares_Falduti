@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
 using Negocio;
+
 namespace Aplicacion_Web
 {
     public partial class ListadoPropiedades : System.Web.UI.Page
@@ -16,12 +17,12 @@ namespace Aplicacion_Web
             Cargar();
         }
 
-        protected void btnDescrip_Click(object sender, EventArgs e)
-        {
-            string ID = ((Button)sender).CommandArgument.ToString();
+        //protected void btnDescrip_Click(object sender, EventArgs e)
+        //{
+        //    string ID = ((Button)sender).CommandArgument.ToString();
 
-            Response.Redirect("DetallePropiedad.aspx?IdPropiedad=" + ID, false);
-        }
+        //    Response.Redirect("DetallePropiedad.aspx?IdPropiedad=" + ID, false);
+        //}
 
         protected void btnFav_Click(object sender, EventArgs e)
         {

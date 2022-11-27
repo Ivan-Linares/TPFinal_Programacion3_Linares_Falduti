@@ -15,7 +15,7 @@ namespace Aplicacion_Web
         public Propiedad Propiedad = new Propiedad();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Cargar(); 
+            Cargar();
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
@@ -25,16 +25,29 @@ namespace Aplicacion_Web
 
         private void Cargar()
         {
-            PropiedadNegocio propiedadNegocio = new PropiedadNegocio();
-            ListaPropiedad = propiedadNegocio.Listar();
-
-            string ID = Request.QueryString["ID"] != null ? Request.QueryString["ID"].ToString() : "";
-
-            foreach (Propiedad propiedad in ListaPropiedad)
+            try
             {
-                if (propiedad.IdPropiedad == int.Parse(ID))
-                    Propiedad = propiedad;
+                PropiedadNegocio propiedadNegocio = new PropiedadNegocio();
+                ListaPropiedad = propiedadNegocio.Listar();
+                string ID;
+
+                if (Request.QueryString["Id"] != null)
+                    ID = Request.QueryString["Id"].ToString();
+                else
+                    ID = "";
+
+                foreach (Propiedad prop in ListaPropiedad)
+                {
+                    if (prop.IdPropiedad == int.Parse(ID))
+                        Propiedad = prop;
+                }
+
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }
