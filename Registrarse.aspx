@@ -6,11 +6,12 @@
     <div class="Registrarse">
         <br />
         <br />
-        <div class="ContenedorReg" >
+        <div class="ContenedorReg" style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBmFJ_pHNKs2VfP4NvxFq91T8BPj3_7D8qRado1Fdq&s)" >
             <div id="register-row" class="row justify-content-center align-items-center">
                 <div id="register-column" class="col-md-6">
                     <div id="register-box" class="col-md-12">
                         <div class="form" method="post">
+                            <br />
                             <h3 class="text-center text-info">Registrate!</h3>
                             <div class="form-group">
                                 <label for="TextDNI" class="text-info">DNI:</label><br>

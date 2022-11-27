@@ -17,6 +17,7 @@
     <link href="Estilos/Estilo_ListadoProp.css" rel="stylesheet">
     <link href="Estilos/Estilo_Abm.css" rel="stylesheet">
     <link href="Estilos/Estilos_Registrarse.css" rel="stylesheet">
+    <link href="Estilos/Estilos_Vendedor.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
 </head>
 <body>
@@ -42,13 +43,25 @@
                         <asp:HyperLink ID="HlLogin" CssClass="nav-link" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
                     </li>
                     <li>
-                        <asp:HyperLink ID="HlAdmin" CssClass="nav-link" NavigateUrl="~/MenuAdmin.aspx" runat="server">Administrador</asp:HyperLink>
+                        <asp:HyperLink ID="HlAgregarPropiedades" CssClass="nav-link" NavigateUrl="~/AgregarPropiedad.aspx" runat="server">Add</asp:HyperLink>
                     </li>
                 </ul>
             </nav>
         </header>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
+
+        <%-- <footer class="footer">
+            <div class="footer_contenido">
+                <h2>Bienes Raices</h2>
+            </div>
+            <div class="Redes">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </footer>--%>
+
+
 
         <footer class="footer-distributed">
 

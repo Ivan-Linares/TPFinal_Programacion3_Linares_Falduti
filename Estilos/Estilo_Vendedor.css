@@ -1,0 +1,16 @@
+﻿.Vendedores{
+
+}
+
+
+.ContenedorVendedores {
+    width: 100%;
+    max-width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    align-content: end;
+    background-color: white;
+}

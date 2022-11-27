@@ -9,6 +9,9 @@ namespace Dominio
     public class Vendedor
     {
         public int IdVendedor { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Sexo { get; set; }  
         public string Legajo { get; set; }
         public string Dni { get; set; }
         public string Domicilio { get; set; }
