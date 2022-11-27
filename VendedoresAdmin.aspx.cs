@@ -69,10 +69,11 @@ namespace Aplicacion_Web
 
                 usuario.Apellido = txtApellidos.Text;
                 usuario.Nombre = txtNombres.Text;
-                usuario.FechaIngreso = DateTime.Parse(txtFechaIng.Text);
                 usuario.Sexo = ddlSexo.SelectedValue;
-
+                usuario.Legajo = txtNroLegajo.Text;
+                usuario.FechaIngreso = DateTime.Parse(txtFechaIng.Text);
                 usuario.Dni = txtDni.Text;
+                usuario.Domicilio=txtDomicilio.Text;
 
 
 

@@ -46,11 +46,14 @@ namespace Negocio
             try
             {
                 datos.Setear_Sp("SP_AGREGAR_VENDEDOR");
-                
+
+                datos.setearParametro("@APELLIDO", NewVendedor.Apellido);
+                datos.setearParametro("@NOMBRE", NewVendedor.Nombre);
+                datos.setearParametro("SEXO", NewVendedor.Sexo);
                 datos.setearParametro("@LEGAJO", NewVendedor.Legajo);
                 datos.setearParametro("@DNI", NewVendedor.Dni);
-                datos.setearParametro("@DOMICILIO", NewVendedor.Domicilio);
                 datos.setearParametro("@FEC_INGRESO", NewVendedor.FechaIngreso);
+                datos.setearParametro("@DOMICILIO", NewVendedor.Domicilio);
                 datos.setearParametro("@ESTADO", 1);
 
                 datos.ejecutarAccion();
@@ -74,6 +77,9 @@ namespace Negocio
                 datos.Setear_Sp("SP_MODIFICAR_VENDEDOR");
 
                 datos.setearParametro("@IDVENDEDOR", UpdatedVendedor.IdVendedor);
+                datos.setearParametro("@APELLIDO", UpdatedVendedor.Apellido);
+                datos.setearParametro("@NOMBRE", UpdatedVendedor.Nombre);
+                datos.setearParametro("SEXO", UpdatedVendedor.Sexo);
                 datos.setearParametro("@LEGAJO", UpdatedVendedor.Legajo);
                 datos.setearParametro("@DNI", UpdatedVendedor.Dni);
                 datos.setearParametro("@DOMICILIO", UpdatedVendedor.Domicilio);
