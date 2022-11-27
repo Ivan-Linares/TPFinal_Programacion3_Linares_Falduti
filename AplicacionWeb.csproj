@@ -89,7 +89,7 @@
     <Content Include="Estilos\Estilos_Master.css" />
     <Content Include="PropiedadesAdmin.aspx" />
     <Content Include="Registrarse.aspx" />
-    <Content Include="VendedoresForm.aspx" />
+    <Content Include="VendedoresAdmin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -195,12 +195,12 @@
     <Compile Include="Registrarse.aspx.designer.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VendedoresForm.aspx.cs">
-      <DependentUpon>VendedoresForm.aspx</DependentUpon>
+    <Compile Include="VendedoresAdmin.aspx.cs">
+      <DependentUpon>VendedoresAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VendedoresForm.aspx.designer.cs">
-      <DependentUpon>VendedoresForm.aspx</DependentUpon>
+    <Compile Include="VendedoresAdmin.aspx.designer.cs">
+      <DependentUpon>VendedoresAdmin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
