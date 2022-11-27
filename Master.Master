@@ -43,7 +43,7 @@
                         <asp:HyperLink ID="HlLogin" CssClass="nav-link" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
                     </li>
                     <li>
-                        <asp:HyperLink ID="HlAgregarPropiedades" CssClass="nav-link" NavigateUrl="~/AgregarPropiedad.aspx" runat="server">Add</asp:HyperLink>
+                        <asp:HyperLink ID="HlAdministrador" CssClass="nav-link" NavigateUrl="~/MenuAdmin.aspx" runat="server">Administrador</asp:HyperLink>
                     </li>
                 </ul>
             </nav>

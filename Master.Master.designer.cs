@@ -69,13 +69,13 @@ namespace TPFinal_Programacion3_Linares_Falduti
         protected global::System.Web.UI.WebControls.HyperLink HlLogin;
 
         /// <summary>
-        /// Control HlAdmin.
+        /// Control HlAdministrador.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HlAdmin;
+        protected global::System.Web.UI.WebControls.HyperLink HlAdministrador;
 
         /// <summary>
         /// Control ContentPlaceHolder1.
