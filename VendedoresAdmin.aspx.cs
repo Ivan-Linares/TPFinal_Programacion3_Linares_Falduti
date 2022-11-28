@@ -57,6 +57,28 @@ namespace Aplicacion_Web
                 Session.Add("error", ex);
                 throw;
             }
+
+
+            string idy = Request.QueryString["id"] != null ? Request.QueryString["id"].ToString() : "";
+            if (idy != "" && !IsPostBack)
+            {
+                VendedorNegocio negocio = new VendedorNegocio();
+                //List<Pokemon> lista = negocio.listar(id);
+                //Pokemon seleccionado = lista[0];
+                Vendedor seleccionado = (negocio.BuscarVendedor(idy))[0];
+
+                //guardo pokemon seleccionado en session
+                Session.Add("VendedorSeleccionado", seleccionado);
+
+                //pre cargar todos los campos...
+                txtApellidos.Text = seleccionado.Apellido;
+                txtNombres.Text = seleccionado.Nombre;
+                txtFechaIng.Text = seleccionado.FechaIngreso.ToString("yyyy-MM-dd");
+                ddlSexo.SelectedValue = seleccionado.Sexo;
+                txtDni.Text = seleccionado.Dni.ToString();
+
+
+            }
         }
 
 

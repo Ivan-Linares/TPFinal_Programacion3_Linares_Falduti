@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Dominio;
 
 namespace Negocio
@@ -23,11 +24,49 @@ namespace Negocio
                     Vendedor aux = new Vendedor();
 
                     aux.IdVendedor = datos.Lector.GetInt32(0);
-                    aux.Legajo = datos.Lector.GetString(1);
-                    aux.Dni = datos.Lector.GetString(2);
-                    aux.Domicilio = datos.Lector.GetString(3);
-                    aux.FechaIngreso = datos.Lector.GetDateTime(4);
-                    aux.Estado = datos.Lector.GetBoolean(5);
+                    aux.Apellido=datos.Lector.GetString(1);
+                    aux.Nombre=datos.Lector.GetString(2);
+                    aux.Sexo=datos.Lector.GetString(3);
+                    aux.Legajo = datos.Lector.GetString(4);
+                    aux.Dni = datos.Lector.GetString(5);
+                    aux.Domicilio = datos.Lector.GetString(6);
+                    aux.FechaIngreso = datos.Lector.GetDateTime(7);
+                    aux.Estado = datos.Lector.GetBoolean(8);
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public List<Vendedor> BuscarVendedor(string ID)
+        {
+            List<Vendedor> lista = new List<Vendedor>();
+            ConexionBD datos = new ConexionBD();
+            try
+            {
+                datos.Setear_Sp("SP_BUSCARVENDEDOR",ID);
+
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Vendedor aux = new Vendedor();
+
+                    aux.IdVendedor = datos.Lector.GetInt32(0);
+                    aux.Apellido = datos.Lector.GetString(1);
+                    aux.Nombre = datos.Lector.GetString(2);
+                    aux.Sexo = datos.Lector.GetString(3);
+                    aux.Legajo = datos.Lector.GetString(4);
+                    aux.Dni = datos.Lector.GetString(5);
+                    aux.Domicilio = datos.Lector.GetString(6);
+                    aux.FechaIngreso = datos.Lector.GetDateTime(7);
+                    aux.Estado = datos.Lector.GetBoolean(8);
 
                     lista.Add(aux);
                 }
@@ -71,7 +110,7 @@ namespace Negocio
         public void ModificarVendedor(Vendedor UpdatedVendedor)
         {
             ConexionBD datos = new ConexionBD();
-            
+
             try
             {
                 datos.Setear_Sp("SP_MODIFICAR_VENDEDOR");
@@ -101,7 +140,7 @@ namespace Negocio
         public void EliminarVendedor(Vendedor DeletedVendedor)
         {
             ConexionBD datos = new ConexionBD();
-            
+
             try
             {
                 datos.Setear_Sp("SP_ELIMINAR_VENDEDOR");

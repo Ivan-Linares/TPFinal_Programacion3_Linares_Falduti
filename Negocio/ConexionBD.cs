@@ -24,6 +24,12 @@ namespace Negocio
             Cmd.CommandText = sp;
 
         }
+        public void Setear_Sp(string sp, string Id)
+        {
+            Cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            Cmd.CommandText = sp;
+
+        }
 
         public SqlDataReader Lector
         {
