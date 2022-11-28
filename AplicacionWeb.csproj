@@ -64,7 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AgregarPropiedad.aspx" />
+    <Content Include="FormularioPropiedad.aspx" />
     <Content Include="Anuncios.aspx" />
     <Content Include="Contactos.aspx" />
     <Content Include="Default.aspx" />
@@ -95,12 +95,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarPropiedad.aspx.cs">
-      <DependentUpon>AgregarPropiedad.aspx</DependentUpon>
+    <Compile Include="FormularioPropiedad.aspx.cs">
+      <DependentUpon>FormularioPropiedad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AgregarPropiedad.aspx.designer.cs">
-      <DependentUpon>AgregarPropiedad.aspx</DependentUpon>
+    <Compile Include="FormularioPropiedad.aspx.designer.cs">
+      <DependentUpon>FormularioPropiedad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Anuncios.aspx.cs">
       <DependentUpon>Anuncios.aspx</DependentUpon>
