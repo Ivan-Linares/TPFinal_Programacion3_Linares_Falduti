@@ -19,7 +19,7 @@ namespace Aplicacion_Web
             {
                 VendedorNegocio negocio = new VendedorNegocio();
                 Session.Add("ListaVendedores", negocio.Listar());
-                GvVendedores = Session["ListaVendedores"];
+                GvVendedores.DataSource = Session["ListaVendedores"];
                 GvVendedores.DataBind();
 
             }
