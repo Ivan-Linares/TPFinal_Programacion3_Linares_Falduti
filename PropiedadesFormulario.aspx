@@ -13,6 +13,9 @@
                 <div id="AddProp-row1">
                     <div id="AddProp-form" class="form" action="" method="post">
                         <div class="form-group">
+                            <asp:TextBox ID="TextId" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
                             <label for="DDTiposProp" class="text-info">Tipo de Propiedad:</label><br>
                             <asp:DropDownList ID="DDTiposProp" runat="server"></asp:DropDownList>
                         </div>
@@ -59,15 +62,12 @@
                         <label for="TextPrecio" class="text-info">Precio $:</label><br>
                         <asp:TextBox ID="TextPrecio" runat="server" class="form-control"></asp:TextBox>
                     </div>
-                    <div>
-                        <asp:TextBox ID="TextId" runat="server" class="form-control"></asp:TextBox>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
     <br />
 
-    <asp:Button ID="btnSubmit" runat="server" Text="Agregar propiedad!" class="" OnClick="btnSubmit_Click" />
+    <asp:Button ID="btnSubmit" runat="server" Text="Aceptar" class="" OnClick="btnSubmit_Click" />
 
 </asp:Content>
