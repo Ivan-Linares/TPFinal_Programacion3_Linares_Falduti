@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="EditarPropiedad.aspx.cs" Inherits="Aplicacion_Web.EditarPropiedad" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="PropiedadesFormulario.aspx.cs" Inherits="Aplicacion_Web.AgregarPropiedad" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
