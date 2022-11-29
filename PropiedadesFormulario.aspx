@@ -59,6 +59,9 @@
                         <label for="TextPrecio" class="text-info">Precio $:</label><br>
                         <asp:TextBox ID="TextPrecio" runat="server" class="form-control"></asp:TextBox>
                     </div>
+                    <div>
+                        <asp:TextBox ID="TextId" runat="server" class="form-control"></asp:TextBox>
+                    </div>
                 </div>
             </div>
         </div>

@@ -11,10 +11,9 @@ namespace Aplicacion_Web
 {
     public partial class AgregarPropiedad : System.Web.UI.Page
     {
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            Cargar();
+            Cargar(sender, e);
         }
 
         protected void TextUrlImagen_TextChanged(object sender, EventArgs e)
@@ -42,7 +41,14 @@ namespace Aplicacion_Web
                 if (CheckCochera.Checked) NewPropiedad.Cochera = true;
                 if (CheckVenta.Checked) NewPropiedad.EnVenta = true;
 
-                Negocio.Agregar_Propiedad(NewPropiedad);
+                if (Request.QueryString["Id"] != null)
+                {
+                    NewPropiedad.IdPropiedad = int.Parse(TextId.Text);
+                    Negocio.Modificar_Propiedad(NewPropiedad);
+                }
+                else
+                    Negocio.Agregar_Propiedad(NewPropiedad);
+
                 Response.Redirect("ListadoPropiedades.aspx", false);
             }
             catch (Exception ex)
@@ -52,11 +58,11 @@ namespace Aplicacion_Web
             }
         }
 
-        private void Cargar()
+        private void Cargar(object sender, EventArgs e)
         {
+            TextId.Enabled = false;
             try
             {
-                ///////////SI QUERES AGREGAR, CAE ACA
                 if (!IsPostBack)
                 {
                     TipoPropiedadNegocio negocio = new TipoPropiedadNegocio();
@@ -68,38 +74,51 @@ namespace Aplicacion_Web
                     DDTiposProp.DataBind();
                 }
 
-                /////////SI SE CAE A ESTA PAG POR MODIFICAR VA PA CA
                 if (Request.QueryString["Id"] != null)
-                {
-                    PropiedadNegocio negocio = new PropiedadNegocio();
-                    List<Propiedad> lista = negocio.Listar();
-                    Propiedad propiedad = new Propiedad();
-
-                    foreach (Propiedad prop in lista)
-                    {
-                        if (prop.IdPropiedad == int.Parse(Request.QueryString["Id"]))
-                            propiedad = prop;
-                    }
-
-                    TextDescrip.Text = propiedad.Descripcion;
-                    TextCantAmb.Text = propiedad.CantAmbientes.ToString(); 
-                    TextMts.Text = propiedad.Mts2.ToString();
-                    TextDireccion.Text = propiedad.Direccion;
-                    TextUrlImagen.Text = propiedad.UrlImagen;
-                    TextPrecio.Text = propiedad.Precio.ToString();
-
-                    DDTiposProp.SelectedValue = propiedad.TipoPropiedad.Descripcion.ToString();
-                    
-                    if(propiedad.EnVenta)
-                        CheckVenta.Checked = true;
-                    if(propiedad.Cochera)
-                        CheckCochera.Checked = true;
-                }
+                    CargarModificiacion(sender, e, Request.QueryString["Id"]);
             }
             catch (Exception ex)
             {
                 Session.Add("Error", ex);
                 throw;
+            }
+
+        }
+
+        private void CargarModificiacion(object sender, EventArgs e, string id)
+        {
+            try
+            {
+                PropiedadNegocio negocio = new PropiedadNegocio();
+                List<Propiedad> lista = negocio.Listar();
+                Propiedad propiedad = new Propiedad();
+
+                foreach (Propiedad prop in lista)
+                {
+                    if (prop.IdPropiedad == int.Parse(id))
+                        propiedad = prop;
+                }
+
+                TextDescrip.Text = propiedad.Descripcion;
+                TextCantAmb.Text = propiedad.CantAmbientes.ToString();
+                TextMts.Text = propiedad.Mts2.ToString();
+                TextDireccion.Text = propiedad.Direccion;
+                TextUrlImagen.Text = propiedad.UrlImagen;
+                TextPrecio.Text = propiedad.Precio.ToString();
+
+                if (propiedad.EnVenta)
+                    CheckVenta.Checked = true;
+                if (propiedad.Cochera)
+                    CheckCochera.Checked = true;
+
+                DDTiposProp.SelectedValue = propiedad.TipoPropiedad.IdTipo.ToString();
+
+                TextUrlImagen_TextChanged(sender, e);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }
