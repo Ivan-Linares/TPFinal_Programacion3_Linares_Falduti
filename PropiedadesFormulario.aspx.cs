@@ -99,6 +99,7 @@ namespace Aplicacion_Web
                         propiedad = prop;
                 }
 
+                TextId.Text = propiedad.IdPropiedad.ToString();
                 TextDescrip.Text = propiedad.Descripcion;
                 TextCantAmb.Text = propiedad.CantAmbientes.ToString();
                 TextMts.Text = propiedad.Mts2.ToString();
