@@ -49,7 +49,7 @@ namespace Aplicacion_Web
                 else
                     Negocio.Agregar_Propiedad(NewPropiedad);
 
-                Response.Redirect("ListadoPropiedades.aspx", false);
+                Response.Redirect("MenuAdmin.aspx", false);
             }
             catch (Exception ex)
             {
@@ -82,7 +82,6 @@ namespace Aplicacion_Web
                 Session.Add("Error", ex);
                 throw;
             }
-
         }
 
         private void CargarModificiacion(object sender, EventArgs e, string id)
@@ -115,7 +114,6 @@ namespace Aplicacion_Web
                 DDTiposProp.SelectedValue = propiedad.TipoPropiedad.IdTipo.ToString();
 
                 TextUrlImagen_TextChanged(sender, e);
-
             }
             catch (Exception ex)
             {

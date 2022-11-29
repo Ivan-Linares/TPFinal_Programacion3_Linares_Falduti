@@ -68,6 +68,6 @@
     </div>
     <br />
 
-    <asp:Button ID="btnSubmit" runat="server" Text="Agregar propiedad!" class="" OnClick="btnSubmit_Click" />
+    <asp:Button ID="btnSubmit" runat="server" Text="Aceptar" class="" OnClick="btnSubmit_Click" />
 
 </asp:Content>
