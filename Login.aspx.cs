@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Dominio;
+using Negocio;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,7 +18,56 @@ namespace Aplicacion_Web
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-          
+            Usuario ingreso;
+            UsuarioNegocio negocio = new UsuarioNegocio();
+            TipoUsuario Tipo= new TipoUsuario();
+            try
+            {
+                ingreso = new Usuario(TexUsuario.Text, TexContra.Text);
+                ingreso = negocio.Loguear(ingreso);
+
+
+
+                if (ingreso.Tipo.Id == 0)
+                {
+                    Session.Add("ingresos", ingreso.Tipo.Id);
+                    Session.Add("IdUsuario", ingreso.IdUsuario);
+                    Response.Redirect("/MenuAdmin.aspx");
+       
+                }
+                else if (ingreso.Tipo.Id == 1)
+                {
+                    Session.Add("ingresos", ingreso.Tipo.Id);
+                    Session.Add("IdUsuario", ingreso.IdUsuario);
+                    Response.Redirect("/Gestion/MenuGestion.aspx");
+            
+
+                }
+                else if (ingreso.Tipo.Id == 2)
+                {
+                    Session.Add("ingresos", ingreso.Tipo.Id);
+                    Session.Add("IdUsuario", ingreso.IdUsuario);
+                    Response.Redirect("/Gestion/MenuGestion.aspx");
+
+                }
+               
+                else
+                {
+
+                    Session.Add("ingresos", null);
+                    Response.Redirect("default.aspx");
+
+                }
+
+
+            }
+
+            catch (Exception ex)
+            {
+                Session.Add("error", ex.ToString());
+                throw ex;
+
+            }
         }
         private void Page_Error(object sender, EventArgs e)
         {

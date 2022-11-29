@@ -51,7 +51,7 @@ namespace Negocio
 
             try
             {
-                datos.Setear_Sp("SP_AGREGAR_PROPIEDAD");
+                datos.Setear_Sp("SP_AGREGAR_USUARIO");
 
                 datos.setearParametro("@NOMBRE", NewUsuario.Nombre);
                 datos.setearParametro("@APELLIDO", NewUsuario.Apellido);
@@ -73,6 +73,35 @@ namespace Negocio
             }
         }
 
+
+
+        public void Agregar_Usuario_Registracion(Usuario NewUsuario)
+        {
+            ConexionBD datos = new ConexionBD();
+
+            try
+            {
+                datos.Setear_Sp("SP_AGREGAR_USUARIO_REGISTRACION");
+
+                datos.setearParametro("@NOMBRE", NewUsuario.Nombre);
+                datos.setearParametro("@APELLIDO", NewUsuario.Apellido);
+                datos.setearParametro("@EMAIL", NewUsuario.Email);
+                datos.setearParametro("@FECHA_NAC", NewUsuario.FechaNacimiento);
+                datos.setearParametro("@NIVEL", 2);
+                datos.setearParametro("@PASS", NewUsuario.Password);
+                datos.setearParametro("@ESTADO", 1);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
         public void Modificar_Usuario(Usuario UpdatedUsuario)
         {
             ConexionBD datos = new ConexionBD();
@@ -111,7 +140,7 @@ namespace Negocio
                 datos.Setear_Sp("SP_ELIMINAR_USUARIO");
 
                 datos.setearParametro("@IDUSUARIO", DeletedUsuario.IdUsuario);
-                
+
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -123,5 +152,45 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        public Usuario Loguear(Usuario ingreso)
+        {
+
+            ConexionBD datos = new ConexionBD();
+
+            try
+            {
+                datos.Setear_Sp("SP_BUSCAR_USUARIO");
+                datos.setearParametro("@user", ingreso.Email);
+                datos.setearParametro("@pass", ingreso.Password);
+                datos.ejecutarAccion();
+
+                while (datos.Lector.Read())
+                {
+                    ingreso.IdUsuario = (int)datos.Lector["IDUSUARIO"];
+                    ingreso.Tipo = (TipoUsuario)datos.Lector["NIVEL_ACCESO"];
+                    ingreso.Nombre = (string)datos.Lector["NOMBRE"];
+                    ingreso.Apellido = (string)datos.Lector["APELLIDO"];
+                    ingreso.Email = (string)datos.Lector["EMAIL"];
+                    ingreso.FechaNacimiento = DateTime.Parse(datos.Lector["FECHA_NACIMIENTO"].ToString());
+                    ingreso.Password = (string)datos.Lector["CONTRASEÑA"];
+
+
+                }
+                return ingreso;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+
+        }
     }
+
 }

@@ -10,7 +10,7 @@ namespace Dominio
     {
         CLIENTE = 0,
         VENDEDOR = 1,
-        ADMINISTRADOR=2
+        ADMINISTRADOR = 2
     }
     public class Usuario
     {
@@ -22,5 +22,18 @@ namespace Dominio
         public string Password { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public bool Estado { get; set; }
+        public Usuario(string Email, string pass)
+        {
+            this.Email = Email;
+            this.Password = pass;
+
+
+        }
+        public Usuario()
+        {
+
+        }
     }
+
+
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dominio;
+using Negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +17,29 @@ namespace Aplicacion_Web
         }
         protected void BotonRegister_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Usuario user = new Usuario();
+                UsuarioNegocio Negocio = new UsuarioNegocio();
 
+
+                user.Email = TextEmail.Text;
+                user.Password = TextContra.Text;
+                user.Nombre = TextEmail.Text;
+                user.Apellido = TextApellido.Text;
+                //user.FechaNacimiento = txtFechaNac.ToString;
+                Negocio.Agregar_Usuario_Registracion(user);
+
+                Session.Add("Usuario", user);
+
+       
+                Response.Redirect("/Login.aspx", false);
+
+            }
+            catch (Exception ex)
+            {
+                Session.Add("error", ex.ToString());
+            }
         }
     }
 }
