@@ -64,12 +64,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FormularioPropiedad.aspx" />
+    <Content Include="PropiedadesFormulario.aspx" />
     <Content Include="Anuncios.aspx" />
     <Content Include="Contactos.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DetallePropiedad.aspx" />
-    <Content Include="EditarPropiedad.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Estilos\Estilos_Error.css" />
     <Content Include="Estilos\Estilos_Registrarse.css" />
@@ -95,12 +94,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormularioPropiedad.aspx.cs">
-      <DependentUpon>FormularioPropiedad.aspx</DependentUpon>
+    <Compile Include="PropiedadesFormulario.aspx.cs">
+      <DependentUpon>PropiedadesFormulario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FormularioPropiedad.aspx.designer.cs">
-      <DependentUpon>FormularioPropiedad.aspx</DependentUpon>
+    <Compile Include="PropiedadesFormulario.aspx.designer.cs">
+      <DependentUpon>PropiedadesFormulario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Anuncios.aspx.cs">
       <DependentUpon>Anuncios.aspx</DependentUpon>
@@ -129,13 +128,6 @@
     </Compile>
     <Compile Include="DetallePropiedad.aspx.designer.cs">
       <DependentUpon>DetallePropiedad.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditarPropiedad.aspx.cs">
-      <DependentUpon>EditarPropiedad.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditarPropiedad.aspx.designer.cs">
-      <DependentUpon>EditarPropiedad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>

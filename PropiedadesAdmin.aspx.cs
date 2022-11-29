@@ -22,5 +22,11 @@ namespace Aplicacion_Web
 
             }
         }
+
+        protected void GvPropiedades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string Id = GvPropiedades.SelectedDataKey.Value.ToString();
+            Response.Redirect("PropiedadesFormulario.aspx?id=" + Id, false);
+        }
     }
 }

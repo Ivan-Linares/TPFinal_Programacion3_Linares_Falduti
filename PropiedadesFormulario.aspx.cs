@@ -11,7 +11,7 @@ namespace Aplicacion_Web
 {
     public partial class AgregarPropiedad : System.Web.UI.Page
     {
-       
+
         protected void Page_Load(object sender, EventArgs e)
         {
             Cargar();
@@ -31,21 +31,21 @@ namespace Aplicacion_Web
 
                 NewPropiedad.TipoPropiedad = new TiposPropiedad();
                 NewPropiedad.TipoPropiedad.IdTipo = int.Parse(DDTiposProp.SelectedValue);
-                
+
                 NewPropiedad.Descripcion = TextDescrip.Text;
                 NewPropiedad.CantAmbientes = int.Parse(TextCantAmb.Text);
                 NewPropiedad.Mts2 = decimal.Parse(TextMts.Text);
                 NewPropiedad.Direccion = TextDireccion.Text;
                 NewPropiedad.UrlImagen = TextUrlImagen.Text;
                 NewPropiedad.Precio = decimal.Parse(TextPrecio.Text);
-               
+
                 if (CheckCochera.Checked) NewPropiedad.Cochera = true;
-                if(CheckVenta.Checked) NewPropiedad.EnVenta = true;
-                
+                if (CheckVenta.Checked) NewPropiedad.EnVenta = true;
+
                 Negocio.Agregar_Propiedad(NewPropiedad);
                 Response.Redirect("ListadoPropiedades.aspx", false);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Session.Add("Error", ex);
                 throw;
@@ -54,8 +54,9 @@ namespace Aplicacion_Web
 
         private void Cargar()
         {
-            try 
+            try
             {
+                ///////////SI QUERES AGREGAR, CAE ACA
                 if (!IsPostBack)
                 {
                     TipoPropiedadNegocio negocio = new TipoPropiedadNegocio();
@@ -65,6 +66,34 @@ namespace Aplicacion_Web
                     DDTiposProp.DataValueField = "IdTipo";
                     DDTiposProp.DataTextField = "Descripcion";
                     DDTiposProp.DataBind();
+                }
+
+                /////////SI SE CAE A ESTA PAG POR MODIFICAR VA PA CA
+                if (Request.QueryString["Id"] != null)
+                {
+                    PropiedadNegocio negocio = new PropiedadNegocio();
+                    List<Propiedad> lista = negocio.Listar();
+                    Propiedad propiedad = new Propiedad();
+
+                    foreach (Propiedad prop in lista)
+                    {
+                        if (prop.IdPropiedad == int.Parse(Request.QueryString["Id"]))
+                            propiedad = prop;
+                    }
+
+                    TextDescrip.Text = propiedad.Descripcion;
+                    TextCantAmb.Text = propiedad.CantAmbientes.ToString(); 
+                    TextMts.Text = propiedad.Mts2.ToString();
+                    TextDireccion.Text = propiedad.Direccion;
+                    TextUrlImagen.Text = propiedad.UrlImagen;
+                    TextPrecio.Text = propiedad.Precio.ToString();
+
+                    DDTiposProp.SelectedValue = propiedad.TipoPropiedad.Descripcion.ToString();
+                    
+                    if(propiedad.EnVenta)
+                        CheckVenta.Checked = true;
+                    if(propiedad.Cochera)
+                        CheckCochera.Checked = true;
                 }
             }
             catch (Exception ex)

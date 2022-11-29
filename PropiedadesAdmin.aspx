@@ -10,7 +10,9 @@
         <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
         <div>
             <div>
-                <asp:GridView ID="GvPropiedades" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="7" CssClass="table table-dark table-borderer">
+                <asp:GridView ID="GvPropiedades" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="7" 
+                    CssClass="table table-dark table-borderer" 
+                    OnSelectedIndexChanged="GvPropiedades_SelectedIndexChanged" DataKeyNames="IdPropiedad">
                     <Columns >
                         <asp:BoundField HeaderText="Numero" DataField="IdPropiedad"  />
                         <asp:BoundField HeaderText="Tipo Prop" DataField="TipoPropiedad.Descripcion" />
@@ -18,7 +20,6 @@
                         <asp:BoundField HeaderText="Precio" DataField="Precio" />
                         <asp:CheckBoxField HeaderText="Cochera" DataField="Cochera" />
                         <asp:CheckBoxField HeaderText="EnVenta" DataField="EnVenta" />
-                        <asp:CheckBoxField HeaderText="" DataField="Estado" />
                         <asp:CommandField HeaderText="Modificar" ShowSelectButton="true" SelectText="✍" />
                         <asp:CommandField HeaderText="Eliminar" ShowSelectButton="true" SelectText="X" />
                     </Columns>
