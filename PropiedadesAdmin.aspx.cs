@@ -16,8 +16,7 @@ namespace Aplicacion_Web
             if (!IsPostBack)
             {
                 PropiedadNegocio negocio = new PropiedadNegocio();
-                Session.Add("ListaPropiedades", negocio.Listar());
-                GvPropiedades.DataSource = Session["ListaPropiedades"];
+                GvPropiedades.DataSource = negocio.Listar();
                 GvPropiedades.DataBind();
 
             }

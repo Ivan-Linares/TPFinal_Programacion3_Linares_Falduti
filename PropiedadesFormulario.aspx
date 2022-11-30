@@ -12,9 +12,12 @@
             <div class="col">
                 <div id="AddProp-row1">
                     <div id="AddProp-form" class="form" action="" method="post">
+                         <%  if (PuedeEliminar) { %>
                         <div class="form-group">
+                            <label for="TextId" class="text-info">ID Propiedad:</label><br>
                             <asp:TextBox ID="TextId" runat="server" class="form-control"></asp:TextBox>
                         </div>
+                        <%} %>
                         <div class="form-group">
                             <label for="DDTiposProp" class="text-info">Tipo de Propiedad:</label><br>
                             <asp:DropDownList ID="DDTiposProp" runat="server"></asp:DropDownList>
@@ -39,16 +42,16 @@
                             <label for="CheckCochera" class="text-info">Cochera:</label>
                             <asp:CheckBox ID="CheckCochera" runat="server" />
                         </div>
-                        <div class="form-group">
-                            <label for="TextDireccion" class="text-info">Direccion:</label><br>
-                            <asp:TextBox ID="TextDireccion" runat="server" class="form-control"></asp:TextBox>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="col">
                 <div id="AddProp-row2">
+                     <div class="form-group">
+                            <label for="TextDireccion" class="text-info">Direccion:</label><br>
+                            <asp:TextBox ID="TextDireccion" runat="server" class="form-control"></asp:TextBox>
+                        </div>
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
                             <div class="form-group">
