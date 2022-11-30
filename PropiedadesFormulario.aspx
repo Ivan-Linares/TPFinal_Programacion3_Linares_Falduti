@@ -12,7 +12,8 @@
             <div class="col">
                 <div id="AddProp-row1">
                     <div id="AddProp-form" class="form" action="" method="post">
-                         <%  if (PuedeEliminar) { %>
+                        <%  if (PuedeEliminar)
+                        { %>
                         <div class="form-group">
                             <label for="TextId" class="text-info">ID Propiedad:</label><br>
                             <asp:TextBox ID="TextId" runat="server" class="form-control"></asp:TextBox>
@@ -48,10 +49,10 @@
 
             <div class="col">
                 <div id="AddProp-row2">
-                     <div class="form-group">
-                            <label for="TextDireccion" class="text-info">Direccion:</label><br>
-                            <asp:TextBox ID="TextDireccion" runat="server" class="form-control"></asp:TextBox>
-                        </div>
+                    <div class="form-group">
+                        <label for="TextDireccion" class="text-info">Direccion:</label><br>
+                        <asp:TextBox ID="TextDireccion" runat="server" class="form-control"></asp:TextBox>
+                    </div>
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
                             <div class="form-group">
@@ -73,15 +74,17 @@
     <asp:Button ID="btnSubmit" runat="server" Text="Aceptar" class="" OnClick="btnSubmit_Click" />
     <updatepanel>
         <contenttemplate>
-            <%  if (PuedeEliminar) { %>
+            <%  if (PuedeEliminar)
+                { %>
             <asp:Button ID="BtnDelete" runat="server" Text="Eliminar" OnClick="BtnDelete_Click" />
-                <%  if (EliminarCheck) {  %>
+            <%  if (EliminarCheck)
+                {  %>
             <label for="ChkEliminar" class="text-info">¿Desea Confirmar Eliminacion?:</label>
             <asp:CheckBox ID="ChkEliminar" runat="server" />
             <asp:Button ID="BtnConfirmarElim" runat="server" Text="Eliminar" OnClick="BtnConfirmarElim_Click" />
-                <%} %>
+            <%} %>
             <%} %>
         </contenttemplate>
     </updatepanel>
-   
+
 </asp:Content>

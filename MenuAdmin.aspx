@@ -20,7 +20,7 @@
                 <h5>USUARIOS</h5>
                 <br />
                 <p>Agregar usuario</p>
-                <a href="../UsuariosAdmin.aspx" class="btn btn-primary">Agregar</a>
+                <a href="../UsuariosFormulario.aspx" class="btn btn-primary">Agregar</a>
                 <br />
                 <br />
                 <p>Modificar usuario</p>

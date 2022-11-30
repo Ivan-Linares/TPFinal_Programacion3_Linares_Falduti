@@ -131,7 +131,7 @@ namespace Negocio
             }
         }
 
-        public void Eliminar_Usuario(Usuario DeletedUsuario)
+        public void Eliminar_Usuario(int Id)
         {
             ConexionBD datos = new ConexionBD();
 
@@ -139,7 +139,7 @@ namespace Negocio
             {
                 datos.Setear_Sp("SP_ELIMINAR_USUARIO");
 
-                datos.setearParametro("@IDUSUARIO", DeletedUsuario.IdUsuario);
+                datos.setearParametro("@IDUSUARIO", Id);
 
                 datos.ejecutarAccion();
             }

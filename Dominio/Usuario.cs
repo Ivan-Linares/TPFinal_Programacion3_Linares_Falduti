@@ -22,16 +22,10 @@ namespace Dominio
         public string Password { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public bool Estado { get; set; }
-        public Usuario(string Email, string pass)
+        public Usuario(string Email = "Default", string pass = "123")
         {
             this.Email = Email;
             this.Password = pass;
-
-
-        }
-        public Usuario()
-        {
-
         }
     }
 
