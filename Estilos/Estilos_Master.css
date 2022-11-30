@@ -56,27 +56,7 @@
         color: #000000;
     }
 
-/*
-.footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 200px;
-    padding: 2em;
-    background-color:lightblue;
-    bottom:0;
-}
 
-.footer_contenido h2 {
-    font-size: 3em;
-}
-
-.footer_contenido h5 {
-    font-size: 1.5em;
-    text-align: center;
-}*/
 
 .footer-right .Redes {
     display: flex;
