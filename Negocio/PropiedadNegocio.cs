@@ -117,14 +117,14 @@ namespace Negocio
             }
         }
 
-        public void Eliminar_Propiedad(Propiedad DeleteProp)
+        public void Eliminar_Propiedad(int IdDelete)
         {
             ConexionBD datos = new ConexionBD();
             try
             {
                 datos.Setear_Sp("SP_ELIMINAR_PROPIEDAD");
 
-                datos.setearParametro("@IDPROPIEDAD", DeleteProp.IdPropiedad);
+                datos.setearParametro("@IDPROPIEDAD", IdDelete);
 
                 datos.ejecutarAccion();
             }

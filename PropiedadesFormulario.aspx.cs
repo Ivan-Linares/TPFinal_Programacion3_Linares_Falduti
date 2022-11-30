@@ -11,6 +11,8 @@ namespace Aplicacion_Web
 {
     public partial class AgregarPropiedad : System.Web.UI.Page
     {
+        public bool PuedeEliminar;
+        public bool EliminarCheck;
         protected void Page_Load(object sender, EventArgs e)
         {
             Cargar(sender, e);
@@ -61,6 +63,10 @@ namespace Aplicacion_Web
         private void Cargar(object sender, EventArgs e)
         {
             TextId.Enabled = false;
+
+            EliminarCheck = false;
+            PuedeEliminar = false;
+
             try
             {
                 if (!IsPostBack)
@@ -86,6 +92,8 @@ namespace Aplicacion_Web
 
         private void CargarModificiacion(object sender, EventArgs e, string id)
         {
+            PuedeEliminar = true;
+
             try
             {
                 PropiedadNegocio negocio = new PropiedadNegocio();
@@ -118,6 +126,22 @@ namespace Aplicacion_Web
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        protected void BtnDelete_Click(object sender, EventArgs e)
+        {
+            EliminarCheck = true;
+        }
+
+        protected void BtnConfirmarElim_Click(object sender, EventArgs e)
+        {
+            PropiedadNegocio negocio = new PropiedadNegocio();
+
+            if (ChkEliminar.Checked)
+            {
+                negocio.Eliminar_Propiedad(int.Parse(TextId.Text));
+                Response.Redirect("MenuAdmin.aspx", false);
             }
         }
     }
