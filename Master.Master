@@ -18,7 +18,8 @@
     <link href="Estilos/Estilo_Abm.css" rel="stylesheet">
     <link href="Estilos/Estilo_Registrarse.css" rel="stylesheet">
     <link href="Estilos/Estilo_ListadoPropiedades.css" rel="stylesheet"> 
-    <link href="Estilos/Estilo_MenuCliente.css" rel="stylesheet">
+    <link href="Estilos/Estilo_MenuCliente.css" rel="stylesheet">   
+    <link href="Estilos/Estilo_Email.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
 </head>
 <body>

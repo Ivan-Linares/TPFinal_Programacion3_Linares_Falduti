@@ -47,7 +47,7 @@ namespace Aplicacion_Web
                 {
                     Session.Add("ingresos", ingreso.Tipo.Id);
                     Session.Add("IdUsuario", ingreso.IdUsuario);
-                    Response.Redirect("/Gestion/MenuGestion.aspx");
+                    Response.Redirect("/MenuAdmin.aspx");
 
                 }
                

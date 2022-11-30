@@ -12,6 +12,21 @@ namespace Aplicacion_Web
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Session["ingresos"] == null)
+            {
+                Response.Redirect("/default.aspx");
+            }
+
+            else if (Session["ingresos"] != null)
+            {
+                int probando;
+                probando = int.Parse(Session["ingresos"].ToString());
+                if (probando != 2) { Response.Redirect("/default.aspx"); }
+
+            }
+
+
+
         }
     }
 }

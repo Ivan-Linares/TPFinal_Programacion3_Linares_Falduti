@@ -64,7 +64,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Estilos\Estilo_Email.css" />
     <Content Include="Estilos\Estilo_MenuCliente.css" />
+    <Content Include="FormularioEmail.aspx" />
     <Content Include="MenuCliente.aspx" />
     <Content Include="PropiedadesFormulario.aspx" />
     <Content Include="Anuncios.aspx" />
@@ -96,6 +98,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormularioEmail.aspx.cs">
+      <DependentUpon>FormularioEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormularioEmail.aspx.designer.cs">
+      <DependentUpon>FormularioEmail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MenuCliente.aspx.cs">
       <DependentUpon>MenuCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
