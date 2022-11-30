@@ -67,7 +67,18 @@
         </div>
     </div>
     <br />
-
     <asp:Button ID="btnSubmit" runat="server" Text="Aceptar" class="" OnClick="btnSubmit_Click" />
-
+    <updatepanel>
+        <contenttemplate>
+            <%  if (PuedeEliminar) { %>
+            <asp:Button ID="BtnDelete" runat="server" Text="Eliminar" OnClick="BtnDelete_Click" />
+                <%  if (EliminarCheck) {  %>
+            <label for="ChkEliminar" class="text-info">¿Desea Confirmar Eliminacion?:</label>
+            <asp:CheckBox ID="ChkEliminar" runat="server" />
+            <asp:Button ID="BtnConfirmarElim" runat="server" Text="Eliminar" OnClick="BtnConfirmarElim_Click" />
+                <%} %>
+            <%} %>
+        </contenttemplate>
+    </updatepanel>
+   
 </asp:Content>
