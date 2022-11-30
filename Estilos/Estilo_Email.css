@@ -1,5 +1,7 @@
 ﻿
 .Contenedor7 {
+    min-height: 550px !important;
+    max-width: 100% !important;
     height: 100%;
     font-family: 'Noto Sans', sans-serif;
     background-color: grey;
@@ -10,13 +12,13 @@
 .contact_form {
     width: 460px;
     height: auto;
-    margin: 80px auto;
+    margin: 150px auto;
     border-radius: 10px;
     padding-top: 30px;
     padding-bottom: 20px;
-    background-color: black;
+    background-color: #fbfbfb;
     padding-left: 30px;
-    justify-content: center;
+    align-content: center;
 }
 
 
@@ -51,6 +53,7 @@ textarea {
 
 label {
     display: block;
+    float: center;
 }
 
 
@@ -61,8 +64,8 @@ button {
     margin-bottom: 20px;
     margin-top: 10px;
     text-transform: uppercase;
-    background-color: mediumseagreen;
-    border-color: black;
+    background-color: #ab4493;
+    border-color: #ab4493;
     border-style: solid;
     border-radius: 10px;
     width: 420px;
@@ -127,9 +130,3 @@ p {
     outline: 0;
     border: 1px solid #97d848;
 }
-
-
-/* creado por javiniguez.com, Julio 2019 */
-
-
-Resources
