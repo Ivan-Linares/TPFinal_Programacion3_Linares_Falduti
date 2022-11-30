@@ -20,12 +20,12 @@
                 <h5>USUARIOS</h5>
                 <br />
                 <p>Agregar usuario</p>
-                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Agregar</a>
+                <a href="../UsuariosAdmin.aspx" class="btn btn-primary">Agregar</a>
                 <br />
                 <br />
                 <p>Modificar usuario</p>
                 <br />
-                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
+                <a href="../UsuariosAdmin.aspx" class="btn btn-primary">Modificar</a>
             </div>
 
 

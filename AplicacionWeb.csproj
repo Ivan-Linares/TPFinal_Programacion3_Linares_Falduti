@@ -94,6 +94,8 @@
     <Content Include="Estilos\Estilos_Master.css" />
     <Content Include="PropiedadesAdmin.aspx" />
     <Content Include="Registrarse.aspx" />
+    <Content Include="UsuariosAdmin.aspx" />
+    <Content Include="UsuariosFormulario.aspx" />
     <Content Include="VendedoresAdmin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -213,6 +215,20 @@
     </Compile>
     <Compile Include="Registrarse.aspx.designer.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosAdmin.aspx.cs">
+      <DependentUpon>UsuariosAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuariosAdmin.aspx.designer.cs">
+      <DependentUpon>UsuariosAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosFormulario.aspx.cs">
+      <DependentUpon>UsuariosFormulario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuariosFormulario.aspx.designer.cs">
+      <DependentUpon>UsuariosFormulario.aspx</DependentUpon>
     </Compile>
     <Compile Include="VendedoresAdmin.aspx.cs">
       <DependentUpon>VendedoresAdmin.aspx</DependentUpon>
