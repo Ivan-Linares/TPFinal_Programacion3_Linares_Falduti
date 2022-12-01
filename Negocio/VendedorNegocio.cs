@@ -137,7 +137,7 @@ namespace Negocio
             }
         }
 
-        public void EliminarVendedor(Vendedor DeletedVendedor)
+        public void EliminarVendedor(int delete)
         {
             ConexionBD datos = new ConexionBD();
 
@@ -145,7 +145,7 @@ namespace Negocio
             {
                 datos.Setear_Sp("SP_ELIMINAR_VENDEDOR");
 
-                datos.setearParametro("@IDVENDEDOR", DeletedVendedor.IdVendedor);
+                datos.setearParametro("@IDVENDEDOR", delete);
 
                 datos.ejecutarAccion();
             }

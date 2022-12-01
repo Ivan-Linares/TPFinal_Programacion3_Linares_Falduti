@@ -1,12 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="VendedoresFormulario.aspx.cs" Inherits="Aplicacion_Web.VendedoresForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
     <div class="Vendedores">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <link href="Estilos/Estilos_Vendedor.css" rel="stylesheet">
-        <div class="ContenedorVendedores" style="background-color: white;">
-            <br /><br /><br /><br />
+        <div class="ContenedorVendedores" style="background-color: black;">
             <div class="row row-cols-4 mb-4">
+                <%  if (PuedeEliminar)
+                    { %>
+                <div class="col">
+                    <label for="TextId" class="form-label">Apellidos</label>
+                    <asp:TextBox runat="server" ID="TextId" CssClass="form-control" />
+                </div>
+                <%} %>
                 <div class="col">
                     <label for="txtApellidos" class="form-label">Apellidos</label>
                     <asp:TextBox runat="server" ID="txtApellidos" CssClass="form-control" />
@@ -46,8 +53,21 @@
             </div>
             <br />
             <div class="row row-cols-4  justify-content-center">
-                <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" CssClass="btn btn-primary" />
-                <asp:Button ID="btnModificar" runat="server" Text="Modificar" OnClick="btnModificar_Click" CssClass="btn btn-primary" Visible="false" />
+                <asp:Button ID="btnSubmit" runat="server" Text="Aceptar" class="" OnClick="btnSubmit_Click" />
+                <updatepanel>
+                    <contenttemplate>
+                        <%  if (PuedeEliminar)
+                            { %>
+                        <asp:Button ID="BtnDelete" runat="server" Text="Eliminar" OnClick="BtnDelete_Click" />
+                        <%  if (EliminarCheck)
+                            {  %>
+                        <label for="ChkEliminar" class="text-info">¿Desea Confirmar Eliminacion?:</label>
+                        <asp:CheckBox ID="ChkEliminar" runat="server" />
+                        <asp:Button ID="BtnConfirmarElim" runat="server" Text="Eliminar" OnClick="BtnConfirmarElim_Click" />
+                        <%} %>
+                        <%} %>
+                    </contenttemplate>
+                </updatepanel>
             </div>
         </div>
     </div>
