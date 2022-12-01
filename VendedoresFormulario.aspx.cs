@@ -25,14 +25,6 @@ namespace Aplicacion_Web
                 Vendedor newVendedor = new Vendedor();
                 VendedorNegocio Negocio = new VendedorNegocio();
 
-                //txtNombres.Text = Vendedor.Nombre.ToString();
-                //txtApellidos.Text = Vendedor.Apellido.ToString();
-                //ddlSexo.Text = Vendedor.Sexo.ToString();
-                //txtNroLegajo.Text = Vendedor.Legajo.ToString();
-                //txtDni.Text = Vendedor.Dni.ToString();
-                //txtDomicilio.Text = Vendedor.Domicilio.ToString();
-                //txtFechaIng.Text = Vendedor.FechaIngreso.ToString();
-
                 newVendedor.Nombre = txtNombres.Text;
                 newVendedor.Apellido = txtApellidos.Text;
                 newVendedor.Sexo = ddlSexo.SelectedValue.ToString();
