@@ -97,6 +97,7 @@
     <Content Include="UsuariosAdmin.aspx" />
     <Content Include="UsuariosFormulario.aspx" />
     <Content Include="VendedoresAdmin.aspx" />
+    <Content Include="VendedoresFormulario.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +237,13 @@
     </Compile>
     <Compile Include="VendedoresAdmin.aspx.designer.cs">
       <DependentUpon>VendedoresAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VendedoresFormulario.aspx.cs">
+      <DependentUpon>VendedoresFormulario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VendedoresFormulario.aspx.designer.cs">
+      <DependentUpon>VendedoresFormulario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

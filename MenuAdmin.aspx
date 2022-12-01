@@ -69,11 +69,11 @@
                 <h5>VENDEDORES</h5>
                 <p>Agregar un vendedor</p>
                 <br />
-                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Agregar</a>
+                <a href="../VendedoresFormulario.aspx" class="btn btn-primary">Agregar</a>
                 <br />
                 <br />
                 <p>Modificar un vendedor</p>
-                <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
+                <a href="../VendedoresAdmin.aspx" class="btn btn-primary">Modificar</a>
             </div>
 
         </div>

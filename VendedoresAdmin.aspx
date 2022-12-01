@@ -1,54 +1,35 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="VendedoresAdmin.aspx.cs" Inherits="Aplicacion_Web.VendedoresForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="VendedoresAdmin.aspx.cs" Inherits="Aplicacion_Web.VendedoresAdmin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="Vendedores">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-        <link href="Estilos/Estilos_Vendedor.css" rel="stylesheet">
-        <div class="ContenedorVendedores" style="background-color: white;">
-            <br /><br /><br /><br />
-            <div class="row row-cols-4 mb-4">
-                <div class="col">
-                    <label for="txtApellidos" class="form-label">Apellidos</label>
-                    <asp:TextBox runat="server" ID="txtApellidos" CssClass="form-control" />
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="ListadoVendedores">
+        <div class="Contenedor5" style="background-color: white">
+            <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+            <div>
+                <div>
+                    <asp:GridView ID="GvVendedores" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="7"
+                        CssClass="table table-dark table-borderer"
+                        OnSelectedIndexChanged="GvVendedores_SelectedIndexChanged" DataKeyNames="IdVendedor">
+                        <Columns>
+                            <asp:BoundField HeaderText="Numero" DataField="IdVendedor" />
+                            <asp:BoundField HeaderText="Legajo" DataField="Legajo" />
+                            <asp:BoundField HeaderText="Dni" DataField="Dni" />
+                            <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
+                            <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
+                            <asp:BoundField HeaderText="Sexo" DataField="Sexo" />
+                            <asp:BoundField HeaderText="Domicilio" DataField="Domicilio" />
+                            <asp:BoundField HeaderText="FechaIngreso" DataField="FechaIngreso" />
+                            <asp:CheckBoxField HeaderText="Estado" DataField="Estado" />
+                            <asp:CommandField HeaderText="Modificar/Eliminar" ShowSelectButton="true" SelectText="✍" />
+                        </Columns>
+                    </asp:GridView>
                 </div>
-                <div class="col">
-                    <label for="txtNombres" class="form-label">Nombres</label>
-                    <asp:TextBox runat="server" ID="txtNombres" CssClass="form-control" />
-                </div>
-                <div class="col">
-                    <label for="ddlSexo" class="form-label">Sexo</label>
-                    <asp:DropDownList runat="server" ID="ddlSexo" class="form-select">
-                        <asp:ListItem Text="F" />
-                        <asp:ListItem Text="M" />
-                        <asp:ListItem Text="O" />
-                    </asp:DropDownList>
-                </div>
-            </div>
-            <div class="row row-cols-4 mb-4">
-                <div class="col">
-                    <label for="txtNroLegajo" class="form-label">Número de Legajo</label>
-                    <asp:TextBox runat="server" ID="txtNroLegajo" CssClass="form-control" />
-                </div>
-                <div class="col">
-                    <label for="txtDni" class="form-label">Número de documento</label>
-                    <asp:TextBox runat="server" ID="txtDni" CssClass="form-control" />
-                </div>
-                <div class="col">
-                    <label for="txtFechaIng" class="form-label">Fecha de Ingreso</label>
-                    <asp:TextBox runat="server" ID="txtFechaIng" TextMode="Date" CssClass="form-control" />
-                </div>
-            </div>
-            <div class="row row-cols-4 mb-4">
-                <div class="col">
-                    <label for="txtDomicilio" class="form-label">Domicilio</label>
-                    <asp:TextBox runat="server" ID="txtDomicilio" CssClass="form-control" />
-                </div>
-            </div>
-            <br />
-            <div class="row row-cols-4  justify-content-center">
-                <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" CssClass="btn btn-primary" />
-                <asp:Button ID="btnModificar" runat="server" Text="Modificar" OnClick="btnModificar_Click" CssClass="btn btn-primary" Visible="false" />
             </div>
         </div>
     </div>
+
 </asp:Content>
