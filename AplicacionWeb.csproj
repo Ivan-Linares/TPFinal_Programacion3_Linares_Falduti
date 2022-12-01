@@ -87,7 +87,6 @@
     <Content Include="Global.asax" />
     <Content Include="imagenes\PlaceHolder.png" />
     <Content Include="ListadoPropiedades.aspx" />
-    <Content Include="ListadoVendedores.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MenuAdmin.aspx" />
     <Content Include="Nosotros.aspx" />
@@ -166,13 +165,6 @@
     </Compile>
     <Compile Include="ListadoPropiedades.aspx.designer.cs">
       <DependentUpon>ListadoPropiedades.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ListadoVendedores.aspx.cs">
-      <DependentUpon>ListadoVendedores.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ListadoVendedores.aspx.designer.cs">
-      <DependentUpon>ListadoVendedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
