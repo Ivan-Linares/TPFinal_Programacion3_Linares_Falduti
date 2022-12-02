@@ -12,8 +12,8 @@ namespace Aplicacion_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (((Usuario)Session["ActualUser"]).IdUsuario != 0)
-                Response.Redirect("Default.aspx");
+            //if (((Usuario)Session["ActualUser"]).IdUsuario != 0)
+            //    Response.Redirect("Default.aspx");
         }
     }
 }
