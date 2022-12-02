@@ -17,7 +17,7 @@ namespace Negocio
             try
             {
 
-                datos.Setear_Sp("SP_LISTAR_TIPOUSUARIO");
+                datos.Setear_Sp("SP_LISTAR_TIPO_USUARIO");
 
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
@@ -26,6 +26,7 @@ namespace Negocio
 
                     aux.Id = datos.Lector.GetInt32(0);
                     aux.Descripcion = datos.Lector.GetString(1);
+                    aux.Estado = datos.Lector.GetBoolean(2);
 
                     lista.Add(aux);
                 }

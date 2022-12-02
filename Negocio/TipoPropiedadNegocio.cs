@@ -26,6 +26,7 @@ namespace Negocio
 
                     aux.IdTipo = datos.Lector.GetInt32(0);
                     aux.Descripcion = datos.Lector.GetString(1);
+                    aux.Estado = datos.Lector.GetBoolean(2);
 
                     lista.Add(aux);
                 }
