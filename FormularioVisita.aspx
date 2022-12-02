@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="FormularioEmail.aspx.cs" Inherits="Aplicacion_Web.FormularioEmail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="FormularioVisita.aspx.cs" Inherits="Aplicacion_Web.FormularioVisita" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="FormularioEmail">
@@ -7,8 +7,8 @@
             <div class="contact_form">
 
                 <div class="formulario">
-                    <h1>Formulario de contacto</h1>
-                    <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+                    <h1>Solicita una visita</h1>
+                    <h3>Queres visitar una de nuestras propiedades,completa el formulario </h3>
 
 
 
@@ -18,14 +18,14 @@
                         <asp:Label runat="server" ID="lblnombre" class="colocar_nombre">Nombre
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                        <input type="text" name="introducir_nombre" id="nombre" required="required" placeholder="Escribe tu nombre">
                     </p>
 
                     <p>
-                        <asp:Label runat="server" ID="lblemail" class="colocar_email">Email
+                        <asp:Label runat="server" ID="lblemail" class="colocar_email">Apellido
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                        <input type="email" name="introducir_email" id="email" required="required" placeholder="Escribe tu Apellido">
                     </p>
 
                     <p>
@@ -40,18 +40,19 @@
                         <asp:Label runat="server" ID="lblasunto" class="colocar_asunto">Asunto
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                        <input type="text" name="introducir_asunto" id="assunto" required="required" placeholder="Escribe un asunto">
                     </p>
 
                     <p>
-                        <asp:Label runat="server" ID="lblmensaje" class="colocar_mensaje">Mensaje
-										<span class="obligatorio">*</span>
-                        </asp:Label>
-                        <asp:TextBox runat="server" ID="txtmensaje" name="introducir_mensaje" class="texto_mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></asp:TextBox>
-                        <asp:Button ID="btnEnviar" runat="server" Text="Enviar Formulario" />
+                        <asp:Label runat="server" ID="txtFechaVisita" class="form-label">Fecha Visita</asp:Label>
+                        <asp:TextBox runat="server" ID="txtFechaIng" TextMode="Date" CssClass="form-control" Width="350px" />
                     </p>
 
-    
+                    <p>
+                        <asp:Label runat="server" ID="txtHoraVisita" class="form-label">Hora Visita</asp:Label>
+                        <asp:TextBox runat="server" ID="txthora" TextMode="Time" CssClass="form-control" Width="350px" />
+                    </p>
+
 
                     <p class="aviso">
                         <span class="obligatorio">* </span>los campos son obligatorios.

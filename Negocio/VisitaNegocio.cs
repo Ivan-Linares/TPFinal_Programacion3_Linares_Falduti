@@ -1,43 +1,44 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dominio;
 
 namespace Negocio
 {
-    public class TurnosNegocio
+    public class VisitaNegocio
     {
-        public List<Turnos> Listar()
+        public List<Visita> Listar()
         {
-            List<Turnos> lista = new List<Turnos>();
+            List<Visita> lista = new List<Visita>();
             ConexionBD datos = new ConexionBD();
-
             try
             {
-                datos.Setear_Sp("");
+                datos.Setear_Sp("SP_LISTAR_VISITAS");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
-                    Turnos aux = new Turnos();
+                    Visita aux = new Visita();
 
-                    //completar aux con las cosas del sp cuando haya tabla sql
+                    aux.Id = datos.Lector.GetInt32(0);
 
                     lista.Add(aux);
                 }
+
                 return lista;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
             finally
             {
                 datos.cerrarConexion();
             }
         }
+
+      
+        }
     }
-}

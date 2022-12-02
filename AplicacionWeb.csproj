@@ -67,6 +67,7 @@
     <Content Include="Estilos\Estilo_Email.css" />
     <Content Include="Estilos\Estilo_MenuCliente.css" />
     <Content Include="FormularioEmail.aspx" />
+    <Content Include="FormularioVisita.aspx" />
     <Content Include="MenuCliente.aspx" />
     <Content Include="PropiedadesFormulario.aspx" />
     <Content Include="Anuncios.aspx" />
@@ -106,6 +107,13 @@
     </Compile>
     <Compile Include="FormularioEmail.aspx.designer.cs">
       <DependentUpon>FormularioEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioVisita.aspx.cs">
+      <DependentUpon>FormularioVisita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormularioVisita.aspx.designer.cs">
+      <DependentUpon>FormularioVisita.aspx</DependentUpon>
     </Compile>
     <Compile Include="MenuCliente.aspx.cs">
       <DependentUpon>MenuCliente.aspx</DependentUpon>

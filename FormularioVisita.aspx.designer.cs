@@ -11,7 +11,7 @@ namespace Aplicacion_Web
 {
 
 
-    public partial class FormularioEmail
+    public partial class FormularioVisita
     {
 
         /// <summary>
@@ -51,30 +51,39 @@ namespace Aplicacion_Web
         protected global::System.Web.UI.WebControls.Label lblasunto;
 
         /// <summary>
-        /// Control lblmensaje.
+        /// Control txtFechaVisita.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblmensaje;
+        protected global::System.Web.UI.WebControls.Label txtFechaVisita;
 
         /// <summary>
-        /// Control txtmensaje.
+        /// Control txtFechaIng.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmensaje;
+        protected global::System.Web.UI.WebControls.TextBox txtFechaIng;
 
         /// <summary>
-        /// Control btnEnviar.
+        /// Control txtHoraVisita.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEnviar;
+        protected global::System.Web.UI.WebControls.Label txtHoraVisita;
+
+        /// <summary>
+        /// Control txthora.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txthora;
     }
 }
