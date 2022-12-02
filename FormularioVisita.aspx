@@ -8,7 +8,7 @@
 
                 <div class="formulario">
                     <h1>Solicita una visita</h1>
-                    <h3>Queres visitar una de nuestras propiedades,completa el formulario </h3>
+                    <h3>Queres visitar una de nuestras propiedades,completa el siguiente formulario </h3>
 
 
 
@@ -52,7 +52,9 @@
                         <asp:Label runat="server" ID="txtHoraVisita" class="form-label">Hora Visita</asp:Label>
                         <asp:TextBox runat="server" ID="txthora" TextMode="Time" CssClass="form-control" Width="350px" />
                     </p>
-
+                    <p>
+                        <asp:Button ID="BtnConfirmar" runat="server" Text="Confirmar" Onclick="BtnConfirmar_Click" />
+                    </p>
 
                     <p class="aviso">
                         <span class="obligatorio">* </span>los campos son obligatorios.
