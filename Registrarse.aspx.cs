@@ -27,7 +27,8 @@ namespace Aplicacion_Web
                 user.Password = TextContra.Text;
                 user.Nombre = TextEmail.Text;
                 user.Apellido = TextApellido.Text;
-                //user.FechaNacimiento = txtFechaNac.ToString;
+                user.Tipo.Id = 2;
+                user.FechaNacimiento = DateTime.Parse(txtFechaNac.Text.ToString());
                 Negocio.Agregar_Usuario_Registracion(user);
 
                 Session.Add("Usuario", user);

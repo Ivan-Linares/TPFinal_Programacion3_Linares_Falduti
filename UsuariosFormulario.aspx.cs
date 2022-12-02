@@ -32,7 +32,7 @@ namespace Aplicacion_Web
                 usuario.Apellido = TextApellido.Text;
                 usuario.Email = TextEmail.Text;
                 usuario.Password = TextPassword.Text;
-                //usuario.FechaNacimiento = TextFechaNac.Text;
+                usuario.FechaNacimiento = DateTime.Parse(TextFechaNac.Text.ToString());
                 if (CheckEstado.Checked)
                     usuario.Estado = true;
 
@@ -120,7 +120,7 @@ namespace Aplicacion_Web
                     TextNombre.Text = User.Nombre;
                     TextEmail.Text = User.Email;
                     TextPassword.Text = User.Password;
-                    //TextFechaNac.Text = User.FechaNacimiento.ToString();
+                    TextFechaNac.Text = User.FechaNacimiento.ToString("yyyy-MM-dd");
 
                     DDTiposUser.SelectedValue = User.Tipo.Id.ToString();
 
