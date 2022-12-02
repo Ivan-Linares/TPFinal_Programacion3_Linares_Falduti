@@ -248,3 +248,17 @@ VALUES(
 )
 END
 GO
+----------------------------------------------------------------------------------
+
+
+CREATE PROC SP_BUSCAR_USUARIO(
+@USER VARCHAR(100),
+@PASS VARCHAR (50)
+)
+AS 
+BEGIN
+SELECT * FROM USUARIOS AS U
+WHERE U.EMAIL=@USER AND U.CONTRESEÑA=@PASS
+END
+
+--EXEC SP_BUSCAR_USUARIO 'MATIASF@YAHOO.COM','123456'

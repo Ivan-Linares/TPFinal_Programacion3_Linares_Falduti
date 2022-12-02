@@ -162,17 +162,15 @@ namespace Negocio
                 datos.Setear_Sp("SP_BUSCAR_USUARIO");
                 datos.setearParametro("@user", ingreso.Email);
                 datos.setearParametro("@pass", ingreso.Password);
-                datos.ejecutarAccion();
+                datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     ingreso.IdUsuario = (int)datos.Lector["IDUSUARIO"];
-                    ingreso.Tipo = (TipoUsuario)datos.Lector["NIVEL_ACCESO"];
-                    ingreso.Nombre = (string)datos.Lector["NOMBRE"];
-                    ingreso.Apellido = (string)datos.Lector["APELLIDO"];
+                    ingreso.Tipo=new TipoUsuario();
+                    ingreso.Tipo.Id =(int)datos.Lector["NIVEL_ACCESO"];
                     ingreso.Email = (string)datos.Lector["EMAIL"];
-                    ingreso.FechaNacimiento = DateTime.Parse(datos.Lector["FECHA_NACIMIENTO"].ToString());
-                    ingreso.Password = (string)datos.Lector["CONTRASEÑA"];
+                    ingreso.Password = (string)datos.Lector["CONTRESEÑA"];
 
 
                 }

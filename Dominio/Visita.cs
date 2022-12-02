@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Administrador : Usuario
+    internal class Visita
     {
-        public Administrador()
-        {
-            
-        }
     }
 }

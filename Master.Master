@@ -17,8 +17,8 @@
     <link href="Estilos/Estilo_ListadoProp.css" rel="stylesheet">
     <link href="Estilos/Estilo_Abm.css" rel="stylesheet">
     <link href="Estilos/Estilo_Registrarse.css" rel="stylesheet">
-    <link href="Estilos/Estilo_ListadoPropiedades.css" rel="stylesheet"> 
-    <link href="Estilos/Estilo_MenuCliente.css" rel="stylesheet">   
+    <link href="Estilos/Estilo_ListadoPropiedades.css" rel="stylesheet">
+    <link href="Estilos/Estilo_MenuCliente.css" rel="stylesheet">
     <link href="Estilos/Estilo_Email.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
 </head>
@@ -44,14 +44,13 @@
                     <li>
                         <asp:HyperLink ID="HlLogin" CssClass="nav-link" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
                     </li>
-                    <li>
+                    <%--                    <li>
                         <asp:HyperLink ID="HlAdministrador" CssClass="nav-link" NavigateUrl="~/MenuAdmin.aspx" runat="server">Administrador</asp:HyperLink>
-                    </li>
+                    </li>--%>
                 </ul>
             </nav>
         </header>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
         </asp:ContentPlaceHolder>
 
         <%-- <footer class="footer">
@@ -91,7 +90,7 @@
 
                 </p>
 
-                <p>Company Name &copy; 2022</p>
+                <p>Bienes Raices &copy; 2022</p>
             </div>
 
         </footer>

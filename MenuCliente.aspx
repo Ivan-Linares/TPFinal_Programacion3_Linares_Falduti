@@ -9,7 +9,7 @@
                 <h3>Enviar Consulta....</h3>
                 <br />
                 <br />
-                <a href="/" class="btn btn-primary">Enviar E-mail</a>
+                <a href="/FormularioEmail.aspx" class="btn btn-primary">Enviar E-mail</a>
             </div>
 
             <div class="Card">
