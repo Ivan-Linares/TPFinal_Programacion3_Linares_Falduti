@@ -26,21 +26,21 @@ namespace Aplicacion_Web
                 ingreso = new Usuario(TexUsuario.Text, TexContra.Text);
                 ingreso = negocio.Loguear(ingreso);
 
-
+                Session.Add("ActualUser", ingreso);
 
                 if (ingreso.Tipo.Id == 0)
                 {
                     Session.Add("ingresos", ingreso.Tipo.Id);
                     Session.Add("IdUsuario", ingreso.IdUsuario);
                     Response.Redirect("/MenuAdmin.aspx");
-       
+
                 }
                 else if (ingreso.Tipo.Id == 1)
                 {
                     Session.Add("ingresos", ingreso.Tipo.Id);
                     Session.Add("IdUsuario", ingreso.IdUsuario);
                     Response.Redirect("/Gestion/MenuVendedor.aspx");
-            
+
 
                 }
                 else if (ingreso.Tipo.Id == 2)
@@ -50,7 +50,7 @@ namespace Aplicacion_Web
                     Response.Redirect("/MenuCliente.aspx");
 
                 }
-               
+
                 else
                 {
 

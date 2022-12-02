@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Dominio;
 
 namespace Aplicacion_Web
 {
@@ -11,7 +12,8 @@ namespace Aplicacion_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (((Usuario)Session["ActualUser"]).IdUsuario != 0)
+                Response.Redirect("Default.aspx");
         }
     }
 }
