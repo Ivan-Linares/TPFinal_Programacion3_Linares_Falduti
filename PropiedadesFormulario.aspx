@@ -6,11 +6,8 @@
     <br />    <br />    <br />    <br />    <br />    <br />    <br />
     <br />    <br />    <br />    <br />    <br />    <br />    <br />
 
-    <h3 class="text-center text-info">Agregar una Propiedad</h3>
-    <br />
     <div class="container text-center" style="background-color:black">
         <div class="row">
-
            <div class="row row-cols-3 mb-2">
                 <div id="AddProp-row4">
                     <div id="AddProp-form" class="form" action="" method="post">

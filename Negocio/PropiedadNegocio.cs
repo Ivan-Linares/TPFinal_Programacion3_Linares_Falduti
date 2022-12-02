@@ -103,7 +103,7 @@ namespace Negocio
                 datos.setearParametro("@URL", AlterPropiedad.UrlImagen);
                 datos.setearParametro("@VENTA", AlterPropiedad.EnVenta);
                 datos.setearParametro("@PRECIO", AlterPropiedad.Precio);
-                datos.setearParametro("@ESTADO", 1);
+                datos.setearParametro("@ESTADO", AlterPropiedad.Estado);
 
                 datos.ejecutarAccion();
             }

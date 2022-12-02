@@ -90,24 +90,27 @@ namespace Aplicacion_Web
 
             try
             {
-                VendedorNegocio negocio = new VendedorNegocio();
-                List<Vendedor> lista = negocio.Listar();
-                Vendedor Vendedor = new Vendedor();
-
-                foreach (Vendedor vender in lista)
+                if (!IsPostBack)
                 {
-                    if (vender.IdVendedor == int.Parse(id))
-                        Vendedor = vender;
-                }
+                    VendedorNegocio negocio = new VendedorNegocio();
+                    List<Vendedor> lista = negocio.Listar();
+                    Vendedor Vendedor = new Vendedor();
 
-                TextId.Text = Vendedor.IdVendedor.ToString();
-                txtNombres.Text = Vendedor.Nombre.ToString();
-                txtApellidos.Text = Vendedor.Apellido.ToString();
-                ddlSexo.Text = Vendedor.Sexo.ToString();
-                txtNroLegajo.Text = Vendedor.Legajo.ToString();
-                txtDni.Text = Vendedor.Dni.ToString();
-                txtDomicilio.Text = Vendedor.Domicilio.ToString();
-                txtFechaIng.Text = Vendedor.FechaIngreso.ToString();
+                    foreach (Vendedor vender in lista)
+                    {
+                        if (vender.IdVendedor == int.Parse(id))
+                            Vendedor = vender;
+                    }
+
+                    TextId.Text = Vendedor.IdVendedor.ToString();
+                    txtNombres.Text = Vendedor.Nombre.ToString();
+                    txtApellidos.Text = Vendedor.Apellido.ToString();
+                    ddlSexo.Text = Vendedor.Sexo.ToString();
+                    txtNroLegajo.Text = Vendedor.Legajo.ToString();
+                    txtDni.Text = Vendedor.Dni.ToString();
+                    txtDomicilio.Text = Vendedor.Domicilio.ToString();
+                    txtFechaIng.Text = Vendedor.FechaIngreso.ToString();
+                }
             }
             catch (Exception ex)
             {

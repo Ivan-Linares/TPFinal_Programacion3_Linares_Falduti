@@ -103,28 +103,30 @@ namespace Aplicacion_Web
 
             try
             {
-                Usuario User = new Usuario();
-                UsuarioNegocio negocio = new UsuarioNegocio();
-                List<Usuario> lista = negocio.Listar();
-
-                foreach (Usuario us in lista)
+                if (!IsPostBack)
                 {
-                    if (us.IdUsuario == int.Parse(id))
-                        User = us;
+                    Usuario User = new Usuario();
+                    UsuarioNegocio negocio = new UsuarioNegocio();
+                    List<Usuario> lista = negocio.Listar();
+
+                    foreach (Usuario us in lista)
+                    {
+                        if (us.IdUsuario == int.Parse(id))
+                            User = us;
+                    }
+
+                    TextId.Text = id;
+                    TextApellido.Text = User.Apellido;
+                    TextNombre.Text = User.Nombre;
+                    TextEmail.Text = User.Email;
+                    TextPassword.Text = User.Password;
+                    //TextFechaNac.Text = User.FechaNacimiento.ToString();
+
+                    DDTiposUser.SelectedValue = User.Tipo.Id.ToString();
+
+                    if (User.Estado)
+                        CheckEstado.Checked = true;
                 }
-
-                TextId.Text = id;
-                TextApellido.Text = User.Apellido;
-                TextNombre.Text = User.Nombre;
-                TextEmail.Text = User.Email;
-                TextPassword.Text = User.Password;
-                //TextFechaNac.Text = User.FechaNacimiento.ToString();
-
-                DDTiposUser.SelectedValue = User.Tipo.Id.ToString();
-
-                if (User.Estado)
-                    CheckEstado.Checked = true;
-
             }
             catch (Exception ex)
             {

@@ -96,32 +96,35 @@ namespace Aplicacion_Web
 
             try
             {
-                PropiedadNegocio negocio = new PropiedadNegocio();
-                List<Propiedad> lista = negocio.Listar();
-                Propiedad propiedad = new Propiedad();
-
-                foreach (Propiedad prop in lista)
+                if (!IsPostBack)
                 {
-                    if (prop.IdPropiedad == int.Parse(id))
-                        propiedad = prop;
+                    PropiedadNegocio negocio = new PropiedadNegocio();
+                    List<Propiedad> lista = negocio.Listar();
+                    Propiedad propiedad = new Propiedad();
+
+                    foreach (Propiedad prop in lista)
+                    {
+                        if (prop.IdPropiedad == int.Parse(id))
+                            propiedad = prop;
+                    }
+
+                    TextId.Text = propiedad.IdPropiedad.ToString();
+                    TextDescrip.Text = propiedad.Descripcion;
+                    TextCantAmb.Text = propiedad.CantAmbientes.ToString();
+                    TextMts.Text = propiedad.Mts2.ToString();
+                    TextDireccion.Text = propiedad.Direccion;
+                    TextUrlImagen.Text = propiedad.UrlImagen;
+                    TextPrecio.Text = propiedad.Precio.ToString();
+
+                    if (propiedad.EnVenta)
+                        CheckVenta.Checked = true;
+                    if (propiedad.Cochera)
+                        CheckCochera.Checked = true;
+
+                    DDTiposProp.SelectedValue = propiedad.TipoPropiedad.IdTipo.ToString();
+
+                    TextUrlImagen_TextChanged(sender, e);
                 }
-
-                TextId.Text = propiedad.IdPropiedad.ToString();
-                TextDescrip.Text = propiedad.Descripcion;
-                TextCantAmb.Text = propiedad.CantAmbientes.ToString();
-                TextMts.Text = propiedad.Mts2.ToString();
-                TextDireccion.Text = propiedad.Direccion;
-                TextUrlImagen.Text = propiedad.UrlImagen;
-                TextPrecio.Text = propiedad.Precio.ToString();
-
-                if (propiedad.EnVenta)
-                    CheckVenta.Checked = true;
-                if (propiedad.Cochera)
-                    CheckCochera.Checked = true;
-
-                DDTiposProp.SelectedValue = propiedad.TipoPropiedad.IdTipo.ToString();
-
-                TextUrlImagen_TextChanged(sender, e);
             }
             catch (Exception ex)
             {
