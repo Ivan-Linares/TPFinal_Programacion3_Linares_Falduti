@@ -29,7 +29,7 @@
             </div>
 
 
-            <div class="Card">
+<%--            <div class="Card">
                 <h5>TIPO PROPIEDAD</h5>
                 <p>Agregar un tipo propiedad</p>
                 <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Agregar</a>
@@ -37,10 +37,10 @@
                 <br />
                 <p>Modificar tipo propiedad</p>
                 <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
-            </div>
+            </div>--%>
 
 
-
+<%--
             <div class="Card">
                 <h5>VISITAS</h5>
                 <p>Agregar visita</p>
@@ -51,9 +51,9 @@
                 <p>Modificar visita</p>
                 <br />
                 <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
-            </div>
+            </div>--%>
 
-            <div class="Card">
+<%--            <div class="Card">
                 <h5>PERFILES</h5>
                 <p>Agregar un perfil</p>
                 <br />
@@ -63,7 +63,7 @@
                 <p>Modificar un perfil</p>
                 <br />
                 <a href="../Tablas/TurnoForm.aspx" class="btn btn-primary">Modificar</a>
-            </div>
+            </div>--%>
 
             <div class="Card">
                 <h5>VENDEDORES</h5>
