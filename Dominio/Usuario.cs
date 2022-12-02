@@ -26,6 +26,7 @@ namespace Dominio
         {
             this.Email = Email;
             this.Password = pass;
+            
         }
         public Usuario()
         {

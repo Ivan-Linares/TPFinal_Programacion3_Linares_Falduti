@@ -168,7 +168,7 @@ namespace Negocio
                 {
                     ingreso.IdUsuario = (int)datos.Lector["IDUSUARIO"];
                     ingreso.Tipo=new TipoUsuario();
-                    ingreso.Tipo.Id =(int)datos.Lector["NIVEL_ACCESO"];
+                    ingreso.Tipo.Id = (int)datos.Lector["TIPO"];
                     ingreso.Email = (string)datos.Lector["EMAIL"];
                     ingreso.Password = (string)datos.Lector["CONTRESEÑA"];
 
