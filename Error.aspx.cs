@@ -11,7 +11,7 @@ namespace Aplicacion_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            LbError.Text = Session["Error"].ToString();
         }
     }
 }

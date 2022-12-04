@@ -46,11 +46,21 @@
                     <li>
                         <asp:HyperLink ID="HlLogin" CssClass="nav-link" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
                     </li>
-<%--                    <%if (((Dominio.Usuario)Session["ActualUser"]).Nombre != null && ((Dominio.Usuario)Session["ActualUser"]).Tipo.Id == 0){  %>--%>
+                    <%if (IsAdmin()){  %>
                     <li>
                         <asp:HyperLink ID="HlAdministrador" CssClass="nav-link" NavigateUrl="~/MenuAdmin.aspx" runat="server">Administrador</asp:HyperLink>
                     </li>
-<%--                    <% }%>--%>
+                    <% }%>
+                    <%if (IsVendedor()){  %>
+                    <li>
+                        <asp:HyperLink ID="HlVendedor" CssClass="nav-link" NavigateUrl="~/MenuAdmin.aspx" runat="server">Vendedores</asp:HyperLink>
+                    </li>
+                    <% }%>
+                    <%if (IsCliente()){  %>
+                    <li>
+                        <asp:HyperLink ID="HlCliente" CssClass="nav-link" NavigateUrl="~/MenuCliente.aspx" runat="server">Clientes</asp:HyperLink>
+                    </li>
+                    <% }%>
                 </ul>
             </nav>
         </header>

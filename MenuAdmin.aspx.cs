@@ -12,8 +12,18 @@ namespace Aplicacion_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (((Usuario)Session["ActualUser"]).IdUsuario != 0)
-            //    Response.Redirect("Default.aspx");
+            try
+            {
+                if (!(Session["ActualUser"] != null && ((Dominio.Usuario)Session["ActualUser"]).Tipo.Id == 0))
+                {
+                    Session.Add("Error", "Necesitas Loguearte!");
+                    Response.Redirect("Error.aspx", false);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

@@ -27,39 +27,38 @@ namespace Aplicacion_Web
                 ingreso = negocio.Loguear(ingreso);
 
                 Session.Add("ActualUser", ingreso);
+                Response.Redirect("default.aspx");
 
-                if (ingreso.Tipo.Id == 0)
-                {
-                    Session.Add("ingresos", ingreso.Tipo.Id);
-                    Session.Add("IdUsuario", ingreso.IdUsuario);
-                    Response.Redirect("/MenuAdmin.aspx");
+                //if (ingreso.Tipo.Id == 0)
+                //{
+                //    Session.Add("ingresos", ingreso.Tipo.Id);
+                //    Session.Add("IdUsuario", ingreso.IdUsuario);
+                //    Response.Redirect("/MenuAdmin.aspx");
 
-                }
-                else if (ingreso.Tipo.Id == 1)
-                {
-                    Session.Add("ingresos", ingreso.Tipo.Id);
-                    Session.Add("IdUsuario", ingreso.IdUsuario);
-                    Response.Redirect("/Gestion/MenuVendedor.aspx");
-
-
-                }
-                else if (ingreso.Tipo.Id == 2)
-                {
-                    Session.Add("ingresos", ingreso.Tipo.Id);
-                    Session.Add("IdUsuario", ingreso.IdUsuario);
-                    Response.Redirect("/MenuCliente.aspx");
-
-                }
-
-                else
-                {
-
-                    Session.Add("ingresos", null);
-                    Response.Redirect("default.aspx");
-
-                }
+                //}
+                //else if (ingreso.Tipo.Id == 1)
+                //{
+                //    Session.Add("ingresos", ingreso.Tipo.Id);
+                //    Session.Add("IdUsuario", ingreso.IdUsuario);
+                //    Response.Redirect("/Gestion/MenuVendedor.aspx");
 
 
+                //}
+                //else if (ingreso.Tipo.Id == 2)
+                //{
+                //    Session.Add("ingresos", ingreso.Tipo.Id);
+                //    Session.Add("IdUsuario", ingreso.IdUsuario);
+                //    Response.Redirect("/MenuCliente.aspx");
+
+                //}
+
+                //else
+                //{
+
+                //    Session.Add("ingresos", null);
+                //    Response.Redirect("default.aspx");
+
+                //}
             }
 
             catch (Exception ex)

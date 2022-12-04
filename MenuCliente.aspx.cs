@@ -11,22 +11,18 @@ namespace Aplicacion_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (Session["ingresos"] == null)
+            try
             {
-                Response.Redirect("/default.aspx");
+                if (!(Session["ActualUser"] != null && ((Dominio.Usuario)Session["ActualUser"]).Tipo.Id == 2))
+                {
+                    Session.Add("Error", "Necesitas Loguearte!");
+                    Response.Redirect("Error.aspx", false);
+                }
             }
-
-            else if (Session["ingresos"] != null)
+            catch (Exception ex)
             {
-                int probando;
-                probando = int.Parse(Session["ingresos"].ToString());
-                if (probando != 2) { Response.Redirect("/default.aspx"); }
-
+                throw ex;
             }
-
-
-
         }
     }
 }

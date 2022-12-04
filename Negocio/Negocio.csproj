@@ -66,7 +66,7 @@
   <ItemGroup>
     <Content Include="Images\PlaceHolder.png" />
     <Content Include="Scripts_DB\CREATE DATABASE.sql" />
-    <Content Include="Scripts_DB\Sp variios.sql" />
+    <Content Include="Scripts_DB\SP Usados.sql" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
