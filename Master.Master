@@ -53,7 +53,7 @@
                     <% }%>
                     <%if (IsVendedor()){  %>
                     <li>
-                        <asp:HyperLink ID="HlVendedor" CssClass="nav-link" NavigateUrl="~/MenuAdmin.aspx" runat="server">Vendedores</asp:HyperLink>
+                        <asp:HyperLink ID="HlVendedor" CssClass="nav-link" NavigateUrl="~/MenuVendedor.aspx" runat="server">Vendedores</asp:HyperLink>
                     </li>
                     <% }%>
                     <%if (IsCliente()){  %>

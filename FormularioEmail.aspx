@@ -18,14 +18,14 @@
                         <asp:Label runat="server" ID="lblnombre" class="colocar_nombre">Nombre
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                        <input type="text" name="introducir_nombre" id="nombre" required="required" placeholder="Escribe tu nombre">
                     </p>
 
                     <p>
                         <asp:Label runat="server" ID="lblemail" class="colocar_email">Email
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                        <input type="email" name="introducir_email" id="email" required="required" placeholder="Escribe tu Email">
                     </p>
 
                     <p>
@@ -40,7 +40,7 @@
                         <asp:Label runat="server" ID="lblasunto" class="colocar_asunto">Asunto
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                        <input type="text" name="introducir_asunto" id="assunto" required="required" placeholder="Escribe un asunto">
                     </p>
 
                     <p>
@@ -60,6 +60,6 @@
                 </div>
             </div>
 
-
+            </div>
         </div>
 </asp:Content>
