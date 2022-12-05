@@ -17,7 +17,7 @@
                 <h3>Solicitar una visita</h3>
                 <br />
                 <br />
-                <a href="/FormularioVisita" class="btn btn-primary">Solicitar</a>
+                <a href="/FormularioVisita.aspx" class="btn btn-primary">Solicitar</a>
             </div>
 
         </div>

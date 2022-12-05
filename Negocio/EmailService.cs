@@ -17,17 +17,17 @@ namespace Negocio
             public EmailService()
             {
                 server = new SmtpClient();
-                server.Credentials = new NetworkCredential("ff01e6ec42e120", "78e6c7a7b640fb");
+                server.Credentials = new NetworkCredential("c90872bd299a9b", "d4ec42872ebabd");
                 server.EnableSsl = true;
                 server.Port = 2525;
                 server.Host = "smtp.mailtrap.io";
             }
 
-            public void armarCorreo(string emailDestino, string asunto, string cuerpo)
+            public void armarCorreo(string emailOrigen,string asunto, string cuerpo)
             {
                 Email = new MailMessage();
-                Email.From = new MailAddress("noresponder@bienesraices.com");
-                Email.To.Add(emailDestino);
+                Email.From = new MailAddress(emailOrigen.ToString());
+                Email.To.Add("faldutimatias@gmail.com");
                 Email.Subject = asunto;
                 Email.IsBodyHtml = true;
                 Email.Body = cuerpo;

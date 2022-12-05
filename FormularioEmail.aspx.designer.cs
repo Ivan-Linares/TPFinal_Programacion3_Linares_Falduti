@@ -24,6 +24,15 @@ namespace Aplicacion_Web
         protected global::System.Web.UI.WebControls.Label lblnombre;
 
         /// <summary>
+        /// Control TxtNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtNombre;
+
+        /// <summary>
         /// Control lblemail.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace Aplicacion_Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblemail;
+
+        /// <summary>
+        /// Control TxtEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtEmail;
 
         /// <summary>
         /// Control lbltelefone.
@@ -42,6 +60,15 @@ namespace Aplicacion_Web
         protected global::System.Web.UI.WebControls.Label lbltelefone;
 
         /// <summary>
+        /// Control TxtTelefono.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtTelefono;
+
+        /// <summary>
         /// Control lblasunto.
         /// </summary>
         /// <remarks>
@@ -49,6 +76,15 @@ namespace Aplicacion_Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblasunto;
+
+        /// <summary>
+        /// Control TxtAsunto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtAsunto;
 
         /// <summary>
         /// Control lblmensaje.

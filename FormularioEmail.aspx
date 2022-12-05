@@ -18,20 +18,20 @@
                         <asp:Label runat="server" ID="lblnombre" class="colocar_nombre">Nombre
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <input type="text" name="introducir_nombre" id="nombre" required="required" placeholder="Escribe tu nombre">
+                        <asp:TextBox ID="TxtNombre" runat="server" ></asp:TextBox>
                     </p>
 
                     <p>
                         <asp:Label runat="server" ID="lblemail" class="colocar_email">Email
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <input type="email" name="introducir_email" id="email" required="required" placeholder="Escribe tu Email">
+                             <asp:TextBox ID="TxtEmail" runat="server" ></asp:TextBox>
                     </p>
 
                     <p>
                         <asp:Label runat="server" ID="lbltelefone" class="colocar_telefono">Teléfono
                         </asp:Label>
-                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                         <asp:TextBox ID="TxtTelefono" runat="server"  ></asp:TextBox>
                     </p>
 
 
@@ -40,15 +40,15 @@
                         <asp:Label runat="server" ID="lblasunto" class="colocar_asunto">Asunto
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <input type="text" name="introducir_asunto" id="assunto" required="required" placeholder="Escribe un asunto">
+                              <asp:TextBox ID="TxtAsunto" runat="server" ></asp:TextBox>
                     </p>
 
                     <p>
                         <asp:Label runat="server" ID="lblmensaje" class="colocar_mensaje">Mensaje
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <asp:TextBox runat="server" ID="txtmensaje" name="introducir_mensaje" class="texto_mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></asp:TextBox>
-                        <asp:Button ID="btnEnviar" runat="server" Text="Enviar Formulario" />
+                        <asp:TextBox runat="server" ID="txtmensaje"  name="introducir_mensaje" class="texto_mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></asp:TextBox>
+                        <asp:Button ID="btnEnviar" runat="server" Text="Enviar Formulario" Onclick="BtnEnviar_Click"/>
                     </p>
 
     

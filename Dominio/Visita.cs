@@ -13,7 +13,7 @@ namespace Dominio
         public TimeSpan Hora { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public string Asunto { get; set; }
+        public int NumeroPropiedad { get; set; }
         public bool Estado { get; set; }
 
     }
