@@ -42,12 +42,39 @@ namespace Aplicacion_Web
                         Propiedad = prop;
                 }
 
+                Session.Add("Propiedad", Propiedad);
+                SetearCard(Propiedad);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                Session.Add("Error", "No seleccionaste una propiedad para ver el detalle");
+                Response.Redirect("Error.aspx", false);
             }
+        }
 
+        private void SetearCard(Propiedad Propiedad)
+        {
+            ImagePropiedad.ImageUrl = Propiedad.UrlImagen.ToString();
+            LbTipo.Text = Propiedad.TipoPropiedad.Descripcion.ToString();
+            LbDescrip.Text = Propiedad.Descripcion.ToString();
+            LbCantAmb.Text = Propiedad.CantAmbientes.ToString();
+            LbMts2.Text = Propiedad.Mts2.ToString();
+            LbDireccion.Text = Propiedad.Direccion.ToString();
+            LbPrecio.Text = Propiedad.Precio.ToString();
+        }
+
+        public bool TieneCochera()
+        {
+            if(((Propiedad)Session["Propiedad"]).Cochera)
+                return true;
+            return false;
+        }
+
+        public bool EnVenta()
+        {
+            if (((Propiedad)Session["Propiedad"]).EnVenta)
+                return true;
+            return false;
         }
     }
 }
