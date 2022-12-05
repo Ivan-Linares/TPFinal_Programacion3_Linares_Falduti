@@ -24,6 +24,24 @@ namespace Aplicacion_Web
         protected global::System.Web.UI.WebControls.Image ImagePropiedad;
 
         /// <summary>
+        /// Control LbVende.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbVende;
+
+        /// <summary>
+        /// Control LbAlquila.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbAlquila;
+
+        /// <summary>
         /// Control LbTipo.
         /// </summary>
         /// <remarks>
@@ -85,24 +103,6 @@ namespace Aplicacion_Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LbCochera;
-
-        /// <summary>
-        /// Control LbVende.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbVende;
-
-        /// <summary>
-        /// Control LbAlquila.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbAlquila;
 
         /// <summary>
         /// Control btnBack.
