@@ -29,7 +29,8 @@ namespace Negocio
                     aux.Nombre = datos.Lector.GetString(3);
                     aux.Apellido = datos.Lector.GetString(4);
                     aux.NumeroPropiedad = datos.Lector.GetInt32(5);
-                    aux.Estado = datos.Lector.GetBoolean(6);
+                    aux.Telefono = datos.Lector.GetString(6);
+                    aux.Estado = datos.Lector.GetBoolean(7);
 
 
 
@@ -60,7 +61,8 @@ namespace Negocio
                 datos.setearParametro("@HORA", NewVisita.Hora);
                 datos.setearParametro("@NOMBRE", NewVisita.Nombre);
                 datos.setearParametro("@APELLIDO", NewVisita.Apellido);
-                datos.setearParametro("@NUMPROPIEDAD", NewVisita.NumeroPropiedad);
+                datos.setearParametro("@NUMPROPIEDAD", NewVisita.NumeroPropiedad); 
+                datos.setearParametro("@TELEFONO", NewVisita.Telefono);
                 datos.setearParametro("@ESTADO", 1);
 
                 datos.ejecutarAccion();
@@ -88,6 +90,7 @@ namespace Negocio
                 datos.setearParametro("@NOMBRE", NewVisita.Nombre);
                 datos.setearParametro("@APELLIDO", NewVisita.Apellido);
                 datos.setearParametro("@NUMPROPIEDAD", NewVisita.NumeroPropiedad);
+                datos.setearParametro("@TELEFONO", NewVisita.Telefono);
                 datos.setearParametro("@ESTADO", 1);
 
                 datos.ejecutarAccion();
