@@ -33,6 +33,8 @@ namespace Aplicacion_Web
         protected void btnComprar_Click(object sender, EventArgs e)
         {
             string ID = ((Button)sender).CommandArgument.ToString();
+
+            Response.Redirect("ComprarPropiedad.aspx?id=" + ID, false);
         }
     }
 }

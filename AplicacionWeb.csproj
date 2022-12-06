@@ -64,6 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ComprarPropiedad.aspx" />
     <Content Include="Estilos\Estilo_Email.css" />
     <Content Include="Estilos\Estilo_MenuCliente.css" />
     <Content Include="FormularioEmail.aspx" />
@@ -102,6 +103,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComprarPropiedad.aspx.cs">
+      <DependentUpon>ComprarPropiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComprarPropiedad.aspx.designer.cs">
+      <DependentUpon>ComprarPropiedad.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FormularioEmail.aspx.cs">
       <DependentUpon>FormularioEmail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
