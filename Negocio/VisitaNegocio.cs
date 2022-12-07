@@ -24,15 +24,11 @@ namespace Negocio
                     Visita aux = new Visita();
 
                     aux.Id = datos.Lector.GetInt32(0);
-                    aux.Fecha = datos.Lector.GetDateTime(1);
-                    aux.Hora = datos.Lector.GetTimeSpan(2);
-                    aux.Nombre = datos.Lector.GetString(3);
-                    aux.Apellido = datos.Lector.GetString(4);
-                    aux.NumeroPropiedad = datos.Lector.GetInt32(5);
-                    aux.Telefono = datos.Lector.GetString(6);
-                    aux.Estado = datos.Lector.GetBoolean(7);
-
-
+                    aux.IdPropiedad = datos.Lector.GetInt32(1);
+                    aux.IdPropiedad = datos.Lector.GetInt32(2);
+                    aux.Fecha = datos.Lector.GetDateTime(3);
+                    aux.Hora = datos.Lector.GetTimeSpan(4);
+                    aux.Estado = datos.Lector.GetBoolean(5);
 
                     lista.Add(aux);
                 }
@@ -57,12 +53,10 @@ namespace Negocio
             {
                 datos.Setear_Sp("SP_AGREGAR_VISITA");
 
+                datos.setearParametro("@IDPROPIEDAD", NewVisita.Fecha);
+                datos.setearParametro("@IDUSUARIO", NewVisita.Fecha);
                 datos.setearParametro("@FECHA", NewVisita.Fecha);
                 datos.setearParametro("@HORA", NewVisita.Hora);
-                datos.setearParametro("@NOMBRE", NewVisita.Nombre);
-                datos.setearParametro("@APELLIDO", NewVisita.Apellido);
-                datos.setearParametro("@NUMPROPIEDAD", NewVisita.NumeroPropiedad); 
-                datos.setearParametro("@TELEFONO", NewVisita.Telefono);
                 datos.setearParametro("@ESTADO", 1);
 
                 datos.ejecutarAccion();
@@ -84,13 +78,12 @@ namespace Negocio
             try
             {
                 datos.Setear_Sp("SP_MODIFICAR_VISITA");
-                datos.setearParametro("@IDVISITA", NewVisita.Id);
+
+                datos.setearParametro("@IDVISITA", NewVisita.Fecha);
+                datos.setearParametro("@IDPROPIEDAD", NewVisita.Fecha);
+                datos.setearParametro("@IDUSUARIO", NewVisita.Fecha);
                 datos.setearParametro("@FECHA", NewVisita.Fecha);
                 datos.setearParametro("@HORA", NewVisita.Hora);
-                datos.setearParametro("@NOMBRE", NewVisita.Nombre);
-                datos.setearParametro("@APELLIDO", NewVisita.Apellido);
-                datos.setearParametro("@NUMPROPIEDAD", NewVisita.NumeroPropiedad);
-                datos.setearParametro("@TELEFONO", NewVisita.Telefono);
                 datos.setearParametro("@ESTADO", 1);
 
                 datos.ejecutarAccion();
@@ -126,7 +119,5 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
-
-
     }
 }
