@@ -51,15 +51,6 @@ namespace Aplicacion_Web
         protected global::System.Web.UI.WebControls.TextBox txthora;
 
         /// <summary>
-        /// Control BtnConfirmar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnConfirmar;
-
-        /// <summary>
         /// Control btnSubmit.
         /// </summary>
         /// <remarks>

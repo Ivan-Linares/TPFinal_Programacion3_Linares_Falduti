@@ -16,16 +16,13 @@
                             <asp:Label runat="server" ID="LbHoraVisita" class="form-label">Hora Visita</asp:Label>
                             <asp:TextBox runat="server" ID="txthora" TextMode="Time" CssClass="form-control" Width="350px" />
                         </p>
-                        <p>
-                            <asp:Button ID="BtnConfirmar" runat="server" Text="Confirmar" OnClick="BtnConfirmar_Click" />
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <br />
-    <asp:Button ID="btnSubmit" runat="server" Text="Aceptar"/>
+    <asp:Button ID="btnSubmit" runat="server" Text="Aceptar" OnClick="btnSubmit_Click"/>
     <updatepanel>
         <contenttemplate>
             <asp:Button ID="BtnDelete" runat="server" Text="Eliminar" />

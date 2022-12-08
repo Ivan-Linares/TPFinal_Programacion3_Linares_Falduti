@@ -13,6 +13,7 @@ namespace Aplicacion_Web
     {
         public bool EliminarCheck;
         int IDVisita;
+        Visita visitaActual;
         protected void Page_Load(object sender, EventArgs e)
         {
             Cargar();
@@ -40,20 +41,19 @@ namespace Aplicacion_Web
             {
                 IDVisita = int.Parse(id); //Despues lo uso para eliminar
 
-                Visita visita = new Visita();
                 VisitaNegocio negocio = new VisitaNegocio();
                 List<Visita> lista = negocio.ListarPorId(((Usuario)Session["ActualUser"]).IdUsuario);
 
                 foreach (Visita aux in lista)
                 {
                     if(aux.Id == int.Parse(id))
-                        visita = aux;
+                        visitaActual = aux;
                 }
 
                 if (!IsPostBack)
                 {
-                    txtFecha.Text = visita.Fecha.ToString();
-                    txthora.Text = visita.Hora.ToString();
+                    txtFecha.Text = visitaActual.Fecha.ToString("yyyy-MM-dd");
+                    txthora.Text = visitaActual.Hora.ToString();
                 }
             }
             catch (Exception ex)
@@ -75,6 +75,26 @@ namespace Aplicacion_Web
             {
                 negocio.EliminarVisita(IDVisita);
                 Response.Redirect("MenuCliente.aspx", false);
+            }
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VisitaNegocio negocio = new VisitaNegocio();
+
+                visitaActual.Fecha = DateTime.Parse(txtFecha.Text.ToString());
+                visitaActual.Hora = TimeSpan.Parse(txthora.Text.ToString());
+
+                negocio.ModificarVisita(visitaActual);
+
+                Response.Redirect("MenuCliente.aspx", false);
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

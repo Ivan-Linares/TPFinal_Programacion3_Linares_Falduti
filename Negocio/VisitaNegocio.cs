@@ -155,7 +155,7 @@ namespace Negocio
             {
                 datos.Setear_Sp("SP_MODIFICAR_VISITA");
 
-                datos.setearParametro("@IDVISITA", NewVisita.Id);
+                datos.setearParametro("@IDVISTA", NewVisita.Id);
                 datos.setearParametro("@IDPROPIEDAD", NewVisita.IdPropiedad);
                 datos.setearParametro("@IDVENDEDOR", NewVisita.IdVendedor);
                 datos.setearParametro("@IDUSUARIO", NewVisita.Idusuario);
