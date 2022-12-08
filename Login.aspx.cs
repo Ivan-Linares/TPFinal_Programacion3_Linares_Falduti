@@ -41,10 +41,26 @@ namespace Aplicacion_Web
         {
             Exception exc = Server.GetLastError();
 
-
             Session.Add("error", exc.ToString());
             //Response.Redirect("Error.aspx");
             Server.Transfer("Error.aspx");
+        }
+
+        public bool EstaLogueado()
+        {
+            if(Session["ActualUser"] != null)
+                return true;
+            return false;
+        }
+
+        //protected void BotonLogin_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
+        protected void BtnDeslogin_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
         }
     }
 }

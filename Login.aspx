@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Aplicacion_Web.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <%      if (!EstaLogueado())
+        {  %>
     <br />
     <br />
     <br />
@@ -24,8 +26,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-info">
-                                <span>Recordar contraseña</span> <span>
-                                <input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                    <span>Recordar contraseña</span> <span>
+                                        <input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
                                 <asp:Button ID="BotonLogin" runat="server" class="btn btn-info btn-md" Text="Ingresar" OnClick="btnLogin_Click" />
                             </div>
                             <div class="form-group">
@@ -37,5 +39,14 @@
             </div>
         </div>
     </div>
-
+    <%} %>
+    <%else
+        {  %>
+      <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <asp:Button ID="BtnDeslogin" runat="server" class="btn btn-info btn-md" Text="Desloguearse" OnClick="BtnDeslogin_Click" />
+    <%} %>
 </asp:Content>
