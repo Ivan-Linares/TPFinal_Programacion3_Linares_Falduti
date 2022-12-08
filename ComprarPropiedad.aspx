@@ -73,11 +73,11 @@
                                     <input type="text" name="introducir_asunto" id="assunto" required="required" placeholder="Escribe un asunto">
                                 </p>
                                 <p>
-                                    <asp:Label runat="server" ID="txtFechaVisita" class="form-label">Fecha Visita</asp:Label>
+                                    <asp:Label runat="server" ID="LbFechaVisita" class="form-label">Fecha Visita</asp:Label>
                                     <asp:TextBox runat="server" ID="txtFechaIng" TextMode="Date" CssClass="form-control" Width="350px" />
                                 </p>
                                 <p>
-                                    <asp:Label runat="server" ID="txtHoraVisita" class="form-label">Hora Visita</asp:Label>
+                                    <asp:Label runat="server" ID="LbHoraVisita" class="form-label">Hora Visita</asp:Label>
                                     <asp:TextBox runat="server" ID="txthora" TextMode="Time" CssClass="form-control" Width="350px" />
                                 </p>
                                 <p>

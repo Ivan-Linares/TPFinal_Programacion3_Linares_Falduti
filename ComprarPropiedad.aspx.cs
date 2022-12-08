@@ -102,8 +102,8 @@ namespace Aplicacion_Web
                 visita.IdPropiedad = Propiedad.IdPropiedad;
                 visita.IdVendedor = Propiedad.IdVendedor;
                 visita.Idusuario = ((Usuario)Session["ActualUser"]).IdUsuario;
-                //visita.Fecha =
-                //visita.Hora =
+                visita.Fecha = DateTime.Parse(txtFechaIng.Text.ToString());
+                visita.Hora = TimeSpan.Parse(txthora.Text.ToString());
                 visita.Estado = true;
 
                 negocio.AgregarVisita(visita);

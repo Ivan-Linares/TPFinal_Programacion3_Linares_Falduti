@@ -114,13 +114,13 @@ namespace Aplicacion_Web
         protected global::System.Web.UI.WebControls.Label lblasunto;
 
         /// <summary>
-        /// Control txtFechaVisita.
+        /// Control LbFechaVisita.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtFechaVisita;
+        protected global::System.Web.UI.WebControls.Label LbFechaVisita;
 
         /// <summary>
         /// Control txtFechaIng.
@@ -132,13 +132,13 @@ namespace Aplicacion_Web
         protected global::System.Web.UI.WebControls.TextBox txtFechaIng;
 
         /// <summary>
-        /// Control txtHoraVisita.
+        /// Control LbHoraVisita.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtHoraVisita;
+        protected global::System.Web.UI.WebControls.Label LbHoraVisita;
 
         /// <summary>
         /// Control txthora.

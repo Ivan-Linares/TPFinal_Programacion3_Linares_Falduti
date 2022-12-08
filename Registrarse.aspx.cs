@@ -33,13 +33,13 @@ namespace Aplicacion_Web
 
                 Session.Add("Usuario", user);
 
-       
                 Response.Redirect("/Login.aspx", false);
 
             }
             catch (Exception ex)
             {
                 Session.Add("error", ex.ToString());
+                throw ex;
             }
         }
     }
