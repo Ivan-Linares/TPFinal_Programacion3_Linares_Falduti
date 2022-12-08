@@ -26,7 +26,7 @@ namespace Aplicacion_Web
         protected void GvVisitas_SelectedIndexChanged(object sender, EventArgs e)
         {
             string Id = GvVisitas.SelectedDataKey.Value.ToString();
-            Response.Redirect(".aspx?id=" + Id, false);
+            Response.Redirect("ModificarVisita.aspx?id=" + Id, false);
         }
     }
 }
