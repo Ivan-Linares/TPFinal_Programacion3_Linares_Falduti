@@ -67,7 +67,7 @@ namespace Aplicacion_Web
             {
                 if (!(Session["ActualUser"] != null && ((Dominio.Usuario)Session["ActualUser"]).Tipo.Id == 2))
                 {
-                    Session.Add("Error", "Necesitas Loguearte!");
+                    Session.Add("Error", "Necesitas Ser Cliente!");
                     Response.Redirect("Error.aspx", false);
                 }
             }

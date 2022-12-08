@@ -71,6 +71,7 @@
     <Content Include="FormularioVisita.aspx" />
     <Content Include="MenuCliente.aspx" />
     <Content Include="MenuVendedor.aspx" />
+    <Content Include="ModificarVisita.aspx" />
     <Content Include="PropiedadesFormulario.aspx" />
     <Content Include="Anuncios.aspx" />
     <Content Include="Contactos.aspx" />
@@ -137,6 +138,13 @@
     </Compile>
     <Compile Include="MenuVendedor.aspx.designer.cs">
       <DependentUpon>MenuVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarVisita.aspx.cs">
+      <DependentUpon>ModificarVisita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarVisita.aspx.designer.cs">
+      <DependentUpon>ModificarVisita.aspx</DependentUpon>
     </Compile>
     <Compile Include="PropiedadesFormulario.aspx.cs">
       <DependentUpon>PropiedadesFormulario.aspx</DependentUpon>

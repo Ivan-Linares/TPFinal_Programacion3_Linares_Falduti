@@ -46,6 +46,80 @@ namespace Negocio
             }
         }
 
+        public List<Visita> ListarPorId(int IdUsuario)
+        {
+            List<Visita> lista = new List<Visita>();
+            ConexionBD datos = new ConexionBD();
+            try
+            {
+                datos.Setear_Sp("SP_LISTAR_VISITAR_PORID");
+                datos.setearParametro("@IDUSUARIO", IdUsuario);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Visita aux = new Visita();
+
+                    aux.Id = datos.Lector.GetInt32(0);
+                    aux.IdPropiedad = datos.Lector.GetInt32(1);
+                    aux.IdVendedor = datos.Lector.GetInt32(2);
+                    aux.Idusuario = datos.Lector.GetInt32(3);
+                    aux.Fecha = datos.Lector.GetDateTime(4);
+                    aux.Hora = datos.Lector.GetTimeSpan(5);
+                    aux.Estado = datos.Lector.GetBoolean(6);
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public List<Visita> ListarPorIdVendededor(int IdVendedor)
+        {
+            List<Visita> lista = new List<Visita>();
+            ConexionBD datos = new ConexionBD();
+            try
+            {
+                datos.Setear_Sp("SP_LISTAR_VISITAR_PORID");
+                datos.setearParametro("@IDUSUARIO", IdVendedor);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Visita aux = new Visita();
+
+                    aux.Id = datos.Lector.GetInt32(0);
+                    aux.IdPropiedad = datos.Lector.GetInt32(1);
+                    aux.IdVendedor = datos.Lector.GetInt32(2);
+                    aux.Idusuario = datos.Lector.GetInt32(3);
+                    aux.Fecha = datos.Lector.GetDateTime(4);
+                    aux.Hora = datos.Lector.GetTimeSpan(5);
+                    aux.Estado = datos.Lector.GetBoolean(6);
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
         public void AgregarVisita(Visita NewVisita)
         {
             ConexionBD datos = new ConexionBD();

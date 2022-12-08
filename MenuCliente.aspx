@@ -14,7 +14,7 @@
 
             <div class="Card">
                 <img src=" imagenes/logocasa.png">
-                <h3>Solicitar una visita</h3>
+                <h3>Consultar visitas</h3>
                 <br />
                 <br />
                 <a href="/FormularioVisita.aspx" class="btn btn-primary">Solicitar</a>
