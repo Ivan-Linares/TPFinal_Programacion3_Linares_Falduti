@@ -39,6 +39,7 @@ namespace Negocio
                     aux.EnVenta = datos.Lector.GetBoolean(9);
                     aux.Precio = datos.Lector.GetDecimal(10);
                     aux.Estado = datos.Lector.GetBoolean(11);
+                    aux.IdVendedor = datos.Lector.GetInt32(12);
 
                     lista.Add(aux);
                 }
@@ -73,6 +74,7 @@ namespace Negocio
                 datos.setearParametro("@VENTA", NewPropiedad.EnVenta);
                 datos.setearParametro("@PRECIO", NewPropiedad.Precio);
                 datos.setearParametro("@ESTADO", 1);
+                datos.setearParametro("@IDVENDEDOR", NewPropiedad.IdVendedor);
 
                 datos.ejecutarAccion();
             }
@@ -104,6 +106,7 @@ namespace Negocio
                 datos.setearParametro("@VENTA", AlterPropiedad.EnVenta);
                 datos.setearParametro("@PRECIO", AlterPropiedad.Precio);
                 datos.setearParametro("@ESTADO", AlterPropiedad.Estado);
+                datos.setearParametro("@IDVENDEDOR", AlterPropiedad.IdVendedor);
 
                 datos.ejecutarAccion();
             }

@@ -10,6 +10,8 @@ namespace Dominio
     {
         public int Id { get; set; }
         public int IdPropiedad { get; set; }
+        public int IdVendedor { get; set; }
+        public int Idusuario { get; set; }
         public DateTime Fecha { get; set; } 
         public TimeSpan Hora { get; set; }
         public bool Estado { get; set; }

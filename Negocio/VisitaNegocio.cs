@@ -25,10 +25,11 @@ namespace Negocio
 
                     aux.Id = datos.Lector.GetInt32(0);
                     aux.IdPropiedad = datos.Lector.GetInt32(1);
-                    aux.IdPropiedad = datos.Lector.GetInt32(2);
-                    aux.Fecha = datos.Lector.GetDateTime(3);
-                    aux.Hora = datos.Lector.GetTimeSpan(4);
-                    aux.Estado = datos.Lector.GetBoolean(5);
+                    aux.IdVendedor = datos.Lector.GetInt32(2);
+                    aux.Idusuario = datos.Lector.GetInt32(3);
+                    aux.Fecha = datos.Lector.GetDateTime(4);
+                    aux.Hora = datos.Lector.GetTimeSpan(5);
+                    aux.Estado = datos.Lector.GetBoolean(6);
 
                     lista.Add(aux);
                 }
@@ -53,8 +54,9 @@ namespace Negocio
             {
                 datos.Setear_Sp("SP_AGREGAR_VISITA");
 
-                datos.setearParametro("@IDPROPIEDAD", NewVisita.Fecha);
-                datos.setearParametro("@IDUSUARIO", NewVisita.Fecha);
+                datos.setearParametro("@IDPROPIEDAD", NewVisita.IdPropiedad);
+                datos.setearParametro("@IDVENDEDOR", NewVisita.IdVendedor);
+                datos.setearParametro("@IDUSUARIO", NewVisita.Idusuario);
                 datos.setearParametro("@FECHA", NewVisita.Fecha);
                 datos.setearParametro("@HORA", NewVisita.Hora);
                 datos.setearParametro("@ESTADO", 1);
@@ -79,9 +81,10 @@ namespace Negocio
             {
                 datos.Setear_Sp("SP_MODIFICAR_VISITA");
 
-                datos.setearParametro("@IDVISITA", NewVisita.Fecha);
-                datos.setearParametro("@IDPROPIEDAD", NewVisita.Fecha);
-                datos.setearParametro("@IDUSUARIO", NewVisita.Fecha);
+                datos.setearParametro("@IDVISITA", NewVisita.Id);
+                datos.setearParametro("@IDPROPIEDAD", NewVisita.IdPropiedad);
+                datos.setearParametro("@IDVENDEDOR", NewVisita.IdVendedor);
+                datos.setearParametro("@IDUSUARIO", NewVisita.Idusuario);
                 datos.setearParametro("@FECHA", NewVisita.Fecha);
                 datos.setearParametro("@HORA", NewVisita.Hora);
                 datos.setearParametro("@ESTADO", 1);

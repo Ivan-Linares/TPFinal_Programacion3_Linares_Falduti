@@ -99,14 +99,19 @@ namespace Aplicacion_Web
                 Visita visita = new Visita();
                 VisitaNegocio negocio = new VisitaNegocio();
 
-                //TODO: CARGAR DATOS DE VISITA
+                visita.IdPropiedad = Propiedad.IdPropiedad;
+                visita.IdVendedor = Propiedad.IdVendedor;
+                visita.Idusuario = ((Usuario)Session["ActualUser"]).IdUsuario;
+                //visita.Fecha =
+                //visita.Hora =
+                visita.Estado = true;
 
                 negocio.AgregarVisita(visita);
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                Session.Add("Error", ex);
+                Response.Redirect("Error.aspx", false);
             }
         }
     }
