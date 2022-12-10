@@ -18,11 +18,6 @@ namespace Aplicacion_Web
             GvVisitas.DataBind();
         }
 
-        //protected void BtnConfirmar_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
         protected void GvVisitas_SelectedIndexChanged(object sender, EventArgs e)
         {
             string Id = GvVisitas.SelectedDataKey.Value.ToString();
