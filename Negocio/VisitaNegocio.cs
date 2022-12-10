@@ -89,8 +89,8 @@ namespace Negocio
             ConexionBD datos = new ConexionBD();
             try
             {
-                datos.Setear_Sp("SP_LISTAR_VISITAR_PORID");
-                datos.setearParametro("@IDUSUARIO", IdVendedor);
+                datos.Setear_Sp("SP_LISTAR_VISITAR_PORID_VENDEDOR");
+                datos.setearParametro("@IDVENDEDOR", IdVendedor);
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())

@@ -107,6 +107,8 @@ namespace Aplicacion_Web
                 visita.Estado = true;
 
                 negocio.AgregarVisita(visita);
+
+                Response.Redirect("Default.aspx", false);
             }
             catch (Exception ex)
             {

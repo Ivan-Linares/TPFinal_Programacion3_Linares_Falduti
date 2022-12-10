@@ -39,6 +39,7 @@ namespace Aplicacion_Web
                 NewPropiedad.Direccion = TextDireccion.Text;
                 NewPropiedad.UrlImagen = TextUrlImagen.Text;
                 NewPropiedad.Precio = decimal.Parse(TextPrecio.Text);
+                NewPropiedad.IdVendedor = int.Parse(TextVendeor.Text);
 
                 if (CheckCochera.Checked) NewPropiedad.Cochera = true;
                 if (CheckVenta.Checked) NewPropiedad.EnVenta = true;
@@ -115,6 +116,7 @@ namespace Aplicacion_Web
                     TextDireccion.Text = propiedad.Direccion;
                     TextUrlImagen.Text = propiedad.UrlImagen;
                     TextPrecio.Text = propiedad.Precio.ToString();
+                    TextVendeor.Text = propiedad.IdVendedor.ToString();
 
                     if (propiedad.EnVenta)
                         CheckVenta.Checked = true;

@@ -32,6 +32,8 @@ namespace Negocio
                     aux.Domicilio = datos.Lector.GetString(6);
                     aux.FechaIngreso = datos.Lector.GetDateTime(7);
                     aux.Estado = datos.Lector.GetBoolean(8);
+                    aux.Email = datos.Lector.GetString(9);
+                    aux.FechaNac = datos.Lector.GetDateTime(10);
 
                     lista.Add(aux);
                 }
@@ -94,6 +96,8 @@ namespace Negocio
                 datos.setearParametro("@FEC_INGRESO", NewVendedor.FechaIngreso);
                 datos.setearParametro("@DOMICILIO", NewVendedor.Domicilio);
                 datos.setearParametro("@ESTADO", 1);
+                datos.setearParametro("@EMAIL", NewVendedor.Email);
+                datos.setearParametro("@FEC_NAC", NewVendedor.FechaNac);
 
                 datos.ejecutarAccion();
             }
@@ -124,6 +128,8 @@ namespace Negocio
                 datos.setearParametro("@DOMICILIO", UpdatedVendedor.Domicilio);
                 datos.setearParametro("@FEC_INGRESO", UpdatedVendedor.FechaIngreso);
                 datos.setearParametro("@ESTADO", UpdatedVendedor.Estado);
+                datos.setearParametro("@EMAIL", UpdatedVendedor.Email);
+                datos.setearParametro("@FEC_NAC", UpdatedVendedor.FechaNac);
 
                 datos.ejecutarAccion();
             }

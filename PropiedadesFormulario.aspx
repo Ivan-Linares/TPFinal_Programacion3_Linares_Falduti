@@ -65,6 +65,10 @@
                         <label for="TextPrecio" class="text-info">Precio $:</label><br>
                         <asp:TextBox ID="TextPrecio" runat="server" class="form-control"></asp:TextBox>
                     </div>
+                    <div class="form-group">
+                        <label for="TextVendeor" class="text-info">Vendedor a Cargo:</label><br>
+                        <asp:TextBox ID="TextVendeor" runat="server" class="form-control"></asp:TextBox>
+                    </div>
                 </div>
             </div>
         </div>
