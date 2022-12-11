@@ -83,14 +83,14 @@ namespace Negocio
             }
         }
 
-        public List<Visita> ListarPorIdVendededor(int IdVendedor)
+        public List<Visita> ListarPorIdVendededor(string email)
         {
             List<Visita> lista = new List<Visita>();
             ConexionBD datos = new ConexionBD();
             try
             {
                 datos.Setear_Sp("SP_LISTAR_VISITAR_PORID_VENDEDOR");
-                datos.setearParametro("@IDVENDEDOR", IdVendedor);
+                datos.setearParametro("@EMAILVEND", email);
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -99,11 +99,10 @@ namespace Negocio
 
                     aux.Id = datos.Lector.GetInt32(0);
                     aux.IdPropiedad = datos.Lector.GetInt32(1);
-                    aux.IdVendedor = datos.Lector.GetInt32(2);
-                    aux.Idusuario = datos.Lector.GetInt32(3);
-                    aux.Fecha = datos.Lector.GetDateTime(4);
-                    aux.Hora = datos.Lector.GetTimeSpan(5);
-                    aux.Estado = datos.Lector.GetBoolean(6);
+                    aux.Idusuario = datos.Lector.GetInt32(2);
+                    aux.Fecha = datos.Lector.GetDateTime(3);
+                    aux.Hora = datos.Lector.GetTimeSpan(4);
+                    aux.Estado = datos.Lector.GetBoolean(5);
 
                     lista.Add(aux);
                 }

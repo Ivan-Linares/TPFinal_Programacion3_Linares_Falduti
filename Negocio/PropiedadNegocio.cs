@@ -140,5 +140,41 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        public List<Propiedad> ListarPorIdVendededor(string email)
+        {
+            List<Propiedad> lista = new List<Propiedad>();
+            ConexionBD datos = new ConexionBD();
+            try
+            {
+                datos.Setear_Sp("SP_LISTAR_PROPIEDADES_PORID_VENDEDOR");
+                datos.setearParametro("@EMAILVEND", email);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Propiedad aux = new Propiedad();
+
+                    aux.IdPropiedad = datos.Lector.GetInt32(0);
+                    aux.TipoPropiedad = new TiposPropiedad();
+                    aux.TipoPropiedad.IdTipo = datos.Lector.GetInt32(1);
+                    aux.TipoPropiedad.Descripcion = datos.Lector.GetString(2);
+                    aux.Direccion = datos.Lector.GetString(3);
+                    aux.EnVenta = datos.Lector.GetBoolean(4);
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

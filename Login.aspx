@@ -25,9 +25,6 @@
                                 <asp:TextBox ID="TexContra" runat="server" class="form-control"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label for="remember-me" class="text-info">
-                                    <span>Recordar contraseña</span> <span>
-                                        <input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
                                 <asp:Button ID="BotonLogin" runat="server" class="btn btn-info btn-md" Text="Ingresar" OnClick="btnLogin_Click" />
                             </div>
                             <div class="form-group">

@@ -23,8 +23,12 @@ namespace Aplicacion_Web
             try
             {
                 VisitaNegocio negocio = new VisitaNegocio();
-                GvVisitas.DataSource = negocio.ListarPorIdVendededor(((Usuario)Session["ActualUser"]).IdUsuario);
+                GvVisitas.DataSource = negocio.ListarPorIdVendededor(((Usuario)Session["ActualUser"]).Email);
                 GvVisitas.DataBind();
+
+                PropiedadNegocio negocio1 = new PropiedadNegocio();
+                GVPropiedadesVendedor.DataSource = negocio1.ListarPorIdVendededor(((Usuario)Session["ActualUser"]).Email);
+                GVPropiedadesVendedor.DataBind();
             }
             catch (Exception ex)
             {
