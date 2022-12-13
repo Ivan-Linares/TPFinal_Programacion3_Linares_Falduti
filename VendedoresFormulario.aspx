@@ -2,6 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
     <div class="Vendedores">
         <link href="Estilos/Estilos_Vendedor.css" rel="stylesheet">
@@ -10,7 +16,7 @@
                 <%  if (PuedeEliminar)
                     { %>
                 <div class="col">
-                    <label for="TextId" class="form-label">Apellidos</label>
+                    <label for="TextId" class="form-label">Id Nro</label>
                     <asp:TextBox runat="server" ID="TextId" CssClass="form-control" />
                 </div>
                 <%} %>
@@ -44,31 +50,38 @@
                     <label for="txtFechaIng" class="form-label">Fecha de Ingreso</label>
                     <asp:TextBox runat="server" ID="txtFechaIng" TextMode="Date" CssClass="form-control" />
                 </div>
-            </div>
-            <div class="row row-cols-4 mb-4">
+                <div class="col">
+                    <label for="txtFechaNac" class="form-label">Fecha de Nacimiento</label>
+                    <asp:TextBox runat="server" ID="txtFechaNac" TextMode="Date" CssClass="form-control" />
+                </div>
                 <div class="col">
                     <label for="txtDomicilio" class="form-label">Domicilio</label>
                     <asp:TextBox runat="server" ID="txtDomicilio" CssClass="form-control" />
                 </div>
+                <div class="col">
+                    <label for="txtEmail" class="form-label">Email</label>
+                    <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control" />
+                </div>
             </div>
-            <br />
-            <div class="row row-cols-4  justify-content-center">
-                <asp:Button ID="btnSubmit" runat="server" Text="Aceptar" class="" OnClick="btnSubmit_Click" />
-                <updatepanel>
-                    <contenttemplate>
-                        <%  if (PuedeEliminar)
-                            { %>
-                        <asp:Button ID="BtnDelete" runat="server" Text="Eliminar" OnClick="BtnDelete_Click" />
-                        <%  if (EliminarCheck)
-                            {  %>
-                        <label for="ChkEliminar" class="text-info">¿Desea Confirmar Eliminacion?:</label>
-                        <asp:CheckBox ID="ChkEliminar" runat="server" />
-                        <asp:Button ID="BtnConfirmarElim" runat="server" Text="Eliminar" OnClick="BtnConfirmarElim_Click" />
-                        <%} %>
-                        <%} %>
-                    </contenttemplate>
-                </updatepanel>
-            </div>
+        </div>
+
+        <br />
+        <div class="row row-cols-4  justify-content-center">
+            <asp:Button ID="btnSubmit" runat="server" Text="Aceptar" class="" OnClick="btnSubmit_Click" />
+            <updatepanel>
+                <contenttemplate>
+                    <%  if (PuedeEliminar)
+                        { %>
+                    <asp:Button ID="BtnDelete" runat="server" Text="Eliminar" OnClick="BtnDelete_Click" />
+                    <%  if (EliminarCheck)
+                        {  %>
+                    <label for="ChkEliminar" class="text-info">¿Desea Confirmar Eliminacion?:</label>
+                    <asp:CheckBox ID="ChkEliminar" runat="server" />
+                    <asp:Button ID="BtnConfirmarElim" runat="server" Text="Eliminar" OnClick="BtnConfirmarElim_Click" />
+                    <%} %>
+                    <%} %>
+                </contenttemplate>
+            </updatepanel>
         </div>
     </div>
 </asp:Content>

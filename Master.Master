@@ -38,25 +38,25 @@
                         <asp:HyperLink ID="HlPropiedades" CssClass="nav-link" NavigateUrl="~/ListadoPropiedades.aspx" runat="server">Propiedades</asp:HyperLink>
                     </li>
                     <li>
-                        <asp:HyperLink ID="HlContacto" CssClass="nav-link" NavigateUrl="~/Contactos.aspx" runat="server">Contacto</asp:HyperLink>
-                    </li>
-                    <li>
                         <asp:HyperLink ID="HlNosotros" CssClass="nav-link" NavigateUrl="~/Nosotros.aspx" runat="server">Nosotros</asp:HyperLink>
                     </li>
                     <li>
                         <asp:HyperLink ID="HlLogin" CssClass="nav-link" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
                     </li>
-                    <%if (IsAdmin()){  %>
+                    <%if (IsAdmin())
+                    {  %>
                     <li>
                         <asp:HyperLink ID="HlAdministrador" CssClass="nav-link" NavigateUrl="~/MenuAdmin.aspx" runat="server">Administrador</asp:HyperLink>
                     </li>
                     <% }%>
-                    <%if (IsVendedor()){  %>
+                    <%if (IsVendedor())
+                    {  %>
                     <li>
                         <asp:HyperLink ID="HlVendedor" CssClass="nav-link" NavigateUrl="~/MenuVendedor.aspx" runat="server">Vendedores</asp:HyperLink>
                     </li>
                     <% }%>
-                    <%if (IsCliente()){  %>
+                    <%if (IsCliente())
+                    {  %>
                     <li>
                         <asp:HyperLink ID="HlCliente" CssClass="nav-link" NavigateUrl="~/MenuCliente.aspx" runat="server">Clientes</asp:HyperLink>
                     </li>

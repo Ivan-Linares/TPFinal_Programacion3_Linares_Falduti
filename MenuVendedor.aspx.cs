@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Dominio;
+using Negocio;
 
 namespace Aplicacion_Web
 {
@@ -11,19 +13,36 @@ namespace Aplicacion_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (!(Session["ActualUser"] != null && ((Dominio.Usuario)Session["ActualUser"]).Tipo.Id == 1))
-            //    {
-            //        Session.Add("Error", "Necesitas Loguearte!");
-            //        Response.Redirect("Error.aspx", false);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw ex;
-            //}
-            //DESCOMENTAR ESTO CUANDO ESTE LA PAGINA LISTA CON LOS VENDEDORES Y ESO
+            Cargar();
+        }
+
+        private void Cargar()
+        {
+            VendedorCheck();
+
+            try
+            {
+                VisitaNegocio negocio = new VisitaNegocio();
+                GvVisitas.DataSource = negocio.ListarPorIdVendededor(((Usuario)Session["ActualUser"]).Email);
+                GvVisitas.DataBind();
+
+                PropiedadNegocio negocio1 = new PropiedadNegocio();
+                GVPropiedadesVendedor.DataSource = negocio1.ListarPorIdVendededor(((Usuario)Session["ActualUser"]).Email);
+                GVPropiedadesVendedor.DataBind();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void VendedorCheck()
+        {
+            if (!(Session["ActualUser"] != null && ((Dominio.Usuario)Session["ActualUser"]).Tipo.Id == 1))
+            {
+                Session.Add("Error", "Necesitas Loguearte Como Vendedor");
+                Response.Redirect("Error.aspx", false);
+            }
         }
     }
 }

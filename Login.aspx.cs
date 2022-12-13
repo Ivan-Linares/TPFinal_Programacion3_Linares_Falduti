@@ -27,44 +27,13 @@ namespace Aplicacion_Web
                 ingreso = negocio.Loguear(ingreso);
 
                 Session.Add("ActualUser", ingreso);
-                Response.Redirect("default.aspx");
-
-                //if (ingreso.Tipo.Id == 0)
-                //{
-                //    Session.Add("ingresos", ingreso.Tipo.Id);
-                //    Session.Add("IdUsuario", ingreso.IdUsuario);
-                //    Response.Redirect("/MenuAdmin.aspx");
-
-                //}
-                //else if (ingreso.Tipo.Id == 1)
-                //{
-                //    Session.Add("ingresos", ingreso.Tipo.Id);
-                //    Session.Add("IdUsuario", ingreso.IdUsuario);
-                //    Response.Redirect("/Gestion/MenuVendedor.aspx");
-
-
-                //}
-                //else if (ingreso.Tipo.Id == 2)
-                //{
-                //    Session.Add("ingresos", ingreso.Tipo.Id);
-                //    Session.Add("IdUsuario", ingreso.IdUsuario);
-                //    Response.Redirect("/MenuCliente.aspx");
-
-                //}
-
-                //else
-                //{
-
-                //    Session.Add("ingresos", null);
-                //    Response.Redirect("default.aspx");
-
-                //}
+                Response.Redirect("default.aspx", false);
+                
             }
-
             catch (Exception ex)
             {
                 Session.Add("error", ex.ToString());
-                throw ex;
+                Response.Redirect("Error.aspx", false);
 
             }
         }
@@ -72,10 +41,26 @@ namespace Aplicacion_Web
         {
             Exception exc = Server.GetLastError();
 
-
             Session.Add("error", exc.ToString());
             //Response.Redirect("Error.aspx");
             Server.Transfer("Error.aspx");
+        }
+
+        public bool EstaLogueado()
+        {
+            if(Session["ActualUser"] != null)
+                return true;
+            return false;
+        }
+
+        //protected void BotonLogin_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
+        protected void BtnDeslogin_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
         }
     }
 }

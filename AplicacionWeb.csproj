@@ -64,15 +64,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ComprarPropiedad.aspx" />
     <Content Include="Estilos\Estilo_Email.css" />
     <Content Include="Estilos\Estilo_MenuCliente.css" />
     <Content Include="FormularioEmail.aspx" />
     <Content Include="FormularioVisita.aspx" />
     <Content Include="MenuCliente.aspx" />
     <Content Include="MenuVendedor.aspx" />
+    <Content Include="ModificarVisita.aspx" />
     <Content Include="PropiedadesFormulario.aspx" />
-    <Content Include="Anuncios.aspx" />
-    <Content Include="Contactos.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DetallePropiedad.aspx" />
     <Content Include="Error.aspx" />
@@ -102,6 +102,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComprarPropiedad.aspx.cs">
+      <DependentUpon>ComprarPropiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComprarPropiedad.aspx.designer.cs">
+      <DependentUpon>ComprarPropiedad.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FormularioEmail.aspx.cs">
       <DependentUpon>FormularioEmail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,26 +137,19 @@
     <Compile Include="MenuVendedor.aspx.designer.cs">
       <DependentUpon>MenuVendedor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ModificarVisita.aspx.cs">
+      <DependentUpon>ModificarVisita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarVisita.aspx.designer.cs">
+      <DependentUpon>ModificarVisita.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PropiedadesFormulario.aspx.cs">
       <DependentUpon>PropiedadesFormulario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PropiedadesFormulario.aspx.designer.cs">
       <DependentUpon>PropiedadesFormulario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Anuncios.aspx.cs">
-      <DependentUpon>Anuncios.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Anuncios.aspx.designer.cs">
-      <DependentUpon>Anuncios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contactos.aspx.cs">
-      <DependentUpon>Contactos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contactos.aspx.designer.cs">
-      <DependentUpon>Contactos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

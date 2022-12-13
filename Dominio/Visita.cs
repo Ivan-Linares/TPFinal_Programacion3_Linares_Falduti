@@ -9,13 +9,11 @@ namespace Dominio
     public class Visita
     {
         public int Id { get; set; }
-        public DateTime Fecha { get; set; }
+        public int IdPropiedad { get; set; }
+        public int IdVendedor { get; set; }
+        public int Idusuario { get; set; }
+        public DateTime Fecha { get; set; } 
         public TimeSpan Hora { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Telefono { get; set; }   
-        public int NumeroPropiedad { get; set; }
         public bool Estado { get; set; }
-
     }
 }

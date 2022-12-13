@@ -31,7 +31,9 @@ namespace Aplicacion_Web
                 newVendedor.Legajo = txtNroLegajo.Text;
                 newVendedor.Dni = txtDni.Text;
                 newVendedor.Domicilio = txtDomicilio.Text;
-                newVendedor.FechaIngreso = DateTime.Parse(txtFechaIng.Text.ToString()); 
+                newVendedor.FechaIngreso = DateTime.Parse(txtFechaIng.Text.ToString());
+                newVendedor.FechaNac = DateTime.Parse(txtFechaNac.Text.ToString());
+                newVendedor.Email = txtEmail.Text;
 
                 if (Request.QueryString["Id"] != null)
                 {
@@ -110,6 +112,8 @@ namespace Aplicacion_Web
                     txtDni.Text = Vendedor.Dni.ToString();
                     txtDomicilio.Text = Vendedor.Domicilio.ToString();
                     txtFechaIng.Text = Vendedor.FechaIngreso.ToString("yyyy-MM-dd");
+                    txtFechaNac.Text = Vendedor.FechaNac.ToString("yyyy-MM-dd");
+                    txtEmail.Text = Vendedor.Email.ToString();
                 }
             }
             catch (Exception ex)
