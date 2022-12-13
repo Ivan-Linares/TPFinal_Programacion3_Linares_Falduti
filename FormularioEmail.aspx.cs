@@ -22,10 +22,10 @@ namespace Aplicacion_Web
             {
 
                 EmailService emailService = new EmailService();
-                string EmailOrigen =(TxtEmail.ToString());
+                string EmailOrigen =(TxtEmail.Text);
 
 
-                emailService.armarCorreo(EmailOrigen,TxtAsunto.ToString(),txtmensaje.ToString());
+                emailService.armarCorreo(EmailOrigen,TxtAsunto.Text,txtmensaje.Text);
                 emailService.enviarEmail();
                 Response.Redirect("Default.aspx", false);
 

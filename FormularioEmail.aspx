@@ -25,7 +25,7 @@
                         <asp:Label runat="server" ID="lblemail" class="colocar_email">Email
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                             <asp:TextBox ID="TxtEmail" runat="server" ></asp:TextBox>
+                             <asp:TextBox ID="TxtEmail" TextMode="Email" runat="server" ></asp:TextBox>
                     </p>
 
                     <p>
