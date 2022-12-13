@@ -18,31 +18,29 @@
                         <asp:Label runat="server" ID="lblnombre" class="colocar_nombre">Nombre
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <asp:TextBox ID="TxtNombre" runat="server" type="text"  required="required" placeholder="Escribe tu nombre"></asp:TextBox>
+                        <input type="text" name="introducir_nombre" id="nombre" required="required" placeholder="Escribe tu nombre">
                     </p>
 
                     <p>
                         <asp:Label runat="server" ID="lblemail" class="colocar_email">Apellido
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                          <asp:TextBox ID="TxtApellido" runat="server" type="text"  required="required" placeholder="Escribe tu Apellido"></asp:TextBox>
+                        <input type="email" name="introducir_email" id="email" required="required" placeholder="Escribe tu Apellido">
                     </p>
 
                     <p>
                         <asp:Label runat="server" ID="lbltelefone" class="colocar_telefono">Teléfono
                         </asp:Label>
-                        <asp:TextBox ID="TxtTelefono" runat="server" type="text"  required="required" placeholder="Escribe su telefono"></asp:TextBox>
-
+                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
                     </p>
 
 
 
                     <p>
-                        <asp:Label runat="server" ID="lblasunto" class="colocar_asunto">Numero de Propiedad
+                        <asp:Label runat="server" ID="lblasunto" class="colocar_asunto">Asunto
 										<span class="obligatorio">*</span>
                         </asp:Label>
-                        <asp:TextBox ID="TxtNumPropiedad" runat="server" type="text"  required="required" placeholder="Escribeel numero de propiedad"></asp:TextBox>
-
+                        <input type="text" name="introducir_asunto" id="assunto" required="required" placeholder="Escribe un asunto">
                     </p>
 
                     <p>
