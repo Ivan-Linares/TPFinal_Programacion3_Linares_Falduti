@@ -6,6 +6,7 @@
     <br />
     <br />
     <br />
+    <h2>Visitas Pendientes</h2>
     <br />
     <div class="ListadoVisitasVendedores">
         <div class="Contenedor5" style="background-color: white">
@@ -30,6 +31,8 @@
     <br />
     <br />
 
+    <h2>Propiedades a Cargo</h2>
+    <br />
     <div class="ListadoPropiedadesVendedores">
         <div class="Contenedor5" style="background-color: white">
             <div>
