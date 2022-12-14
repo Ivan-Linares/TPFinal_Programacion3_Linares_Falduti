@@ -2,7 +2,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="Contenedor">
+    <div class="Contenedor10" style=" width: 100%;height:800px; z-index:1;">
+        <br />
+        <br />
+        <br />
+        <br />
         <div class="card" style="width: 28rem; margin: auto; align-content: center">
             <asp:Image ID="ImagePropiedad" runat="server" ImageUrl="./imagenes/PlaceHolder.png" onerror="this.src= './imagenes/PlaceHolder.png'" />
             <div class="card-body">

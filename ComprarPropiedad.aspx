@@ -2,14 +2,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <div class="Contenedor">
-                    <div class="FormularioEmail">
-                        <div class="Contenedor7">
-                            <div class="contact_form">
-                                <div class="formulario">
+    <div class="container text-center" style="color:#191c32">
+        <div class="row" >
+            <div class="col" ">
+                <div class="Contenedor" >
+                    <div class="FormularioEmail" >
+                        <div class="Contenedor7" style="background-color:#191c32">
+                            <div class="contact_form" >
+                                <div class="formulario" >
                                     <asp:Image ID="ImagePropiedad" runat="server" ImageUrl="./imagenes/PlaceHolder.png" onerror="this.src= './imagenes/PlaceHolder.png'" Style="width: 28rem;" />
                                     <div class="card-body">
                                         <div>
@@ -60,9 +60,13 @@
                 </div>
             </div>
  <%-------------------------------------------------------------------------------------------------------------------------------%>
+      
             <div class="col">
+                    <br />
+                    <br />
+                    <br />
                 <div class="FormularioEmail">
-                    <div class="Contenedor7">
+                    <div class="Contenedor7"  style="background-color:#191c32">
                         <div class="contact_form">
                             <div class="formulario">
                                 <h1>Solicita una visita</h1>
